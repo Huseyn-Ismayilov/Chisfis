@@ -1,0 +1,72 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+}
+
+body {
+    color: var(--base-color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+body.overflow_hidden {
+    overflow: hidden;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+u {
+    text-decoration: underline;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+    color: currentColor;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: transparent;
+    border: unset;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}

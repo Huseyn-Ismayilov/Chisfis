@@ -1,0 +1,16 @@
+.sec_title {
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid currentColor;
+    }
+}
+@media (max-width: 768px) {
+    .sec_title {
+        .flex {
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    }
+}
