@@ -1,14 +1,24 @@
 @use "sass:map";
+// Base
 @import "./base/reset";
-@import "./base/fonts";
+@import "./base/typography";
+
+// Containers
 @import "./containers";
+
+// Components
 @import "./variables/colors";
 @import "./variables/dimensions";
+
+// Components
 @import "./components/primary-btn";
-@import "./components/swiper-bundle.min";
-@import "./components/toggle";
+@import "./components/carousel";
 @import "./components/section-title";
-// @import "./variables/fonts";
-@import "./header/header";
-@import "./footer/footer";
-@import "./elements/hero";
+@import "./components/slider";
+
+// Layout
+@import "./layout/header";
+@import "./layout/footer";
+
+// Pages
+@import "./pages/home";

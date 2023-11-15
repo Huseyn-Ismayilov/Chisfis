@@ -5,31 +5,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambridge It Security</title>
+    <title>Chisfis</title>
     <link rel="stylesheet" href="./assets/scss/main.css">
+    <link href="./assets/scss/mobiscroll.javascript.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-
-        <symbol id="arrow_bottom" viewBox="0 0 10 6" fill="none">
-            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+        <symbol id="location" viewBox="0 0 20 20">
+            <path
+                d="M14.7142 13.8807C13.9867 14.6083 12.5191 16.0758 11.4136 17.1813C10.6325 17.9624 9.36775 17.9623 8.5867 17.1813C7.50109 16.0957 6.06062 14.6552 5.28612 13.8807C2.68262 11.2772 2.68262 7.05612 5.28612 4.45262C7.88961 1.84913 12.1107 1.84913 14.7142 4.45262C17.3177 7.05612 17.3177 11.2772 14.7142 13.8807Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M12.5002 9.16667C12.5002 10.5474 11.3809 11.6667 10.0002 11.6667C8.61945 11.6667 7.50016 10.5474 7.50016 9.16667C7.50016 7.78596 8.61945 6.66667 10.0002 6.66667C11.3809 6.66667 12.5002 7.78596 12.5002 9.16667Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol viewBox="0 0 24 24">
+            <path d="M14 5L21 12M21 12L14 19M21 12L3 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
         </symbol>
-
+        <symbol id="star" viewBox="0 0 15 15">
+            <path
+                d="M6.54449 1.09555C6.83466 0.155474 8.16534 0.155474 8.45551 1.09555L9.41525 4.20477C9.54463 4.62393 9.93209 4.90983 10.3708 4.90983H13.5814C14.5376 4.90983 14.9484 6.12324 14.1888 6.70416L11.5047 8.75698C11.172 9.01138 11.0331 9.4461 11.1566 9.84625L12.1608 13.0996C12.448 14.03 11.3713 14.7804 10.5978 14.1888L8.10749 12.2843C7.74892 12.01 7.25108 12.01 6.89251 12.2843L4.40217 14.1888C3.62871 14.7804 2.55197 14.03 2.83916 13.0996L3.84337 9.84625C3.96689 9.4461 3.82799 9.01138 3.49535 8.75698L0.81116 6.70416C0.0515728 6.12324 0.462386 4.90983 1.41865 4.90983H4.62924C5.06791 4.90983 5.45537 4.62393 5.58475 4.20477L6.54449 1.09555Z"
+                fill="currentColor" />
+        </symbol>
+        <symbol id="heart" viewBox="0 0 21 21">
+            <path
+                d="M4.17745 5.+7652C2.71299 6.94099 2.71299 9.31536 4.17745 10.7798L10.5791 17.1815L16.9808 10.7798C18.4452 9.31536 18.4452 6.94099 16.9808 5.47652C15.5163 4.01206 13.1419 4.01206 11.6775 5.47652L10.5791 6.57492L9.48075 5.47652C8.01629 4.01206 5.64192 4.01206 4.17745 5.47652Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="chevron_right" viewBox="0 0 24 24">
+            <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="chevron_left" viewBox="0 0 24 24">
+            <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="chevron_down" viewBox="0 0 24 24">
+            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="chevron_up" viewBox="0 0 24 24">
+            <path d="M5 15L12 8L19 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
         <!-- 
             usage
             <svg width="12" height="19">
-                <use xlink:href="#facebook"></use>
+                <use xlink:href="#star"></use>
             </svg>
          -->
     </svg>
+    <header class="site_header">
+        <div class="container">
+            <div class="wrapper">
+                <div class="left">
+                    <a href="" class="site_logo">
+                        <svg class="dark_block" viewBox="0 0 65 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.4444 14.0325C24.4444 21.4807 12.9444 29.3945 12.9444 29.3945C12.9444 29.3945 1.44444 21.4807 1.44444 14.0325C1.44444 7.51522 6.84722 2.39453 12.9444 2.39453C19.0417 2.39453 24.4444 7.51522 24.4444 14.0325Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M12.9444 29.3945C12.9444 29.3945 24.4444 21.4807 24.4444 14.0325C24.4444 7.51522 19.0417 2.39453 12.9444 2.39453C6.84722 2.39453 1.44444 7.51522 1.44444 14.0325C1.44444 21.4807 12.9444 29.3945 12.9444 29.3945ZM12.9444 29.3945V2.6807"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <circle cx="13" cy="15" r="4" fill="white"></circle>
+                            <path id="text"
+                                d="M31.8601 25.2216C32.951 25.2216 33.897 24.3097 33.9055 23.1761C33.897 22.0597 32.951 21.1477 31.8601 21.1477C30.7351 21.1477 29.8061 22.0597 29.8146 23.1761C29.8061 24.3097 30.7351 25.2216 31.8601 25.2216ZM43.9261 11.9091H41.3267V11.0312C41.3267 10.1449 41.6847 9.625 42.75 9.625C43.1847 9.625 43.6278 9.71875 43.9176 9.8125L44.5568 7.08523C44.1051 6.94886 43.108 6.72727 41.9915 6.72727C39.5284 6.72727 37.696 8.11648 37.696 10.9631V11.9091H35.8466V14.6364H37.696V25H41.3267V14.6364H43.9261V11.9091ZM46.1442 25H49.7749V11.9091H46.1442V25ZM47.968 10.2216C49.0504 10.2216 49.9368 9.39489 49.9368 8.38068C49.9368 7.375 49.0504 6.54829 47.968 6.54829C46.8942 6.54829 46.0078 7.375 46.0078 8.38068C46.0078 9.39489 46.8942 10.2216 47.968 10.2216ZM63.5753 15.642C63.2514 13.2301 61.3082 11.7386 58.0014 11.7386C54.652 11.7386 52.4446 13.2898 52.4531 15.8125C52.4446 17.7727 53.6804 19.0426 56.2372 19.554L58.5043 20.0057C59.6463 20.2358 60.1662 20.6534 60.1832 21.3097C60.1662 22.0852 59.3224 22.6392 58.0526 22.6392C56.7571 22.6392 55.8963 22.0852 55.6747 21.0199L52.1037 21.2074C52.4446 23.7131 54.5753 25.2557 58.044 25.2557C61.4361 25.2557 63.8651 23.5256 63.8736 20.9432C63.8651 19.0511 62.6293 17.9176 60.0895 17.3977L57.7202 16.9205C56.5014 16.6562 56.0497 16.2386 56.0582 15.608C56.0497 14.8239 56.9361 14.3125 58.0611 14.3125C59.3224 14.3125 60.0724 15.0028 60.2514 15.8466L63.5753 15.642Z"
+                                fill="white"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="center">
+                    <div class="navbar">
+                        <div class="wrap">
+                            <div class="search_bar">
+                                <ul>
+                                    <li>
+                                        <span>Location</span>
+                                        <div class="line"></div>
+                                    </li>
+                                    <li>
+                                        <span>Check In</span>
+                                        <div class="line"></div>
+                                    </li>
+                                    <li>
+                                        <span>Add guests</span>
+                                    </li>
+                                </ul>
+                                <button type="button" class="search_btn">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1.5"
+                                            d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="searchForm">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="">Stays</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Experiences</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Cars</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Flights</a>
+                                    </li>
+                                </ul>
+                                <div class="wrapper">
+                                    <div class="form_item search_input">
+                                        <div class="search_input">
+                                            <input type="text" placeholder="Location">
+                                            <span>Where are you going?</span>
+                                        </div>
+                                        <div class="dropdown">
+                                            <h3>Recent searches</h3>
+                                            <ul>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        aria-hidden="true" class="h-4 sm:h-6 w-4 sm:w-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                    </svg>
+                                                    <span>Lorem ipsum dolor sit.</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="action_list">
+                        <a href="" class="list_property">List your property</a>
+                        <button type="button" class="action_item">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true" class="w-7 h-7">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z">
+                                </path>
+                            </svg>
+                        </button>
+                        <button type="button" class="action_item">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
+                        </button>
+                        <button type="button" class="action_item">
+                            <div class="avatar">
+                                <img src="./assets/images/Image-1.90baa8cc883db8970fda.png" alt="">
+                            </div>
+                        </button>
+                        <button type="button" class="action_item toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg"></div>
+    </header>
     <main>
-
+        <label>
+            <input id="demo-responsive" mbsc-input data-label-style="stacked" data-input-style="box"
+                placeholder="Please Select..." />
+        </label>
     </main>
-
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/mobiscroll.javascript.min.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 

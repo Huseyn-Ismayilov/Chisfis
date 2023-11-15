@@ -6,7 +6,7 @@
         border-bottom: 1px solid currentColor;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: map.get($grid-breakpoints, "md")) {
     .sec_title {
         .flex {
             flex-wrap: wrap;
