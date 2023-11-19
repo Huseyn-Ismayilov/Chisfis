@@ -1,0 +1,208 @@
+.hero {
+    padding: 64px 0;
+
+    .content {
+        padding-right: 56px;
+        padding-top: 30px;
+        h1 {
+            font-size: var(--text-7xl);
+            font-weight: 500;
+            line-height: 1.14;
+        }
+        p {
+            font-size: 18px;
+            color: var(--gray-500);
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+    .col {
+        width: 50%;
+    }
+    .tabs_wrapper {
+        margin-top: -165px;
+        .tabs {
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+            margin-bottom: 32px;
+            // span {
+            //     font-size: 1rem;
+            //     line-height: 1.5rem;
+            // }
+            li {
+                cursor: pointer;
+                &::before {
+                    content: "";
+                    background-color: var(--gray-800);
+                    width: 0.625rem;
+                    height: 0.625rem;
+                    display: inline-block;
+                    border-radius: 999px;
+                    opacity: 0;
+                    margin-right: 0.5rem;
+                }
+                &.active {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+                &:not(:first-child) {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+    .search_bar {
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow:
+            0px 10px 10px -5px rgba(0, 0, 0, 0.04),
+            0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(32px);
+        .form_wrap {
+            display: flex;
+            align-items: center;
+        }
+        .select {
+            margin: 20px;
+            padding-left: 33px;
+            .mbsc-ios.mbsc-label-stacked.mbsc-ltr {
+                font-size: var(--text-lg);
+                font-weight: 600;
+                left: 48px;
+                svg {
+                    position: absolute;
+                    left: -35px;
+                    top: 10px;
+                }
+            }
+        }
+        .date_item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 24px;
+            svg {
+                margin-bottom: 7px;
+            }
+            span {
+                color: var(--gray-500);
+            }
+            input {
+                font-size: var(--text-lg);
+                font-weight: 600;
+                display: block;
+                border: unset;
+                background-color: transparent;
+                height: 48px;
+                padding-left: 0;
+                margin-bottom: -26px;
+                padding-bottom: 35px;
+                &::placeholder {
+                    color: black;
+                }
+            }
+        }
+    }
+    .mbsc-ios.mbsc-select.mbsc-ltr {
+        background-color: transparent;
+    }
+    .item1 {
+        flex: 1.5 1;
+    }
+    .item2 {
+        flex: 1 1;
+    }
+    .item3 {
+        flex: 1 1;
+    }
+}
+
+.mbsc-datepicker-tab-wrapper {
+    padding: 20px;
+}
+
+.tabs_container .tab_content {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero {
+        padding-top: 32px;
+        .content {
+            padding-right: 0;
+            padding-top: 0;
+            padding-bottom: 56px;
+            h1 {
+                font-size: var(--text-4xl);
+            }
+            p {
+                font-size: 16px;
+                margin-top: 32px;
+            }
+        }
+        .col {
+            width: 100%;
+        }
+        .tabs {
+            display: none;
+        }
+    }
+}
+
+.section_slider {
+    .slider {
+        overflow: hidden;
+    }
+}
+
+
+.FeaturePlaces {
+    overflow: hidden;
+    margin: 60px 0;
+    .wrapper {
+        background-color: var(--gray-100);
+        margin: 0 -160px;
+        padding: 80px 160px;
+        border-radius: 50px;
+    }
+    .sec_title {
+        width: 100%;
+    }
+    .tabs_wrapper {
+        width: 100%;
+    }
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 40px;
+        .btn {
+            background-color: white;
+            color: var(--gray-600);
+        }
+    }
+    .tabs {
+        display: flex;
+        align-items: center;
+        li {
+            padding: 12px 24px;
+            border-radius: 99px;
+            cursor: pointer;
+            &.active {
+                background-color: #115e59;
+                color: white;
+            }
+        }
+    } 
+    .listItems {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+}

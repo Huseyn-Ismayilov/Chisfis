@@ -1,9 +1,28 @@
 .listingCart {
     border-radius: 24px;
     overflow: hidden;
+    background-color: white;
     .image {
         position: relative;
+        &::after {
+            content: "";
+            background: linear-gradient(180deg, rgba(33, 34, 35, 0.00) 0%, rgba(33, 34, 35, 0.66) 100%);
+            height: 36px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+        .image_slider {
+            z-index: 0;
+        }
+        > * {
+            position: relative;
+            z-index: 3;
+        }
         img {
+            object-fit: cover;
             aspect-ratio: 30/22;
             width: 100%;
         }
@@ -12,7 +31,10 @@
             left: 12px;
             top: 12px;
             background-color: var(--red-700);
+            color: white;
             font-size: 12px;
+            padding: 2px 12px;
+            border-radius: 99px;
             z-index: 1;
         }
         .save_btn {
@@ -33,14 +55,17 @@
         padding: 16px;
         h5 {
             font-size: var(--text-sm);
+            font-weight: 400;
             color: var(--gray-500);
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 4px;
         }
         h3 {
             font-size: var(--text-lg);
+            margin-bottom: 6px;
         }
-        .location  {
+        .location {
+            color: var(--gray-500);
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -49,8 +74,28 @@
             display: block;
             margin: 16px 0;
             width: 100%;
+            height: 1px;
             max-width: 56px;
             background-color: var(--gray-100);
+        }
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .price {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .rating {
+                display: flex;
+                align-items: center;
+                gap: 2px;
+            }
+            span {
+                color: var(--gray-500);
+                font-weight: 400;
+            }
         }
     }
 }

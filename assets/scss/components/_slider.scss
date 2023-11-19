@@ -1,22 +1,20 @@
 .category_slider {
-    .slider {
-        .item {
-            .image {
-                margin-bottom: 20px;
-                img {
-                    border-radius: 16px;
-                }
+    .item {
+        .image {
+            margin-bottom: 20px;
+            img {
+                border-radius: 16px;
             }
-            .details {
-                h3 {
-                    font-size: var(--text-lg);
-                    margin-bottom: 10px;
-                }
-                span {
-                    font-size: var(--text-sm);
-                    color: var(--gray-500);
-                    display: block;
-                }
+        }
+        .details {
+            h3 {
+                font-size: var(--text-lg);
+                margin-bottom: 10px;
+            }
+            span {
+                font-size: var(--text-sm);
+                color: var(--gray-500);
+                display: block;
             }
         }
     }

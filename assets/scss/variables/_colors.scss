@@ -1,7 +1,5 @@
-// Colors
-//
+// // // Colors
 :root {
-    // Gray
     --gray-900: #111827;
     --gray-800: #1f2937;
     --gray-700: #374151;
@@ -13,14 +11,78 @@
     --gray-100: #f3f4f6;
     --gray-50: #f9fafb;
     // Red
-    --red-700: #B91C1C;
+    --red-700: #b91c1c;
 
     // Indigo
-    --indigo-900: #312E81;
-    --indigo-800: #3730A3;
-    --indigo-700: #4338CA;
-    --indigo-600: #4F46E5;
-    --indigo-500: #6366F1;
-    --indigo-400: #818CF8;
-    
+    --indigo-900: #312e81;
+    --indigo-800: #3730a3;
+    --indigo-700: #4338ca;
+    --indigo-600: #4f46e5;
+    --indigo-500: #6366f1;
+    --indigo-400: #818cf8;
+}
+
+.dark_theme {
+    .mbsc-windows.mbsc-popup {
+        background-color: #1f2937 !important;
+        min-width: 500px;
+    }
+    body {
+        background-color: #111827;
+        color: white;
+    }
+    .site_header {
+        color: white;
+        .bg {
+            background-color: #111827;
+        }
+        .action_item {
+            svg {
+                color: white;
+            }
+        }
+        .site_logo #text {
+            fill: white;
+        }
+        .search_bar {
+            border: 1px solid var(--gray-500);
+        }
+    }
+    .hero .tabs_wrapper .tabs li::before {
+        background-color: white;
+    }
+    .hero {
+        .search_bar {
+            background-color: #1118278f;
+            color: white;
+        }
+    }
+    .hero .search_bar .select .mbsc-ios.mbsc-label-stacked.mbsc-ltr {
+        color: white;
+    }
+    .hero .mbsc-ios.mbsc-select.mbsc-ltr,
+    .hero .search_bar .date_item input {
+        color: white;
+        &::placeholder {
+            color: white;
+        }
+    }
+    .FeaturePlaces .wrapper {
+        background-color: rgb(0 0 0 / 20%);
+    }
+    .FeaturePlaces .head .btn {
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+    }
+}
+
+.light_theme {
+    .mbsc-windows.mbsc-popup {
+        background-color: white !important;
+        min-width: 500px;
+    }
+    body {
+        background-color: white;
+    }
 }

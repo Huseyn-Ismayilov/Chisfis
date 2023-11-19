@@ -1,9 +1,30 @@
 .sec_title {
+    margin-bottom: 56px;
     .flex {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid currentColor;
+    }
+    p {
+        color: var(--gray-500);
+    }
+    h1 {
+        font-size: var(--text-4xl);
+    }
+    .pagination {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        .arrow {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--gray-300);
+            cursor: pointer;
+        }
     }
 }
 @media (max-width: map.get($grid-breakpoints, "md")) {

@@ -2,11 +2,20 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
+    padding: 12px 25px;
+    font-weight: 500;
+    gap: 12px;
+    border-radius: 999px;
+    &.purple {
+        background-color: var(--indigo-600);
+        color: white;
+        &:hover {
+            background-color: var(--indigo-800);
+        }
+    }
 }
-// @media (max-width: map.get($grid-breakpoints, "lg")){
-//     .btn {
-//         padding: 7px 20px;
-//         width: map-get($grid-breakpoints, md);
-//     }
-// }
+@media (max-width: map.get($grid-breakpoints, "lg")) {
+    .btn {
+        font-size: 14px;
+    }
+}
