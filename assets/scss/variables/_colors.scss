@@ -20,6 +20,8 @@
     --indigo-600: #4f46e5;
     --indigo-500: #6366f1;
     --indigo-400: #818cf8;
+    --indigo-100: #E0E7FF;
+    --indigo-50: #EEF2FF;
 }
 
 .dark_theme {
@@ -86,6 +88,47 @@
     }
     .pagination .arrow {
         background-color: rgba(0, 0, 0, 0.2);
+    }
+    // .quantity_item .quantity .dropdown {
+    //     background-color: ;
+    // }
+    .site_header .searchForm .wrapper {
+        background-color: #1F2937;
+        border-color: transparent;
+    }
+    .site_header .date_item input {
+        &::placeholder {
+            color: white;
+        }
+    }
+    .quantity_item .quantity .dropdown {
+        background-color: #1F2937;
+        color: white;
+        h4 {
+            color: white;
+        }
+    }
+    .quantity_item .quantity .qua input {
+        color: white;
+    }
+    .quantity_item .quantity .qua button {
+        color: white;
+    }
+    .blog_hero .blog_items .item,
+    .exploreNearby .list_items li .id {
+        background-color: #1F2937;
+    }
+    .site_footer .menu ul a {
+        color: white;
+        opacity: .6;
+    }
+    .site_footer .socialMedia svg {
+        path {
+            fill: white;
+        }
+    }
+    .exploreNearby .list_items li h3 {
+        color: white;
     }
 }
 
