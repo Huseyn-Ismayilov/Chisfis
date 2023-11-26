@@ -123,7 +123,7 @@
             max-width: 56rem;
             margin: 0 auto;
         }
-        ul {
+        .tab-menu {
             height: 88px;
             display: flex;
             align-items: center;
@@ -200,8 +200,12 @@
             border-radius: 999px;
         }
         .form_item {
-            border-radius: 1242px;
-            padding: 0 20px;
+            border-radius: 999px;
+        }
+        .search_item {
+            .btn {
+                padding: 14px 35px;
+            }
         }
         &.opened {
             z-index: -1;

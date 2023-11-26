@@ -130,6 +130,33 @@
     .exploreNearby .list_items li h3 {
         color: white;
     }
+    .exploreNearby .list_items li {
+        border-color: var(--gray-700);
+        &:hover {
+            background-color: var(--gray-800);
+        }
+    }
+    .search_item input {
+        color: white;
+    }
+    .blogs_list .block  {
+        background-color: #1F2937;
+    }
+    .hero .tabs_wrapper .tabs li.active {
+        color: var(--gray-50);
+    }
+    .blogs_list .pagination ul span {
+        color: white;
+    }
+    .search_item .dropdown {
+        background-color: #1F2937;
+    }
+    .search_item .dropdown ul li span {
+        color: var(--gray-300);
+        &:hover {
+            background-color: var(--gray-600);
+        }
+    }
 }
 
 .light_theme {

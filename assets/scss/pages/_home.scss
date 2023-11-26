@@ -46,6 +46,8 @@
             // }
             li {
                 cursor: pointer;
+                font-weight: 500;
+                color: var(--gray-400);
                 &::before {
                     content: "";
                     background-color: var(--gray-800);
@@ -57,6 +59,7 @@
                     margin-right: 0.5rem;
                 }
                 &.active {
+                    color: var(--gray-800);
                     &::before {
                         opacity: 1;
                     }
@@ -124,9 +127,6 @@
             border-radius: 999px;
         }
     }
-    .mbsc-ios.mbsc-select.mbsc-ltr {
-        background-color: transparent;
-    }
     .item1 {
         flex: 1.5 1;
     }
@@ -142,9 +142,40 @@
         align-items: center;
         justify-content: space-between;
     }
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        aspect-ratio: 1/1;
+        width: 24rem;
+        border-radius: 376.037px;
+        opacity: 0.5;
+        background: rgba(225, 29, 72, 0.2);
+        filter: blur(57px);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 300px;
+        left: 300px;
+        z-index: 0;
+        aspect-ratio: 1/1;
+        width: 24rem;
+        border-radius: 376.037px;
+        opacity: 0.5;
+        background: rgba(4, 120, 87, 0.2);
+        filter: blur(57px);
+    }
 }
 .quantity_item {
     text-align: left;
+    border-radius: 999px;
     position: relative;
     h3 {
         font-size: 18px;
@@ -249,10 +280,16 @@
             }
         }
     }
+    &.active {
+        box-shadow: 0 4px 16px rgba(17, 17, 26, 0.05), 0 8px 32px rgba(17, 17, 26, 0.05);
+    }
 }
 .search_item {
     display: flex;
     align-items: center;
+    position: relative;
+    border-radius: 9999px;
+    text-align: left;
     .btn {
         padding: 23px 25px;
     }
@@ -272,12 +309,59 @@
             color: currentColor;
         }
     }
+    .dropdown {
+        position: absolute;
+        top: calc(100% + 20px);
+        left: 0;
+        background-color: white;
+        z-index: 10;
+        padding: 16px 0;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow:
+            0px 10px 10px -5px rgba(0, 0, 0, 0.04),
+            0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-radius: 1.5rem;
+        h3 {
+            padding: 0 32px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        ul {
+            li {
+                > span {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 16px 32px;
+
+                    &:hover {
+                        background-color: var(--gray-100);
+                    }
+                }
+                span {
+                    color: var(--gray-600);
+                }
+            }
+        }
+        svg {
+            width: 24px;
+            height: auto;
+        }
+    }
     &.active {
-        box-shadow: 0 4px 16px rgba(17,17,26,.05), 0 8px 32px rgba(17,17,26,.05);
+        box-shadow:
+            0 4px 16px rgba(17, 17, 26, 0.05),
+            0 8px 32px rgba(17, 17, 26, 0.05);
         input {
             &::placeholder {
                 color: var(--gray-300);
             }
+        }
+        .dropdown {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }
@@ -291,10 +375,17 @@
         display: block;
     }
 }
-
+@media (min-width: 991px) {
+    .hero {
+        .form_item {
+            height: 92px;
+        }
+    }
+}
 @media (max-width: 991px) {
     .hero {
         padding-top: 32px;
+        overflow: hidden;
         .content {
             padding-right: 0;
             padding-top: 0;
@@ -532,7 +623,13 @@
             border-radius: 24px;
             border: 1px solid var(--gray-200);
             gap: 16px;
+            transition: 0.1s;
             position: relative;
+            &:hover {
+                box-shadow:
+                    0px 10px 10px -5px rgba(0, 0, 0, 0.04),
+                    0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+            }
             .image {
                 width: 96px;
                 img {
@@ -545,7 +642,7 @@
                 color: var(--gray-800);
             }
             span {
-                font-size: .875rem;
+                font-size: 0.875rem;
                 line-height: 1.25rem;
                 color: var(--gray-500);
             }
