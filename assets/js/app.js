@@ -372,9 +372,9 @@ $(function () {
 });
 
 
-$('.sectionVideos .mainVideo .playBtn').click(function () {
-	$(this).style.opacity = 0
-})
+// $('.sectionVideos .mainVideo .playBtn').click(function () {
+// 	$(this).style.opacity = 0
+// })
 
 
 // var player;
@@ -423,4 +423,23 @@ var swiper = new Swiper(".clientSay .slider", {
 		nextEl: '.clientSay .next_arrow',
 		prevEl: '.clientSay .prev_arrow',
 	},
+});
+
+
+
+$('.navMenu .menu .nav_link').click(function () {
+	$(this).next().slideToggle()
+	return false
+})
+
+
+$('.site_header .action_list .toggle, .navMenu .closeBtn').click(function () {
+	$('.navMenu').toggleClass('opened')
+})
+
+
+$(document).click(function (event) {
+	if (!$(event.target).closest(".navMenu .inner, .site_header .action_list .toggle").length) {
+		$("body").find(".navMenu").removeClass("opened");
+	}
 });

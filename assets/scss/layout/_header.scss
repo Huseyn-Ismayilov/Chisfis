@@ -279,43 +279,7 @@
         z-index: 10;
     }
 }
-.mbsc-ios.mbsc-popup-pointer .mbsc-popup-body-round {
-    border-radius: 16px;
-}
-.mbsc-ios.mbsc-label-stacked.mbsc-ltr {
-    font-weight: 600;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    left: 1em;
-    top: 0;
-}
-.md-item-template-title {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    span {
-        height: fit-content;
-        line-height: normal;
-    }
-}
-.mbsc-wheel-checkmark {
-    display: none !important;
-}
-.md-item-template {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 0.4rem;
-    padding-top: 0.4rem;
-}
-.mbsc-ios.mbsc-scroller-pointer .mbsc-wheel-item-checkmark.mbsc-ltr {
-    padding: 0 !important;
-    margin: 0 !important;
-    border-radius: 0 !important;
-}
-.mbsc-ios.mbsc-textfield-wrapper-box,
-.mbsc-ios.mbsc-textfield-wrapper-outline {
-    margin: 0;
-}
+
 .toggle {
     writing-mode: lr;
     display: flex;
@@ -436,5 +400,130 @@
 @media (max-width: 576px) {
     .datepicker {
         min-width: 90%;
+    }
+}
+
+.navMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.74);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: flex-end;
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    .inner {
+        max-width: 448px;
+        height: 100%;
+        background-color: white;
+        position: relative;
+        transform: translateX(100%);
+        transition-duration: .15s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+    }
+    .top {
+        padding: 24px 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--gray-100);
+        > * {
+            margin-bottom: 18px;
+        }
+    }
+    .site_logo {
+        color: var(--indigo-600);
+        display: block;
+        width: 96px;
+        #text {
+            fill: var(--gray-800);
+        }
+        svg {
+            display: block;
+        }
+    }
+    p {
+        font-size: 14px;
+        color: var(--gray-600);
+    }
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .socialMedia {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        a {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--gray-100);
+        }
+        svg {
+            path {
+                fill: var(--gray-700);
+            }
+        }
+    }
+    .menu {
+        padding: 0 10px;
+        .nav_link {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &::after {
+                content: "";
+                background-position: center;
+                background-size: contain;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true' class='ml-2 h-4 w-4 text-neutral-500'%3E%3Cpath fill-rule='evenodd' d='M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .dropdown {
+            padding-left: 30px;
+            margin-bottom: 10px;
+            display: none;
+            a {
+                font-size: 14px;
+                display: block;
+                padding: 6px 10px;
+                
+            }
+        }
+        a {
+            border-radius: 12px;
+            &:hover {
+                background-color: var(--gray-100);
+            }
+        }
+    }
+    .closeBtn {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        z-index: 2;
+        cursor: pointer;
+    }
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+        .inner {
+            transform: translateX(0);
+        }
     }
 }

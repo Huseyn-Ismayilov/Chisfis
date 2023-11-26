@@ -43,12 +43,13 @@
                 color: white;
             }
         }
-        .site_logo #text {
-            fill: white;
-        }
+      
         .search_bar {
             border: 1px solid var(--gray-500);
         }
+    }
+    .site_logo #text {
+        fill: white !important;
     }
     .hero .tabs_wrapper .tabs li::before {
         background-color: white;
@@ -198,7 +199,7 @@
         color: white;
     }
     .datepicker  {
-        background-color: var(--gray-900);
+        background-color: var(--gray-800);
         color: white;
         .datepicker__month-day {
             color: white;
@@ -210,7 +211,65 @@
             color: white;
         }
     }
-    
+    .FeaturePlaces.listings .listingCart {
+        border-color: var(--gray-700);
+    }
+    .checkOut .form_wrap label {
+        color: white;
+    }
+    .checkOut .form_wrap input, .checkOut .form_wrap textarea {
+        background-color: transparent;
+        color: white;
+        border-color: var(--gray-700);
+        &::placeholder {
+            color: white;
+        }
+    }
+    .checkOut .dateRange {
+        border-color: var(--gray-700);
+    }
+    .checkOut .dateRange .range:first-child {
+        border-color: var(--gray-700);
+    }
+    .checkOut .mainContent .block {
+        border-color: var(--gray-700);
+    }
+    .checkOut .sticky  {
+        border-color: var(--gray-700);
+    }
+    .checkOut .sticky .info li.last {
+        border-color: var(--gray-700);
+    }
+    .navMenu .inner {
+        background-color: var(--gray-900);
+    }
+    .navMenu .menu a {
+        &:hover {
+            background-color: var(--gray-800);
+        }
+    }
+    .navMenu .menu .nav_link::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true' class='ml-2 h-4 w-4 text-neutral-500' style=' color: white;%0A'%3E%3Cpath fill-rule='evenodd' d='M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+    }
+    .c-theme-switch {
+        svg {
+           color: white;
+        }
+    }
+    .navMenu p {
+        color: white;
+    }
+    .navMenu .socialMedia a {
+        background-color: var(--gray-800);
+        svg {
+            path {
+                fill: white;
+            }
+        }
+    }
+    .navMenu .top {
+        border-color: var(--gray-700);
+    }
 }
 
 .light_theme {
