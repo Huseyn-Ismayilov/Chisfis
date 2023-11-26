@@ -132,10 +132,14 @@
                 display: flex;
                 align-items: center;
                 position: relative;
+                font-weight: 400;
+                color: var(--gray-500);
                 &:not(:first-child) {
                     margin-left: 30px;
                 }
                 &.active {
+                    font-weight: 500;
+                    color: var(--gray-800);
                     &::after {
                         opacity: 1;
                     }
@@ -173,7 +177,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-right: 10px !important;
         }
         .search_btn {
             width: 3.5rem;
@@ -405,7 +408,12 @@
             .wrapper {
                 border: unset;
                 > .date_item {
-                    padding: 0 35px;
+                    padding: 0 16px;
+                }
+            }
+            .search_item {
+                .btn {
+                    padding: 14px 16px;
                 }
             }
             .search_input {
@@ -422,14 +430,11 @@
             }
         }
     }
+
 }
 
-// @media (max-width: 576px) {
-//     .site_header {
-//         .bg {
-//             &.opened {
-//                 height: 242px;
-//             }
-//         }
-//     }
-// }
+@media (max-width: 576px) {
+    .datepicker {
+        min-width: 90%;
+    }
+}

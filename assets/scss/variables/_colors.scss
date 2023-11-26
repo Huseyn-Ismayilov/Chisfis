@@ -118,6 +118,9 @@
     .exploreNearby .list_items li .id {
         background-color: #1F2937;
     }
+    .site_footer {
+        border-color: var(--gray-700);
+    }
     .site_footer .menu ul a {
         color: white;
         opacity: .6;
@@ -157,6 +160,57 @@
             background-color: var(--gray-600);
         }
     }
+    .addListing .wrap {
+        border-color: var(--gray-700);
+    }
+    .addListing .stepCount span {
+        color: var(--gray-100);
+    }
+    .addListing .listingCart {
+        border-color: var(--gray-700);
+    }
+    .addListing .btn.primary:hover {
+        background-color: var(--gray-800);
+    }
+    .addListing .form_wrap .form_element label {
+        color: white;
+    }
+    .addListing .form_wrap .form_element select {
+        color: white;
+        background-color: var(--gray-900);
+    }
+    .addListing .form_wrap .form_element .currentLocation {
+        color: white;
+    }
+    .addListing .form_wrap .form_element input, .addListing .form_wrap .form_element textarea {
+        background-color: transparent;
+        color: white;
+        border-color: var(--gray-700);
+    }
+    .addListing .form_wrap .form_element .quantity_wrap button {
+        color: white;
+    }
+    .checkbox span {
+        color: white;
+    }
+    .addListing .addTag input {
+        background-color: transparent;
+        color: white;
+    }
+    .datepicker  {
+        background-color: var(--gray-900);
+        color: white;
+        .datepicker__month-day {
+            color: white;
+        }
+        .datepicker__month-day--invalid {
+            opacity: .3;
+        }
+        .datepicker__info--help {
+            color: white;
+        }
+    }
+    
 }
 
 .light_theme {

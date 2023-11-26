@@ -78,6 +78,8 @@
         }
         .aside {
             width: 33.3333%;
+            position: relative;
+            z-index: 3;
         }
     }
     .listingSection {
@@ -283,7 +285,6 @@
             }
         }
 
-
         .info {
             margin: 32px 0;
             li {
@@ -301,9 +302,21 @@
                 }
             }
         }
-        .btn {
+        > .btn {
             width: 100%;
             padding: 12px 24px;
+        }
+        .quantity_item {
+            border-radius: 0 0 22px 22px;
+            .quantity {
+                .btn {
+                    padding: 0;
+                    justify-content: flex-start;
+                }
+            }
+            .dropdown {
+                border: 1px solid var(--gray-200);
+            }
         }
     }
     .googleMap {
@@ -321,11 +334,22 @@
         gap: 13px;
         padding: 12px;
         cursor: pointer;
+        position: relative;
+
         &:first-child {
             border-bottom: 1px solid var(--gray-200);
         }
         span {
             display: block;
+        }
+        input {
+            border: unset;
+            background-color: transparent;
+        }
+        #datepicker-2 {
+            right: 0;
+            top: calc(100% + 20px);
+            z-index: 9999;
         }
     }
 }
