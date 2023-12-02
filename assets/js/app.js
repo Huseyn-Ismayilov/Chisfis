@@ -222,7 +222,7 @@ const largeSlider = () => {
 		let sliderLength = slider.children[0].children.length
 		let result = (sliderLength > 1) ? true : false
 		const swiper = new Swiper(slider, {
-			loop: result,
+			// loop: result,
 			navigation: {
 				nextEl: nextArrow[index],
 				prevEl: prevArrow[index],
@@ -230,7 +230,6 @@ const largeSlider = () => {
 			speed: 1000,
 			pagination: {
 				el: `.listingCart .swiper-pagination`,
-				type: 'progressbar',
 			},
 		});
 	})
@@ -439,7 +438,17 @@ $(document).click(function (event) {
 });
 
 
-
+var stickyCagorySlider = new Swiper(".stickyCagorySlider .slider", {
+	slidesPerView: "auto",
+	pagination: {
+		el: ".stickyCagorySlider .swiper-pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.stickyCagorySlider .next_arrow',
+		prevEl: '.stickyCagorySlider .prev_arrow',
+	},
+});
 
 // $.boceksoft = {
 // 	calendarShow: function (eventPick, number) {
@@ -742,4 +751,7 @@ var demo14 = new HotelDatepicker(document.querySelector(".dateRange .asideDatePi
 
 Fancybox.bind('.listingGallery a', {
 	groupAll: true,
-});  
+});
+
+
+

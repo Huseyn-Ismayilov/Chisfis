@@ -281,6 +281,20 @@
     .listingDetailPage .mainContent .main .btn {
         color: white;
     }
+    .stickyCagorySlider {
+        background-color: var(--gray-800);
+        .categortItem {
+            img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+            }
+        }
+    }
+    .stickyCagorySlider .arrow {
+        background-color: var(--gray-500);
+    }
+    .stickyCagorySlider .categortItem::after {
+        background-color: white;
+    }
 }
 
 .light_theme {

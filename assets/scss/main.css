@@ -396,6 +396,18 @@ h1 {
 .dark_theme .listingDetailPage .mainContent .main .btn {
   color: white;
 }
+.dark_theme .stickyCagorySlider {
+  background-color: var(--gray-800);
+}
+.dark_theme .stickyCagorySlider .categortItem img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+.dark_theme .stickyCagorySlider .arrow {
+  background-color: var(--gray-500);
+}
+.dark_theme .stickyCagorySlider .categortItem::after {
+  background-color: white;
+}
 
 .light_theme .mbsc-windows.mbsc-popup {
   background-color: white !important;
@@ -1849,6 +1861,7 @@ datepicker__buttons {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
+  visibility: visible;
   z-index: 1;
   transform: scaleX(1) scaleY(1) translateY(0);
   transform-origin: top center;
@@ -1857,6 +1870,12 @@ datepicker__buttons {
   width: 100%;
   max-width: 56rem;
   margin: 0 auto;
+}
+.site_header .searchForm.opened {
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleX(0.395) scaleY(0.6) translateY(-90px);
 }
 .site_header .searchForm .tab-menu {
   height: 88px;
@@ -1943,11 +1962,6 @@ datepicker__buttons {
   justify-content: flex-start;
   padding: 14px 35px;
 }
-.site_header .searchForm.opened {
-  z-index: -1;
-  opacity: 0;
-  transform: scaleX(0.395) scaleY(0.6) translateY(-90px);
-}
 .site_header .action_list {
   display: flex;
   align-items: center;
@@ -1995,6 +2009,99 @@ datepicker__buttons {
 }
 .site_header .bg.opened {
   height: 185px;
+}
+
+.stickyCagorySlider {
+  position: sticky;
+  top: 88px;
+  left: 0;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  background-color: white;
+}
+.stickyCagorySlider .swiper-slide {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  margin-right: 36px;
+}
+.stickyCagorySlider .slider {
+  overflow: hidden;
+  position: relative;
+  padding: 0 20px;
+}
+.stickyCagorySlider .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  z-index: 4;
+}
+.stickyCagorySlider .arrow.swiper-button-disabled {
+  opacity: 0;
+}
+.stickyCagorySlider .prev_arrow {
+  left: 0;
+}
+.stickyCagorySlider .next_arrow {
+  right: 0;
+}
+.stickyCagorySlider .categortItem {
+  text-align: center;
+  opacity: 0.7;
+  position: relative;
+  padding: 15px 0;
+  min-width: 56px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+.stickyCagorySlider .categortItem .icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.stickyCagorySlider .categortItem img {
+  width: 100%;
+  height: 100%;
+}
+.stickyCagorySlider .categortItem span {
+  font-size: 11px;
+  font-weight: 500;
+  display: block;
+}
+.stickyCagorySlider .categortItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  background-color: black;
+}
+.stickyCagorySlider .categortItem.active {
+  opacity: 1;
+}
+.stickyCagorySlider .categortItem.active span {
+  font-weight: 600;
+}
+.stickyCagorySlider .categortItem.active::after {
+  opacity: 1;
+}
+.stickyCagorySlider .categortItem:not(.active):hover {
+  opacity: 1;
+}
+.stickyCagorySlider .categortItem:not(.active):hover::after {
+  opacity: 0.1;
 }
 
 .page_overlay {
@@ -2099,6 +2206,19 @@ datepicker__buttons {
   }
   .site_header > .container > .wrapper {
     height: 65px;
+  }
+  .stickyCagorySlider {
+    top: 65px;
+  }
+  .stickyCagorySlider .slider {
+    padding: 0 24px;
+    margin: 0 -16px;
+  }
+  .stickyCagorySlider .arrow {
+    display: none;
+  }
+  .stickyCagorySlider .swiper-slide {
+    margin-right: 16px;
   }
 }
 @media (max-width: 576px) {
@@ -2745,6 +2865,8 @@ datepicker__buttons {
 }
 .FeaturePlaces.listings .wrapper {
   background-color: transparent;
+  padding: 0;
+  margin: 20px 0;
 }
 .FeaturePlaces.listings .tags {
   display: flex;
