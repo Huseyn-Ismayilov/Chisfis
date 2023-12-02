@@ -1,0 +1,28 @@
+.reservCheck {
+    margin: 100px 0;
+    .sec_title {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+    }
+    .form_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 24px;
+        padding-bottom: 24px;
+        .form_element {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            border: 1px solid var(--gray-200);
+            padding: 16px;
+            border-radius: 12px;
+        }
+    }
+    button {
+        float: right;
+    }
+}

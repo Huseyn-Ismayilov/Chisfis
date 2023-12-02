@@ -207,6 +207,8 @@
         }
         .search_item {
             .btn {
+                width: 100%;
+                justify-content: flex-start;
                 padding: 14px 35px;
             }
         }
@@ -392,6 +394,9 @@
             &.opened {
                 height: 333px;
             }
+        }
+        > .container > .wrapper {
+            height: 65px;
         }
     }
 

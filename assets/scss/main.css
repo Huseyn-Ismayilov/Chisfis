@@ -143,8 +143,8 @@ h1 {
   --indigo-600: #4f46e5;
   --indigo-500: #6366f1;
   --indigo-400: #818cf8;
-  --indigo-100: #E0E7FF;
-  --indigo-50: #EEF2FF;
+  --indigo-100: #e0e7ff;
+  --indigo-50: #eef2ff;
 }
 
 .dark_theme .mbsc-windows.mbsc-popup {
@@ -212,7 +212,7 @@ h1 {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .dark_theme .site_header .searchForm .wrapper {
-  background-color: #1F2937;
+  background-color: #1f2937;
   border-color: transparent;
 }
 .dark_theme .site_header .date_item input::-moz-placeholder {
@@ -222,7 +222,7 @@ h1 {
   color: white;
 }
 .dark_theme .quantity_item .quantity .dropdown {
-  background-color: #1F2937;
+  background-color: #1f2937;
   color: white;
 }
 .dark_theme .quantity_item .quantity .dropdown h4 {
@@ -236,7 +236,7 @@ h1 {
 }
 .dark_theme .blog_hero .blog_items .item,
 .dark_theme .exploreNearby .list_items li .id {
-  background-color: #1F2937;
+  background-color: #1f2937;
 }
 .dark_theme .site_footer {
   border-color: var(--gray-700);
@@ -261,7 +261,7 @@ h1 {
   color: white;
 }
 .dark_theme .blogs_list .block {
-  background-color: #1F2937;
+  background-color: #1f2937;
 }
 .dark_theme .hero .tabs_wrapper .tabs li.active {
   color: var(--gray-50);
@@ -270,7 +270,7 @@ h1 {
   color: white;
 }
 .dark_theme .search_item .dropdown {
-  background-color: #1F2937;
+  background-color: #1f2937;
 }
 .dark_theme .search_item .dropdown ul li span {
   color: var(--gray-300);
@@ -300,7 +300,8 @@ h1 {
 .dark_theme .addListing .form_wrap .form_element .currentLocation {
   color: white;
 }
-.dark_theme .addListing .form_wrap .form_element input, .dark_theme .addListing .form_wrap .form_element textarea {
+.dark_theme .addListing .form_wrap .form_element input,
+.dark_theme .addListing .form_wrap .form_element textarea {
   background-color: transparent;
   color: white;
   border-color: var(--gray-700);
@@ -334,7 +335,8 @@ h1 {
 .dark_theme .checkOut .form_wrap label {
   color: white;
 }
-.dark_theme .checkOut .form_wrap input, .dark_theme .checkOut .form_wrap textarea {
+.dark_theme .checkOut .form_wrap input,
+.dark_theme .checkOut .form_wrap textarea {
   background-color: transparent;
   color: white;
   border-color: var(--gray-700);
@@ -342,7 +344,8 @@ h1 {
 .dark_theme .checkOut .form_wrap input::-moz-placeholder, .dark_theme .checkOut .form_wrap textarea::-moz-placeholder {
   color: white;
 }
-.dark_theme .checkOut .form_wrap input::placeholder, .dark_theme .checkOut .form_wrap textarea::placeholder {
+.dark_theme .checkOut .form_wrap input::placeholder,
+.dark_theme .checkOut .form_wrap textarea::placeholder {
   color: white;
 }
 .dark_theme .checkOut .dateRange {
@@ -383,6 +386,15 @@ h1 {
 }
 .dark_theme .navMenu .top {
   border-color: var(--gray-700);
+}
+.dark_theme .listingDetailPage .roomRates .list li:nth-child(odd) {
+  background-color: var(--gray-700);
+}
+.dark_theme .listingDetailPage .sticky .price span {
+  color: var(--gray-300);
+}
+.dark_theme .listingDetailPage .mainContent .main .btn {
+  color: white;
 }
 
 .light_theme .mbsc-windows.mbsc-popup {
@@ -1095,9 +1107,16 @@ button.swiper-pagination-bullet {
   border-radius: 24px;
   overflow: hidden;
   background-color: white;
+  display: flex;
+  position: relative;
+  transition: 0.15s;
 }
 .listingCart .image {
   position: relative;
+  overflow: hidden;
+  width: 232px;
+  margin: 12px;
+  border-radius: 12px;
 }
 .listingCart .image::after {
   content: "";
@@ -1119,14 +1138,14 @@ button.swiper-pagination-bullet {
 .listingCart .image img {
   -o-object-fit: cover;
      object-fit: cover;
-  aspect-ratio: 30/22;
+  aspect-ratio: 1/1;
   width: 100%;
 }
 .listingCart .image .saleOff {
   position: absolute;
   left: 12px;
   top: 12px;
-  background-color: var(--red-700);
+  background-color: #F97316;
   color: white;
   font-size: 12px;
   padding: 2px 12px;
@@ -1161,6 +1180,7 @@ button.swiper-pagination-bullet {
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
+  transition: 0.15s;
   background-color: white;
   opacity: 0;
 }
@@ -1172,6 +1192,7 @@ button.swiper-pagination-bullet {
 }
 .listingCart .details {
   padding: 16px;
+  flex-grow: 1;
 }
 .listingCart .details h5 {
   font-size: var(--text-sm);
@@ -1216,10 +1237,32 @@ button.swiper-pagination-bullet {
   color: var(--gray-500);
   font-weight: 400;
 }
+.listingCart .link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.listingCart:hover {
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
+}
 .listingCart:hover .image .arrow {
   opacity: 1;
 }
 
+@media (max-width: 576px) {
+  .listingCart {
+    flex-direction: column;
+  }
+  .listingCart .image {
+    width: calc(100% - 24px);
+  }
+}
 .sec_title {
   margin-bottom: 56px;
 }
@@ -1896,6 +1939,8 @@ datepicker__buttons {
   border-radius: 999px;
 }
 .site_header .searchForm .search_item .btn {
+  width: 100%;
+  justify-content: flex-start;
   padding: 14px 35px;
 }
 .site_header .searchForm.opened {
@@ -2051,6 +2096,9 @@ datepicker__buttons {
   }
   .site_header .bg.opened {
     height: 333px;
+  }
+  .site_header > .container > .wrapper {
+    height: 65px;
   }
 }
 @media (max-width: 576px) {
@@ -2691,8 +2739,9 @@ datepicker__buttons {
 }
 .FeaturePlaces .listItems {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
+  width: 100%;
 }
 .FeaturePlaces.listings .wrapper {
   background-color: transparent;
@@ -2727,11 +2776,6 @@ datepicker__buttons {
   border: 1px solid var(--gray-100);
 }
 
-@media (max-width: 1200px) {
-  .FeaturePlaces .listItems {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 @media (max-width: 991px) {
   .FeaturePlaces .head .btn {
     display: none;
@@ -2741,7 +2785,7 @@ datepicker__buttons {
     padding: 10px 20px;
   }
   .FeaturePlaces .listItems {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 576px) {
@@ -3183,6 +3227,34 @@ datepicker__buttons {
 .listingDetailPage .roomRates .list li:nth-child(odd) {
   background-color: var(--gray-100);
 }
+.listingDetailPage .roomRates .datepicker {
+  position: static;
+  box-shadow: unset;
+}
+.listingDetailPage .roomRates .datepicker .datepicker__month-day {
+  position: relative;
+}
+.listingDetailPage .roomRates .datepicker .datepicker__month-day::after {
+  content: attr(title);
+  font-size: 11px;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+.listingDetailPage .roomRates .datepicker .datepicker__month-day span {
+  display: block;
+  font-weight: 600;
+}
+.listingDetailPage .roomRates input {
+  display: none;
+}
+.listingDetailPage .roomRates .datepicker__inner {
+  padding: 0;
+}
 .listingDetailPage .line {
   margin: 24px 0;
   width: 100%;
@@ -3363,6 +3435,11 @@ datepicker__buttons {
   border-radius: 16px;
 }
 
+.datepicker .datepicker__month-day span {
+  display: block;
+  font-weight: 600;
+}
+
 .dateRange {
   border: 1px solid var(--gray-200);
   border-radius: 24px;
@@ -3375,22 +3452,34 @@ datepicker__buttons {
   cursor: pointer;
   position: relative;
 }
+.dateRange .range > div {
+  flex-grow: 1;
+}
 .dateRange .range:first-child {
   border-bottom: 1px solid var(--gray-200);
 }
-.dateRange .range span {
+.dateRange .range > span {
   display: block;
 }
 .dateRange .range input {
   border: unset;
+  padding: 0;
   background-color: transparent;
 }
-.dateRange .range #datepicker-2 {
+.dateRange .range .datepicker {
   right: 0;
   top: calc(100% + 20px);
   z-index: 9999;
 }
 
+@media (min-width: 991px) {
+  .listingDetailPage .roomRates .datepicker {
+    width: 100%;
+  }
+  .listingDetailPage .roomRates .datepicker .datepicker__month {
+    width: 47%;
+  }
+}
 @media (max-width: 991px) {
   .listingDetailPage .listingSection {
     padding: 0;
@@ -4352,7 +4441,6 @@ datepicker__buttons {
   border-bottom: 1px solid var(--gray-100);
 }
 .addListing .listingCart {
-  max-width: 300px;
   border: 1px solid var(--gray-100);
   margin-bottom: 32px;
 }
@@ -4436,4 +4524,32 @@ datepicker__buttons {
   .addListing .checkbox_list {
     grid-template-columns: 1fr;
   }
+}
+.reservCheck {
+  margin: 100px 0;
+}
+.reservCheck .sec_title {
+  width: 100%;
+}
+.reservCheck form {
+  width: 100%;
+}
+.reservCheck .form_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  padding-bottom: 24px;
+}
+.reservCheck .form_wrap .form_element {
+  width: 100%;
+}
+.reservCheck .form_wrap input {
+  width: 100%;
+  border: 1px solid var(--gray-200);
+  padding: 16px;
+  border-radius: 12px;
+}
+.reservCheck button {
+  float: right;
 }/*# sourceMappingURL=main.css.map */

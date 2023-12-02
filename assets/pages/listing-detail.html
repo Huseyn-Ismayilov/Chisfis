@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chisfis</title>
     <link rel="stylesheet" href="../scss/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
 <body class="light_theme">
@@ -60,7 +61,7 @@
         <div class="container">
             <div class="wrapper">
                 <div class="left">
-                    <a href="" class="site_logo">
+                    <a href="../../index.html" class="site_logo">
                         <svg class="dark_block" viewBox="0 0 65 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M24.4444 14.0325C24.4444 21.4807 12.9444 29.3945 12.9444 29.3945C12.9444 29.3945 1.44444 21.4807 1.44444 14.0325C1.44444 7.51522 6.84722 2.39453 12.9444 2.39453C19.0417 2.39453 24.4444 7.51522 24.4444 14.0325Z"
@@ -786,7 +787,7 @@
                 </div>
                 <div class="right">
                     <div class="action_list">
-                        <a href="" class="list_property">List your property</a>
+                        <a href="./add-listing-1.html" class="list_property">List your property</a>
                         <button type="button" class="action_item c-theme-switch">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-7 h-7">
@@ -808,7 +809,7 @@
                                 <img src="../images/Image-1.90baa8cc883db8970fda.png" alt="">
                             </div>
                         </button>
-                     <button type="button" class="action_item toggle">
+                        <button type="button" class="action_item toggle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="h-7 w-7"
                                 viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd"
@@ -829,7 +830,9 @@
                 <div class="listingGallery">
                     <div class="wrapper">
                         <div class="main_img">
-                            <img src="../images/pexels-photo-6129967.jpeg" alt="">
+                            <a href="../images/pexels-photo-6129967.jpeg">
+                                <img src="../images/pexels-photo-6129967.jpeg" alt="">
+                            </a>
                             <div class="showAll">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5 h-5">
@@ -841,10 +844,18 @@
                             </div>
                         </div>
                         <div class="nav_imgs">
-                            <img src="../images/image7.png" alt="">
-                            <img src="../images/image7.png" alt="">
-                            <img src="../images/image7.png" alt="">
-                            <img src="../images/image7.png" alt="">
+                            <a href="../images/image7.png">
+                                <img src="../images/image7.png" alt="">
+                            </a>
+                            <a href="../images/image7.png">
+                                <img src="../images/image7.png" alt="">
+                            </a>
+                            <a href="../images/image7.png">
+                                <img src="../images/image7.png" alt="">
+                            </a>
+                            <a href="../images/image7.png">
+                                <img src="../images/image7.png" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1097,7 +1108,7 @@
                                 <h2>Availability</h2>
                                 <p>Prices may increase on weekends or holidays</p>
                                 <div class="line"></div>
-                                <input type="text" class="inlineDatePicker" style="display: none;">
+                                <input type="text" class="inlineDatePicker" id="calendar">
                             </div>
                         </div>
                         <div class="listingSection">
@@ -1632,6 +1643,10 @@
     </footer>
     <script src="../js/fecha.min.js"></script>
     <script src="../js/hotel-datepicker.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="../js/app.js"></script>
     <script>
         var demo1 = new HotelDatepicker(
             document.querySelector(".searchForm .date_item input"),
@@ -1639,24 +1654,9 @@
                 noCheckInDaysOfWeek: ['Monday', 'Tuesday']
             }
         );
-        var demo2 = new HotelDatepicker(
-            document.querySelector(".dateRange .asideDatePicker"),
-            {
-                noCheckInDaysOfWeek: ['Monday', 'Tuesday']
-            }
-        );
-        var demo3 = new HotelDatepicker(
-            document.querySelector(".inlineDatePicker"),
-            {
-                inline: true,
-                clearButton: true,
-                noCheckInDaysOfWeek: ['Monday', 'Tuesday']
-            }
-        );
+
+
     </script>
-    <script src="../js/swiper-bundle.min.js"></script>
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/app.js"></script>
 </body>
 
 </html>

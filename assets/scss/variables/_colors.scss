@@ -20,8 +20,8 @@
     --indigo-600: #4f46e5;
     --indigo-500: #6366f1;
     --indigo-400: #818cf8;
-    --indigo-100: #E0E7FF;
-    --indigo-50: #EEF2FF;
+    --indigo-100: #e0e7ff;
+    --indigo-50: #eef2ff;
 }
 
 .dark_theme {
@@ -43,7 +43,7 @@
                 color: white;
             }
         }
-      
+
         .search_bar {
             border: 1px solid var(--gray-500);
         }
@@ -94,7 +94,7 @@
     //     background-color: ;
     // }
     .site_header .searchForm .wrapper {
-        background-color: #1F2937;
+        background-color: #1f2937;
         border-color: transparent;
     }
     .site_header .date_item input {
@@ -103,7 +103,7 @@
         }
     }
     .quantity_item .quantity .dropdown {
-        background-color: #1F2937;
+        background-color: #1f2937;
         color: white;
         h4 {
             color: white;
@@ -117,14 +117,14 @@
     }
     .blog_hero .blog_items .item,
     .exploreNearby .list_items li .id {
-        background-color: #1F2937;
+        background-color: #1f2937;
     }
     .site_footer {
         border-color: var(--gray-700);
     }
     .site_footer .menu ul a {
         color: white;
-        opacity: .6;
+        opacity: 0.6;
     }
     .site_footer .socialMedia svg {
         path {
@@ -143,8 +143,8 @@
     .search_item input {
         color: white;
     }
-    .blogs_list .block  {
-        background-color: #1F2937;
+    .blogs_list .block {
+        background-color: #1f2937;
     }
     .hero .tabs_wrapper .tabs li.active {
         color: var(--gray-50);
@@ -153,7 +153,7 @@
         color: white;
     }
     .search_item .dropdown {
-        background-color: #1F2937;
+        background-color: #1f2937;
     }
     .search_item .dropdown ul li span {
         color: var(--gray-300);
@@ -183,7 +183,8 @@
     .addListing .form_wrap .form_element .currentLocation {
         color: white;
     }
-    .addListing .form_wrap .form_element input, .addListing .form_wrap .form_element textarea {
+    .addListing .form_wrap .form_element input,
+    .addListing .form_wrap .form_element textarea {
         background-color: transparent;
         color: white;
         border-color: var(--gray-700);
@@ -198,14 +199,14 @@
         background-color: transparent;
         color: white;
     }
-    .datepicker  {
+    .datepicker {
         background-color: var(--gray-800);
         color: white;
         .datepicker__month-day {
             color: white;
         }
         .datepicker__month-day--invalid {
-            opacity: .3;
+            opacity: 0.3;
         }
         .datepicker__info--help {
             color: white;
@@ -217,7 +218,8 @@
     .checkOut .form_wrap label {
         color: white;
     }
-    .checkOut .form_wrap input, .checkOut .form_wrap textarea {
+    .checkOut .form_wrap input,
+    .checkOut .form_wrap textarea {
         background-color: transparent;
         color: white;
         border-color: var(--gray-700);
@@ -234,7 +236,7 @@
     .checkOut .mainContent .block {
         border-color: var(--gray-700);
     }
-    .checkOut .sticky  {
+    .checkOut .sticky {
         border-color: var(--gray-700);
     }
     .checkOut .sticky .info li.last {
@@ -253,7 +255,7 @@
     }
     .c-theme-switch {
         svg {
-           color: white;
+            color: white;
         }
     }
     .navMenu p {
@@ -269,6 +271,15 @@
     }
     .navMenu .top {
         border-color: var(--gray-700);
+    }
+    .listingDetailPage .roomRates .list li:nth-child(odd) {
+        background-color: var(--gray-700);
+    }
+    .listingDetailPage .sticky .price span {
+        color: var(--gray-300);
+    }
+    .listingDetailPage .mainContent .main .btn {
+        color: white;
     }
 }
 
