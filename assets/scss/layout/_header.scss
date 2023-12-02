@@ -465,6 +465,10 @@
             }
             .quantity_item {
                 flex-direction: column;
+                position: static;
+                .quantity {
+                    position: relative;
+                }
             }
             .wrapper {
                 border: unset;
@@ -476,6 +480,12 @@
                 .btn {
                     padding: 14px 16px;
                 }
+            }
+            .search_btn {
+                position: absolute;
+                margin-right: 0;
+                bottom:-30px;
+                transform: translateY(50%);
             }
             .search_input {
                 margin-bottom: 12px;

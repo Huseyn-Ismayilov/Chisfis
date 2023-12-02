@@ -529,7 +529,7 @@
         }
     }
 }
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
     .FeaturePlaces {
         .head {
             .btn {
@@ -542,13 +542,6 @@
                 padding: 10px 20px;
             }
         }
-        .listItems {
-            grid-template-columns: 1fr;
-        }
-    }
-}
-@media (max-width: 576px) {
-    .FeaturePlaces {
         .listItems {
             grid-template-columns: 1fr;
         }

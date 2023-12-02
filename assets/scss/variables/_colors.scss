@@ -295,6 +295,9 @@
     .stickyCagorySlider .categortItem::after {
         background-color: white;
     }
+    .listingCart .save_btn {
+        background-color: var(--gray-700);
+    }
 }
 
 .light_theme {
