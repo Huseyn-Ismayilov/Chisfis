@@ -3517,6 +3517,7 @@ datepicker__buttons {
   font-weight: 500;
   color: var(--indigo-800);
   background-color: var(--indigo-100);
+  white-space: nowrap;
 }
 .listingDetailPage .preview .top .btn {
   padding: 0;
