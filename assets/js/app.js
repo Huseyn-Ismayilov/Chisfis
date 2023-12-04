@@ -649,35 +649,18 @@ var stickyCagorySlider = new Swiper(".stickyCagorySlider .slider", {
 // }
 
 
-// var demo29 = new HotelDatepicker(document.querySelector(".inlineDatePicker"), {
-// 	extraDayText: function (date, attributes) {
-// 		if (date === fecha.format(testDate, "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-// 			return "$150";
-// 		}
-// 	},
-// });
-
-// var demo29 = new HotelDatepicker(
-// 	document.querySelector(".inlineDatePicker"),
-// 	{
-// 		inline: true,
-// 		minNights: 2,
-// 		disabledDates: [
-// 			'2023-12-09',
-// 			'2023-12-05',
-// 			'2023-12-08',
-// 			'2023-12-10',
-// 			'2023-12-13',
-// 			'2023-12-23'
-// 		]
-// 	}
-// );
-
-// var testDate = new Date();
-// testDate.setDate(testDate.getDate() + 2);
-
 var demo3 = new HotelDatepicker(document.querySelector(".inlineDatePicker"), {
 	inline: true,
+	moveBothMonths: true,
+	showTopbar: false,
+	disabledDates: [
+        '2023-12-12',
+        '2023-12-08',
+        '2023-12-11',
+        '2023-12-13',
+        '2023-12-16',
+        '2023-12-26'
+    ],
 	extraDayText: function (date, attributes) {
 		if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
 			return "<span>$110</span>";
@@ -709,7 +692,9 @@ var demo3 = new HotelDatepicker(document.querySelector(".inlineDatePicker"), {
 // 	}
 // );
 var demo14 = new HotelDatepicker(document.querySelector(".dateRange .asideDatePicker"), {
-	// inline: true,
+	moveBothMonths: true,
+	showTopbar: false,
+
 	extraDayText: function (date, attributes) {
 		if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
 			return "<span>$110</span>";
@@ -732,8 +717,30 @@ var demo14 = new HotelDatepicker(document.querySelector(".dateRange .asideDatePi
 		if (date === fecha.format(new Date("2024-1-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
 			return "<span>$63</span>";
 		}
+	},
+	disabledDates: [
+        '2023-12-12',
+        '2023-12-08',
+        '2023-12-11',
+        '2023-12-13',
+        '2023-12-16',
+        '2023-12-26'
+    ],
+	onSelectRange: function () {
+		$('.listingDetailPage .sticky .hiddenForm').slideDown(400)
+		$('.listingDetailPage .dateRange').addClass('active')
+		datepicker.hide();
 	}
 });
+var demo1 = new HotelDatepicker(
+	document.querySelector(".searchForm .date_item input"),
+	{
+		showTopbar: false,
+		moveBothMonths: true,
+		// noCheckInDaysOfWeek: ['Monday', 'Tuesday']
+	}
+);
+
 // var demo23 = new HotelDatepicker(
 // 	document.querySelector(".inlineDatePicker"),
 // 	{
@@ -755,3 +762,78 @@ Fancybox.bind('.listingGallery a', {
 
 
 
+
+var input = document.querySelector("#phone");
+var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+window.addEventListener("load", function () {
+
+	errorMsg = document.querySelector("#error-msg"),
+		validMsg = document.querySelector("#valid-msg");
+	var iti = window.intlTelInput(input, {
+		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@16.0.2/build/js/utils.js"
+	});
+	window.intlTelInput(input, {
+		// allowDropdown: false,
+		// autoHideDialCode: false,
+		// autoPlaceholder: "off",
+		// dropdownContainer: document.body,
+		// excludeCountries: ["us"],
+		// formatOnDisplay: false,
+		geoIpLookup: function (callback) {
+			$.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
+				var countryCode = (resp && resp.country) ? resp.country : "";
+				callback(countryCode);
+			});
+		},
+		// hiddenInput: "full_number",
+		initialCountry: "auto",
+
+		localizedCountries: { 'Tr': 'Turk' },
+		//nationalMode: false,
+		// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+		placeholderNumberType: "MOBILE",
+		// preferredCountries: ['cn', 'jp'],
+		// separateDialCode: true,
+		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@16.0.2/build/js/utils.js",
+	});
+	$(validMsg).addClass("hide");
+	input.addEventListener('blur', function () {
+		reset();
+		if (input.value.trim()) {
+			if (iti.isValidNumber()) {
+				validMsg.classList.remove("hide");
+			} else {
+				input.classList.add("error");
+				var errorCode = iti.getValidationError();
+				errorMsg.innerHTML = errorMap[errorCode];
+				errorMsg.classList.remove("hide");
+			}
+		}
+	});
+
+	input.addEventListener('change', reset);
+	input.addEventListener('keyup', reset);
+});
+
+
+var reset = function () {
+	input.classList.remove("error");
+	errorMsg.innerHTML = "";
+	errorMsg.classList.add("hide");
+	validMsg.classList.add("hide");
+};
+$(document).ready(function () {
+	$("#phone").val("+907773859");
+});
+
+
+
+$(".listingDetailNav .reserve_btn, .datePickerForm .sticky .closeBtn").click(function() {
+	$(".datePickerForm").toggleClass('active')
+	$("body").toggleClass('overflow_hidden')
+})
+
+$(".datePickerForm .yourTrip .bookDetails, .datePickerForm .bookingDetails .closeBtn").click(function() {
+	$(".datePickerForm .bookingDetails").toggleClass('active')
+	$(".datePickerForm").toggleClass('overflowHidden')
+})

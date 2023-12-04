@@ -261,14 +261,15 @@
     gap: 8px;
     cursor: pointer;
     input {
-        width: 20px;
-        height: 20px;
-        border-radius: 4px;
+        width: 20px !important;
+        height: 20px !important;
+        border-radius: 4px !important;
+        padding: 0 !important;
         appearance: none;
         background-size: contain;
         background-position: center;
         background-position: center;
-        border: 1px solid var(--gray-300);
+        border: 1px solid var(--gray-300) !important;
         &:checked {
             border-color: transparent;
             background-color: var(--indigo-600);

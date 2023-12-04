@@ -8,6 +8,7 @@
     <title>Chisfis</title>
     <link rel="stylesheet" href="../scss/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/intl-tel-input@16.0.2/build/css/intlTelInput.css'>
 </head>
 
 <body class="light_theme">
@@ -824,6 +825,298 @@
         <div class="bg"></div>
     </header>
     <div class="page_overlay"></div>
+    <div class="listingDetailNav">
+        <div class="container">
+            <div class="wrapper">
+                <div class="left">
+                    <div class="price">
+                        <span>$119</span>/night
+                    </div>
+                    <div class="date">Feb 06 - Feb 23</div>
+                </div>
+                <button type="button" class="btn purple reserve_btn">Reserve</button>
+            </div>
+        </div>
+    </div>
+    <div class="datePickerForm">
+        <div class="sticky listingSection">
+            <div class="top">
+                <h2>Confirm and payment</h2>
+            </div>
+            <div class="yourTrip">
+                <h3>Your trip</h3>
+                <div class="bookDetails">View booking details</div>
+            </div>
+            <div class="dateRange">
+                <label class="range">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.33333 8.16667V3.5M18.6667 8.16667V3.5M8.16667 12.8333H19.8333M5.83333 24.5H22.1667C23.4553 24.5 24.5 23.4553 24.5 22.1667V8.16667C24.5 6.878 23.4553 5.83333 22.1667 5.83333H5.83333C4.54467 5.83333 3.5 6.878 3.5 8.16667V22.1667C3.5 23.4553 4.54467 24.5 5.83333 24.5Z"
+                            stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <div>
+                        <input type="text" class="" placeholder="Feb 06 - Feb 23">
+                        <h4>Check in - Check out</h4>
+                    </div>
+                </label>
+                <div class="range quantity_item">
+                    <div class="quantity">
+                        <div class="btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                class="w-5 h-5 lg:w-7 lg:h-7">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z">
+                                </path>
+                            </svg>
+                            <div>
+                                <h3>4 Guests</h3>
+                                <span>Guests</span>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <div class="item">
+                                <div class="text">
+                                    <h4>Adults</h4>
+                                    <span>Ages 13 or above</span>
+                                </div>
+                                <div class="qua">
+                                    <button type="button" id="sub" class="sub">-</button>
+                                    <input class="count" type="text" id="value1 1" value="1" min="1" max="10">
+                                    <button type="button" id="add" class="add">+</button>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text">
+                                    <h4>Children</h4>
+                                    <span>Ages 2–12</span>
+                                </div>
+                                <div class="qua">
+                                    <button type="button" id="sub" class="sub">-</button>
+                                    <input class="count" type="text" id="value2 1" value="1" min="1" max="10">
+                                    <button type="button" id="add" class="add">+</button>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text">
+                                    <h4>Infants</h4>
+                                    <span>Ages 0–2</span>
+                                </div>
+                                <div class="qua">
+                                    <button type="button" id="sub" class="sub">-</button>
+                                    <input class="count" type="text" id="value3 1" value="1" min="1" max="10">
+                                    <button type="button" id="add" class="add">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hiddenForm">
+                <form action="">
+                    <div class="form_wrap">
+                        <h4>Ücretler</h4>
+                        <ul class="info">
+                            <li>
+                                <span>4833 ₺ x 3 Gece</span>
+                                <span>14500 ₺</span>
+                            </li>
+                            <li>
+                                <span>Temizlik Ücreti0</span>
+                                <span>0 ₺</span>
+                            </li>
+                        </ul>
+                        <h4>Ödeme Planı</h4>
+                        <ul class="info">
+                            <li>
+                                <span>Ön Ödeme</span>
+                                <span>7250</span>
+                            </li>
+                            <li>
+                                <span>Girişte Yapılacak Ödeme</span>
+                                <span>7250</span>
+                            </li>
+                        </ul>
+
+                        <div class="form_element">
+                            <div class="inptWithIcon">
+                                <div class="icon">
+                                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_339_10)">
+                                            <path
+                                                d="M1 19C1 15.134 4.13401 12 8 12C11.866 12 15 15.134 15 19M12 5C12 7.20914 10.2091 9 8 9C5.79086 9 4 7.20914 4 5C4 2.79086 5.79086 1 8 1C10.2091 1 12 2.79086 12 5Z"
+                                                stroke="black" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <input type="text" placeholder="Adınız Soyadınız">
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_element">
+                                <div class="iti iti--allow-dropdown">
+                                    <div class="iti__flag-container">
+                                        <div class="iti__selected-flag" role="combobox" aria-owns="country-listbox"
+                                            tabindex="0" title="Turkey (Türkiye): +90">
+                                            <div class="iti__flag iti__tr"></div>
+                                            <div class="iti__arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="iti iti--allow-dropdown">
+                                        <div class="iti__flag-container">
+                                            <div class="iti__selected-flag" role="combobox" aria-owns="country-listbox"
+                                                tabindex="0" title="Turkey (Türkiye): +90">
+                                                <div class="iti__flag iti__tr"></div>
+                                                <div class="iti__arrow"></div>
+                                            </div>
+                                        </div><input type="tel" id="phone" autocomplete="off" data-intl-tel-input-id="1"
+                                            placeholder="0501 234 56 78">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_element">
+                                <div class="inptWithIcon">
+                                    <div class="icon">
+                                        <svg width="668" height="534" viewBox="0 0 668 534" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_339_8)">
+                                                <path
+                                                    d="M34 133.667L215.664 254.777C258.432 283.287 279.817 297.543 302.927 303.083C323.353 307.977 344.647 307.977 365.073 303.083C388.183 297.543 409.57 283.287 452.337 254.777L634 133.667M140.667 500.333H527.333C564.67 500.333 583.34 500.333 597.6 493.067C610.143 486.677 620.343 476.477 626.733 463.933C634 449.673 634 431.003 634 393.667V140.333C634 102.997 634 84.328 626.733 70.0673C620.343 57.523 610.143 47.3243 597.6 40.933C583.34 33.6666 564.67 33.6666 527.333 33.6666H140.667C103.33 33.6666 84.6613 33.6666 70.4007 40.933C57.8563 47.3243 47.6577 57.523 41.2663 70.0673C34 84.328 34 102.996 34 140.333V393.667C34 431.003 34 449.673 41.2663 463.933C47.6577 476.477 57.8563 486.677 70.4007 493.067C84.6613 500.333 103.33 500.333 140.667 500.333Z"
+                                                    stroke="black" stroke-width="66.6667" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <input type="text" placeholder="E-posta adresiniz">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_element">
+                            <div class="inptWithIcon">
+                                <div class="icon">
+                                    <svg width="624" height="496" viewBox="0 0 624 496" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_339_2)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24 88V408C24 443.347 52.6538 472 88 472H536C571.347 472 600 443.347 600 408V88C600 52.6538 571.347 24 536 24H88C52.6538 24 24 52.6538 24 88Z"
+                                                stroke="black" stroke-width="48" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M408 184H504" stroke="black" stroke-width="48"
+                                                stroke-linecap="round"></path>
+                                            <path d="M408 280H504" stroke="black" stroke-width="48"
+                                                stroke-linecap="round"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M280 184C280 219.347 251.347 248 216 248C180.654 248 152 219.347 152 184C152 148.654 180.654 120 216 120C232.973 120 249.251 126.743 261.254 138.745C273.258 150.748 280 167.026 280 184Z"
+                                                stroke="black" stroke-width="48" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M88 376C177.056 275.616 281.664 307.168 344 376" stroke="black"
+                                                stroke-width="48" stroke-linecap="round"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <input type="text" placeholder="Kimlik Numaranız">
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_element">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Adresiniz"></textarea>
+                            </div>
+                            <div class="form_element">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Mesajınız"></textarea>
+                            </div>
+                        </div>
+                        <div class="form_element">
+                            <div class="checkbox">
+                                <input type="checkbox" id="property">
+                                <label for="property">
+                                    <span>Kiralama Sözleşmesi</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form_element">
+                            <div class="checkbox">
+                                <input type="checkbox" id="kvkk">
+                                <label for="kvkk">
+                                    <span>KVKK Aydınlatma Metni</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form_element">
+                            <div class="checkbox">
+                                <input type="checkbox" id="kvkk1">
+                                <label for="kvkk1">
+                                    <span>Açık Rıza Metni</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button type="button" class="btn purple">Reserve</button>
+        </div>
+        <div class="bookingDetails">
+            <div class="inner">
+                <div class="top">
+                    <div class="closeBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" fill="currentColor"
+                            aria-hidden="true" class="w-5 h-5 text-black dark:text-white">
+                            <path fill-rule="evenodd"
+                                d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h4>Booking details</h4>
+                </div>
+                <div class="bookItem">
+                    <div class="image">
+                        <img src="../images/pexels-photo-6373478.webp" alt="">
+                    </div>
+                    <div class="details">
+                        <span>Hotel room in Tokyo, Jappan</span>
+                        <h4>The Lounge & Bar</h4>
+                        <span>2 beds · 2 baths</span>
+                        <div class="rating">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" fill="currentColor"
+                                aria-hidden="true" class="w-[18px] h-[18px] text-orange-500">
+                                <path fill-rule="evenodd"
+                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            4.5
+                            <span>(112)</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Price detail</h3>
+                    <ul class="info">
+                        <li>
+                            <span>$19 x 3 day</span>
+                            <span>$57</span>
+                        </li>
+                        <li>
+                            <span>Service charge</span>
+                            <span>$0</span>
+                        </li>
+                        <li>
+                            <span>Total</span>
+                            <span>$57</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="closeBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" fill="currentColor"
+                aria-hidden="true" class="w-5 h-5 text-black dark:text-white">
+                <path fill-rule="evenodd"
+                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </div>
+    </div>
     <main>
         <section class="listingDetailPage">
             <div class="container">
@@ -874,7 +1167,7 @@
                                                     stroke="#4B5563" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
-                                            Share
+                                            <span> Share</span>
                                         </button>
                                         <button type="button" class="btn save_btn">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -884,7 +1177,7 @@
                                                     stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
-                                            Save
+                                            <span> Save</span>
                                         </button>
                                     </div>
                                 </div>
@@ -900,13 +1193,6 @@
                                     </svg>
                                     <span>4.9</span> (122 reviews) ·
                                     Tokyo, Jappan
-                                </div>
-                                <div class="profile">
-                                    <div class="img">
-                                        <img src="../images/photo.png" alt="" width="40">
-
-                                    </div>
-                                    <h4><span>Hosted by</span> Kevin Francis</h4>
                                 </div>
                                 <div class="line"></div>
                                 <div class="features_items">
@@ -1113,27 +1399,6 @@
                         </div>
                         <div class="listingSection">
                             <h2>Host Information</h2>
-                            <div class="line"></div>
-                            <div class="profile">
-                                <div class="img">
-                                    <img src="../images/photo.png" alt="" width="60">
-                                </div>
-                                <div>
-                                    <h3>Kevin Francis</h3>
-                                    <div class="rating">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_298_5306)">
-                                                <path
-                                                    d="M11.0489 2.92705C11.3483 2.00574 12.6517 2.00574 12.9511 2.92705L14.4697 7.60081C14.6035 8.01284 14.9875 8.2918 15.4207 8.2918H20.335C21.3037 8.2918 21.7065 9.53141 20.9228 10.1008L16.947 12.9894C16.5966 13.244 16.4499 13.6954 16.5838 14.1074L18.1024 18.7812C18.4017 19.7025 17.3472 20.4686 16.5635 19.8992L12.5878 17.0106C12.2373 16.756 11.7627 16.756 11.4122 17.0106L7.43648 19.8992C6.65276 20.4686 5.59828 19.7025 5.89763 18.7812L7.41623 14.1074C7.55011 13.6954 7.40345 13.244 7.05296 12.9894L3.07722 10.1008C2.29351 9.53141 2.69628 8.2918 3.66501 8.2918H8.57929C9.01252 8.2918 9.39647 8.01284 9.53035 7.60081L11.0489 2.92705Z"
-                                                    fill="#DC2626" />
-                                            </g>
-                                        </svg>
-                                        <span>4.9</span> (122 reviews) ·
-                                        Tokyo, Jappan
-                                    </div>
-                                </div>
-                            </div>
                             <div class="line"></div>
                             <p>Providing lake views, The Symphony 9 Tam Coc in Ninh Binh provides accommodation, an
                                 outdoor swimming pool, a bar, a shared lounge, a garden and barbecue facilities...</p>
@@ -1391,8 +1656,8 @@
                                         <h4>Check in - Check out</h4>
                                     </div>
                                 </label>
-                                            <div class="range quantity_item">
-                                                <div class="quantity">
+                                <div class="range quantity_item">
+                                    <div class="quantity">
                                         <div class="btn">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="28" fill="none"
                                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -1446,8 +1711,137 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="hiddenForm">
+                                    <form action="">
+                                        <div class="form_wrap">
+                                            <h4>Ücretler</h4>
+                                            <ul class="info">
+                                                <li>
+                                                    <span>4833 ₺ x 3 Gece</span>
+                                                    <span>14500 ₺</span>
+                                                </li>
+                                                <li>
+                                                    <span>Temizlik Ücreti0</span>
+                                                    <span>0 ₺</span>
+                                                </li>
+                                            </ul>
+                                            <h4>Ödeme Planı</h4>
+                                            <ul class="info">
+                                                <li>
+                                                    <span>Ön Ödeme</span>
+                                                    <span>7250</span>
+                                                </li>
+                                                <li>
+                                                    <span>Girişte Yapılacak Ödeme</span>
+                                                    <span>7250</span>
+                                                </li>
+                                            </ul>
+
+                                            <div class="form_element">
+                                                <div class="inptWithIcon">
+                                                    <div class="icon">
+                                                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_339_10)">
+                                                                <path
+                                                                    d="M1 19C1 15.134 4.13401 12 8 12C11.866 12 15 15.134 15 19M12 5C12 7.20914 10.2091 9 8 9C5.79086 9 4 7.20914 4 5C4 2.79086 5.79086 1 8 1C10.2091 1 12 2.79086 12 5Z"
+                                                                    stroke="black" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                    <input type="text" placeholder="Adınız Soyadınız">
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="form_element">
+                                                    <input type="tel" id="phone">
+                                                </div>
+                                                <div class="form_element">
+                                                    <div class="inptWithIcon">
+                                                        <div class="icon">
+                                                            <svg width="668" height="534" viewBox="0 0 668 534"
+                                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_339_8)">
+                                                                    <path
+                                                                        d="M34 133.667L215.664 254.777C258.432 283.287 279.817 297.543 302.927 303.083C323.353 307.977 344.647 307.977 365.073 303.083C388.183 297.543 409.57 283.287 452.337 254.777L634 133.667M140.667 500.333H527.333C564.67 500.333 583.34 500.333 597.6 493.067C610.143 486.677 620.343 476.477 626.733 463.933C634 449.673 634 431.003 634 393.667V140.333C634 102.997 634 84.328 626.733 70.0673C620.343 57.523 610.143 47.3243 597.6 40.933C583.34 33.6666 564.67 33.6666 527.333 33.6666H140.667C103.33 33.6666 84.6613 33.6666 70.4007 40.933C57.8563 47.3243 47.6577 57.523 41.2663 70.0673C34 84.328 34 102.996 34 140.333V393.667C34 431.003 34 449.673 41.2663 463.933C47.6577 476.477 57.8563 486.677 70.4007 493.067C84.6613 500.333 103.33 500.333 140.667 500.333Z"
+                                                                        stroke="black" stroke-width="66.6667"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                        <input type="text" placeholder="E-posta adresiniz">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_element">
+                                                <div class="inptWithIcon">
+                                                    <div class="icon">
+                                                        <svg width="624" height="496" viewBox="0 0 624 496" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_339_2)">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M24 88V408C24 443.347 52.6538 472 88 472H536C571.347 472 600 443.347 600 408V88C600 52.6538 571.347 24 536 24H88C52.6538 24 24 52.6538 24 88Z"
+                                                                    stroke="black" stroke-width="48"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M408 184H504" stroke="black" stroke-width="48"
+                                                                    stroke-linecap="round" />
+                                                                <path d="M408 280H504" stroke="black" stroke-width="48"
+                                                                    stroke-linecap="round" />
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M280 184C280 219.347 251.347 248 216 248C180.654 248 152 219.347 152 184C152 148.654 180.654 120 216 120C232.973 120 249.251 126.743 261.254 138.745C273.258 150.748 280 167.026 280 184Z"
+                                                                    stroke="black" stroke-width="48"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M88 376C177.056 275.616 281.664 307.168 344 376"
+                                                                    stroke="black" stroke-width="48"
+                                                                    stroke-linecap="round" />
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                    <input type="text" placeholder="Kimlik Numaranız">
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="form_element">
+                                                    <textarea name="" id="" cols="30" rows="10"
+                                                        placeholder="Adresiniz"></textarea>
+                                                </div>
+                                                <div class="form_element">
+                                                    <textarea name="" id="" cols="30" rows="10"
+                                                        placeholder="Mesajınız"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form_element">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="property">
+                                                    <label for="property">
+                                                        <span>Kiralama Sözleşmesi</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form_element">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="kvkk">
+                                                    <label for="kvkk">
+                                                        <span>KVKK Aydınlatma Metni</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form_element">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="kvkk1">
+                                                    <label for="kvkk1">
+                                                        <span>Açık Rıza Metni</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            <ul class="info">
+                            <!-- <ul class="info">
                                 <li>
                                     <span>$311 x 3 night</span>
                                     <span>$554</span>
@@ -1460,7 +1854,7 @@
                                     <span>Total</span>
                                     <span>$554</span>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn purple">Reserve</button>
                         </div>
                     </div>
@@ -1645,18 +2039,9 @@
     <script src="../js/hotel-datepicker.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="../js/jquery.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/intl-tel-input@16.0.2/build/js/intlTelInput.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="../js/app.js"></script>
-    <script>
-        var demo1 = new HotelDatepicker(
-            document.querySelector(".searchForm .date_item input"),
-            {
-                noCheckInDaysOfWeek: ['Monday', 'Tuesday']
-            }
-        );
-
-
-    </script>
 </body>
 
 </html>

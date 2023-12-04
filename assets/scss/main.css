@@ -3343,6 +3343,7 @@ datepicker__buttons {
   background-color: white;
   padding: 8px 12px;
   border-radius: 12px;
+  pointer-events: none;
   cursor: pointer;
 }
 .listingGallery .main_img .showAll svg {
@@ -3432,6 +3433,7 @@ datepicker__buttons {
 .listingDetailPage .roomRates .datepicker {
   position: static;
   box-shadow: unset;
+  width: 100%;
 }
 .listingDetailPage .roomRates .datepicker .datepicker__month-day {
   position: relative;
@@ -3450,6 +3452,15 @@ datepicker__buttons {
 .listingDetailPage .roomRates .datepicker .datepicker__month-day span {
   display: block;
   font-weight: 600;
+}
+.listingDetailPage .roomRates .datepicker .datepicker__month-button:after {
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  text-indent: 0;
+  content: "";
+  width: 16px;
+  height: 16px;
 }
 .listingDetailPage .roomRates input {
   display: none;
@@ -3499,7 +3510,7 @@ datepicker__buttons {
 .listingDetailPage .preview .top {
   justify-content: space-between;
 }
-.listingDetailPage .preview .top span {
+.listingDetailPage .preview .top > span {
   padding: 2px 10px;
   border-radius: 99px;
   font-size: 12px;
@@ -3579,8 +3590,6 @@ datepicker__buttons {
   max-width: 100%;
 }
 .listingDetailPage .sticky {
-  position: sticky;
-  top: 110px;
   padding: 24px 32px;
   --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -3602,22 +3611,104 @@ datepicker__buttons {
   font-weight: 600;
   color: black;
 }
+.listingDetailPage .sticky .hiddenForm {
+  padding: 20px;
+  display: none;
+}
+.listingDetailPage .sticky .hiddenForm h4 {
+  text-align: center;
+  font-weight: 600;
+}
+.listingDetailPage .sticky .hiddenForm .quantity_item {
+  padding: 0;
+  margin-bottom: 24px;
+}
+.listingDetailPage .sticky .hiddenForm .quantity_item .dropdown {
+  opacity: 1;
+  visibility: visible;
+  position: static;
+  width: 100%;
+  padding: 0;
+  border: unset;
+  box-shadow: unset;
+}
+.listingDetailPage .sticky .hiddenForm .quantity_item .dropdown h4 {
+  text-align: left;
+}
+.listingDetailPage .sticky .hiddenForm .quantity_item .dropdown .item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.listingDetailPage .sticky .hiddenForm .form_group {
+  margin-bottom: 10px;
+}
+.listingDetailPage .sticky .hiddenForm .form_group .form_element:not(:last-child) {
+  margin-bottom: 6px;
+}
+.listingDetailPage .sticky .hiddenForm .form_element {
+  margin-bottom: 16px;
+}
+.listingDetailPage .sticky .hiddenForm .form_element .inptWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.listingDetailPage .sticky .hiddenForm .form_element .inptWithIcon .icon {
+  min-width: 25px;
+  position: absolute;
+  left: 16px;
+}
+.listingDetailPage .sticky .hiddenForm .form_element .inptWithIcon svg {
+  display: block;
+  width: 18px;
+  max-height: 16px;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0.7;
+}
+.listingDetailPage .sticky .hiddenForm .form_element .inptWithIcon input {
+  padding-left: 44px;
+}
+.listingDetailPage .sticky .hiddenForm .form_element input,
+.listingDetailPage .sticky .hiddenForm .form_element textarea {
+  width: 100%;
+  height: 55px;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid var(--gray-300);
+}
+.listingDetailPage .sticky .hiddenForm .form_element textarea {
+  width: 100% !important;
+  resize: unset;
+  min-height: 80px;
+}
+.listingDetailPage .sticky .hiddenForm .form_element .iti {
+  width: 100%;
+}
+.listingDetailPage .sticky .hiddenForm .form_element .iti input {
+  padding-right: 6px;
+  padding-left: 52px;
+}
+.listingDetailPage .sticky .dateRange .range {
+  border-bottom: 1px solid var(--gray-200);
+}
 .listingDetailPage .sticky .info {
-  margin: 32px 0;
+  margin-bottom: 16px;
 }
 .listingDetailPage .sticky .info li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 10px 0;
 }
 .listingDetailPage .sticky .info li.last {
   border-top: 1px solid var(--gray-200);
   padding-top: 16px;
   margin-top: 8px;
 }
-.listingDetailPage .sticky .info li.last span {
-  font-weight: 600;
+.listingDetailPage .sticky .info li span {
+  font-size: 14px;
+  font-weight: 500;
 }
 .listingDetailPage .sticky > .btn {
   width: 100%;
@@ -3645,6 +3736,7 @@ datepicker__buttons {
 .dateRange {
   border: 1px solid var(--gray-200);
   border-radius: 24px;
+  margin-bottom: 24px;
 }
 .dateRange .range {
   display: flex;
@@ -3656,9 +3748,6 @@ datepicker__buttons {
 }
 .dateRange .range > div {
   flex-grow: 1;
-}
-.dateRange .range:first-child {
-  border-bottom: 1px solid var(--gray-200);
 }
 .dateRange .range > span {
   display: block;
@@ -3674,12 +3763,307 @@ datepicker__buttons {
   z-index: 9999;
 }
 
+.datePickerForm {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 999;
+  padding-top: 40px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.15s;
+  transform: translateY(100px);
+}
+.datePickerForm .hiddenForm {
+  display: block !important;
+}
+.datePickerForm .closeBtn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+}
+.datePickerForm .yourTrip {
+  margin-bottom: 16px;
+}
+.datePickerForm .yourTrip h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.datePickerForm .yourTrip .bookDetails {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.datePickerForm .sticky {
+  padding: 20px;
+}
+.datePickerForm .sticky .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.datePickerForm .sticky .top h2 {
+  font-size: 30px;
+}
+.datePickerForm .sticky .price {
+  color: var(--gray-600);
+}
+.datePickerForm .sticky .price span {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  color: black;
+}
+.datePickerForm .sticky .hiddenForm h4 {
+  text-align: center;
+  font-weight: 600;
+}
+.datePickerForm .sticky .hiddenForm .quantity_item {
+  padding: 0;
+  margin-bottom: 24px;
+}
+.datePickerForm .sticky .hiddenForm .quantity_item .dropdown {
+  opacity: 1;
+  visibility: visible;
+  position: static;
+  width: 100%;
+  padding: 0;
+  border: unset;
+  box-shadow: unset;
+}
+.datePickerForm .sticky .hiddenForm .quantity_item .dropdown h4 {
+  text-align: left;
+}
+.datePickerForm .sticky .hiddenForm .quantity_item .dropdown .item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.datePickerForm .sticky .hiddenForm .form_group {
+  margin-bottom: 10px;
+}
+.datePickerForm .sticky .hiddenForm .form_group .form_element:not(:last-child) {
+  margin-bottom: 6px;
+}
+.datePickerForm .sticky .hiddenForm .form_element {
+  margin-bottom: 16px;
+}
+.datePickerForm .sticky .hiddenForm .form_element .inptWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.datePickerForm .sticky .hiddenForm .form_element .inptWithIcon .icon {
+  min-width: 25px;
+  position: absolute;
+  left: 16px;
+}
+.datePickerForm .sticky .hiddenForm .form_element .inptWithIcon svg {
+  display: block;
+  width: 18px;
+  max-height: 16px;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0.7;
+}
+.datePickerForm .sticky .hiddenForm .form_element .inptWithIcon input {
+  padding-left: 44px;
+}
+.datePickerForm .sticky .hiddenForm .form_element input,
+.datePickerForm .sticky .hiddenForm .form_element textarea {
+  width: 100%;
+  height: 55px;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid var(--gray-300);
+}
+.datePickerForm .sticky .hiddenForm .form_element textarea {
+  width: 100% !important;
+  resize: unset;
+  min-height: 80px;
+}
+.datePickerForm .sticky .hiddenForm .form_element .iti {
+  width: 100%;
+}
+.datePickerForm .sticky .hiddenForm .form_element .iti input {
+  padding-right: 6px;
+  padding-left: 52px;
+}
+.datePickerForm .sticky .dateRange .range {
+  border-bottom: 1px solid var(--gray-200);
+}
+.datePickerForm .sticky .info {
+  margin-bottom: 16px;
+}
+.datePickerForm .sticky .info li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.datePickerForm .sticky .info li.last {
+  border-top: 1px solid var(--gray-200);
+  padding-top: 16px;
+  margin-top: 8px;
+}
+.datePickerForm .sticky .info li span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.datePickerForm .sticky > .btn {
+  width: 100%;
+  padding: 12px 24px;
+}
+.datePickerForm .sticky .quantity_item {
+  border-radius: 0 0 22px 22px;
+}
+.datePickerForm .sticky .quantity_item .quantity .btn {
+  padding: 0;
+  justify-content: flex-start;
+}
+.datePickerForm .sticky .quantity_item .dropdown {
+  border: 1px solid var(--gray-200);
+}
+.datePickerForm .bookingDetails {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.15s;
+}
+.datePickerForm .bookingDetails .inner {
+  background-color: white;
+  border-radius: 24px;
+  transform: scale(0.7);
+  transition: 0.15s;
+}
+.datePickerForm .bookingDetails .inner > div {
+  margin: 16px 24px;
+}
+.datePickerForm .bookingDetails .top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.datePickerForm .bookingDetails .top h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.datePickerForm .bookingDetails .top .closeBtn {
+  position: absolute;
+  left: 12px;
+}
+.datePickerForm .bookingDetails .bookItem {
+  padding-bottom: 16px;
+}
+.datePickerForm .bookingDetails .bookItem .image {
+  margin-bottom: 16px;
+}
+.datePickerForm .bookingDetails .bookItem .image img {
+  aspect-ratio: 30/23;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+.datePickerForm .bookingDetails .bookItem .details > * {
+  margin-bottom: 8px;
+}
+.datePickerForm .bookingDetails .bookItem h4 {
+  font-weight: 600;
+}
+.datePickerForm .bookingDetails .bookItem span {
+  display: block;
+  opacity: 0.6;
+}
+.datePickerForm .bookingDetails .bookItem .rating {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.datePickerForm .bookingDetails .info li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.datePickerForm .bookingDetails .info li:last-child {
+  border-top: 1px solid var(--gray-300);
+}
+.datePickerForm .bookingDetails .info li:last-child span {
+  font-weight: 600;
+}
+.datePickerForm .bookingDetails.active {
+  opacity: 1;
+  visibility: visible;
+}
+.datePickerForm .bookingDetails.active .inner {
+  transform: scale(1);
+}
+.datePickerForm.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.datePickerForm.overflowHidden {
+  overflow: hidden;
+}
+
+.listingDetailNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  padding: 8px 0;
+  border-top: 1px solid var(--gray-300);
+}
+.listingDetailNav .wrapper {
+  justify-content: space-between;
+  align-items: center;
+}
+.listingDetailNav .price {
+  color: var(--gray-500);
+  font-size: 14px;
+  font-weight: 500;
+}
+.listingDetailNav .price span {
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+}
+.listingDetailNav .date {
+  font-size: 14px;
+  text-decoration: underline;
+}
+.listingDetailNav .btn {
+  border-radius: 12px;
+}
+
 @media (min-width: 991px) {
-  .listingDetailPage .roomRates .datepicker {
-    width: 100%;
-  }
   .listingDetailPage .roomRates .datepicker .datepicker__month {
     width: 47%;
+  }
+  .datePickerForm {
+    display: none;
+  }
+  .listingDetailNav {
+    display: none;
   }
 }
 @media (max-width: 991px) {
@@ -3702,6 +4086,9 @@ datepicker__buttons {
   }
   .listingDetailPage .mainContent .aside {
     width: 100%;
+  }
+  .listingDetailPage .preview .top .btn span {
+    display: none;
   }
 }
 .checkOut {
@@ -4697,16 +5084,17 @@ datepicker__buttons {
   cursor: pointer;
 }
 .checkbox input {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 4px !important;
+  padding: 0 !important;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background-size: contain;
   background-position: center;
   background-position: center;
-  border: 1px solid var(--gray-300);
+  border: 1px solid var(--gray-300) !important;
 }
 .checkbox input:checked {
   border-color: transparent;
