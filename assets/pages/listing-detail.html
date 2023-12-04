@@ -825,6 +825,26 @@
         <div class="bg"></div>
     </header>
     <div class="page_overlay"></div>
+    <div class="datePickerPopup">
+        <div class="inner">
+            <h3> When's your trip?</h3>
+            <div class="closeBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" fill="currentColor"
+                    aria-hidden="true" class="w-5 h-5 text-black dark:text-white">
+                    <path fill-rule="evenodd"
+                        d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            <div>
+            <input type="text" class="datePicker" style="display: none;">
+            </div>
+            <div class="bottom">
+                <button type="button" class="clear_btn">Clear dates</button>
+                <button type="button" class="btn purple">Save</button>
+            </div>
+        </div>
+    </div>
     <div class="listingDetailNav">
         <div class="container">
             <div class="wrapper">
@@ -848,7 +868,7 @@
                 <div class="bookDetails">View booking details</div>
             </div>
             <div class="dateRange">
-                <label class="range">
+                <label class="range dateRange0">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M9.33333 8.16667V3.5M18.6667 8.16667V3.5M8.16667 12.8333H19.8333M5.83333 24.5H22.1667C23.4553 24.5 24.5 23.4553 24.5 22.1667V8.16667C24.5 6.878 23.4553 5.83333 22.1667 5.83333H5.83333C4.54467 5.83333 3.5 6.878 3.5 8.16667V22.1667C3.5 23.4553 4.54467 24.5 5.83333 24.5Z"
@@ -956,7 +976,7 @@
                         </div>
                         <div class="form_group">
                             <div class="form_element">
-                                <input type="tel" id="phone" placeholder="Telefon numarası">
+                                <input type="tel" placeholder="Telefon numarası">
                             </div>
                             <div class="form_element">
                                 <div class="inptWithIcon">
@@ -1099,7 +1119,7 @@
             </svg>
         </div>
     </div>
-    
+
     <main>
         <section class="listingDetailPage">
             <div class="container">

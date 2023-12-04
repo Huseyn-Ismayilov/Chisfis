@@ -837,11 +837,18 @@ $(".datePickerForm .yourTrip .bookDetails, .datePickerForm .bookingDetails .clos
 	$(".datePickerForm .bookingDetails").toggleClass('active')
 	$(".datePickerForm").toggleClass('overflowHidden')
 })
+$(".listingDetailNav .date, .datePickerForm .dateRange0").click(function () {
+	$(".datePickerPopup").toggleClass('active')
+})
 
-var demo4 = new HotelDatepicker(document.querySelector(".datePickerForm .asideDatePicker"), {
+$(".datePickerPopup .closeBtn").click(function () {
+	$(".datePickerPopup").removeClass('active')
+})
+
+var demo99 = new HotelDatepicker(document.querySelector(".datePickerPopup .datePicker"), {
 	moveBothMonths: true,
 	showTopbar: false,
-
+	inline: true,
 	extraDayText: function (date, attributes) {
 		if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
 			return "<span>$110</span>";
