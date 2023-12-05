@@ -1,34 +1,3 @@
-// // var input1 = document.querySelector('.hero .date_item input');
-
-// // var input2 = document.querySelector('.searchForm .date_item input');
-// (function () {
-
-// 	var demo5 = new HotelDatepicker(
-// 		document.querySelector(".hero .date_item input"),
-// 		{
-// 			minNights: 7,
-// 		}
-// 	);
-
-// 	var demo2 = new HotelDatepicker(
-// 		document.querySelector(".searchForm .date_item input"),
-// 		{
-// 			minNights: 7,
-// 		}
-// 	);
-
-// })
-
-
-// var input = document.querySelector(".searchForm .date_item input");
-// var demo = new HotelDatepicker(input);
-
-// var input1 = document.querySelector(".hero .date_item input");
-// var demo1 = new HotelDatepicker(input1);
-
-
-
-
 $(window).scroll(function () {
 	var scroll = $(window).scrollTop();
 	if (scroll >= 60) {
@@ -55,6 +24,14 @@ $(window).scroll(function () {
 // });
 
 // end
+var demo1 = new HotelDatepicker(
+	document.querySelector(".site_header .date_item input"),
+	{
+		showTopbar: false,
+		moveBothMonths: true,
+		// noCheckInDaysOfWeek: ['Monday', 'Tuesday']
+	}
+);
 
 
 // end
@@ -103,66 +80,6 @@ $('ul.tabs li').click(function () {
 	}
 
 });
-
-
-
-
-// var swiper = new Swiper(".mySwiper", {
-// 	slidesPerView: "auto",
-// 	spaceBetween: 30,
-// 	pagination: {
-// 		el: ".swiper-pagination",
-// 		clickable: true,
-// 	},
-// 	breakpoints: {
-// 		640: {
-// 			slidesPerView: 2,
-// 			spaceBetween: 20,
-// 		},
-// 		768: {
-// 			slidesPerView: 4,
-// 			spaceBetween: 40,
-// 		},
-// 		1024: {
-// 			slidesPerView: 5,
-// 			spaceBetween: 50,
-// 		},
-// 	},
-// });
-
-
-
-// let index = 1;
-
-// const on = (listener, query, fn) => {
-// 	document.querySelectorAll(query).forEach(item => {
-// 		item.addEventListener(listener, el => {
-// 			fn(el);
-// 		})
-// 	})
-// }
-
-// on('click', '.selectBtn', item => {
-// 	const next = item.target.nextElementSibling;
-// 	next.classList.toggle('toggle');
-// 	next.style.zIndex = index++;
-// });
-// on('click', '.option', item => {
-// 	item.target.parentElement.classList.remove('toggle');
-
-// 	const parent = item.target.closest('.select').children[0];
-// 	parent.setAttribute('data-type', item.target.getAttribute('data-type'));
-// 	parent.innerText = item.target.innerText;
-// })
-
-
-
-// mobiscroll.datepicker('#range', {
-//     controls: ['calendar'],
-//     select: 'range',
-//     calendarType: 'month',
-//     touchUi: true
-// });
 
 
 
@@ -365,47 +282,6 @@ $(function () {
 });
 
 
-// $('.sectionVideos .mainVideo .playBtn').click(function () {
-// 	$(this).style.opacity = 0
-// })
-
-
-// var player;
-
-// // this function gets called when API is ready to use
-// function onYouTubePlayerAPIReady() {
-// 	// create the global player from the specific iframe (#video)
-// 	player = new YT.Player('video', {
-// 		events: {
-// 			// call this function when player is ready to use
-// 			'onReady': onPlayerReady
-// 		}
-// 	});
-// }
-
-// function onPlayerReady(event) {
-
-// 	// bind events
-// 	var playButton = document.querySelector(".mainVideo .playBtn");
-// 	playButton.addEventListener("click", function () {
-// 		player.playVideo();
-// 	});
-
-// 	var pauseButton = document.getElementById("pause-button");
-// 	pauseButton.addEventListener("click", function () {
-// 		player.pauseVideo();
-// 		alert(player.getCurrentTime());
-
-// 	});
-
-// }
-
-// // Inject YouTube API script. 
-// var tag = document.createElement('script');
-// tag.src = "//www.youtube.com/player_api";
-// var firstScriptTag = document.getElementsByTagName('script')[0];
-// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
 
 var swiper = new Swiper(".clientSay .slider", {
 	pagination: {
@@ -438,6 +314,7 @@ $(document).click(function (event) {
 });
 
 
+
 var stickyCagorySlider = new Swiper(".stickyCagorySlider .slider", {
 	slidesPerView: "auto",
 	pagination: {
@@ -450,217 +327,56 @@ var stickyCagorySlider = new Swiper(".stickyCagorySlider .slider", {
 	},
 });
 
-// $.boceksoft = {
-// 	calendarShow: function (eventPick, number) {
-// 		$(eventPick).html("");
-// 		$(eventPick).removeClass("hasDatepicker");
-// 		$(eventPick).datepicker({
-// 			monthNamesShort: (window.location.pathname.split("/")[1] == "en" ? $.datepicker.regional["en"].monthNames : $.datepicker.regional["tr"].monthNames),
-// 			numberOfMonths: (number != 0 ? number : ($(window).width() > 1200 ? 2 : 1)),
-// 			minDate: '0',
-// 			dateFormat: 'dd.mm.yy',
-// 			beforeShowDay: function (date) {
-// 				return $.boceksoft.calendarBeforeShowDay(date, "", "", false);
-// 			},
-// 			onSelect: function (setDate) {
-// 				var ssx = setDate.split('.');
-// 				if (Calendardate1 == undefined)
-// 					Calendardate1 = ssx[2] + "-" + ssx[1] + "-" + ssx[0] + "T00:00:00";
-// 				else if (Calendardate2 == undefined && Calendardate1 != ssx[2] + "-" + ssx[1] + "-" + ssx[0])
-// 					Calendardate2 = ssx[2] + "-" + ssx[1] + "-" + ssx[0] + "T00:00:00";
-// 				else
-// 					Calendardate1 = ssx[2] + "-" + ssx[1] + "-" + ssx[0] + "T00:00:00",
-// 						Calendardate2 = undefined;
-// 				if (Calendardate1 != undefined && Calendardate2 != undefined) {
-// 					var datex1 = new Date(Calendardate1.replace(' ', 'T'));
-// 					var datex2 = new Date(Calendardate2.replace(' ', 'T'));
-// 					var event1 = "#calendarReservationdate1", event2 = "#calendarReservationdate2";
-// 					var event1Input = "reservationdate1", event2Input = "reservationdate2";
-// 					if (datex1 > datex2)
-// 						event1 = "#calendarReservationdate2", event2 = "#calendarReservationdate1", event1Input = "reservationdate2", event2Input = "reservationdate1";
-// 					$(event1).data("id", $("#reservationdate1").data("id"));
-// 					$(event2).data("id", $("#reservationdate1").data("id"));
-// 					if ($(event1).data("label-show") == "1")
-// 						$(event1).parents("label").eq(0).find(".date").html((datex1.getDate() < 10 ? "0" : "") + datex1.getDate() + "." + ((datex1.getMonth() + 1) < 10 ? "0" : "") + (datex1.getMonth() + 1) + "." + datex1.getFullYear()),
-// 							$(event1).parents("label").eq(0).find(".dateName").html($.boceksoft.dateName(datex1.getDay()));
-// 					if ($(event2).data("label-show") == "1")
-// 						$(event2).parents("label").eq(0).find(".date").html((datex2.getDate() < 10 ? "0" : "") + datex2.getDate() + "." + ((datex2.getMonth() + 1) < 10 ? "0" : "") + (datex2.getMonth() + 1) + "." + datex2.getFullYear()),
-// 							$(event2).parents("label").eq(0).find(".dateName").html($.boceksoft.dateName(datex2.getDay()));
-// 					$("[name='" + event1Input + "']").val((datex1.getDate() < 10 ? "0" : "") + datex1.getDate() + "." + ((datex1.getMonth() + 1) < 10 ? "0" : "") + (datex1.getMonth() + 1) + "." + datex1.getFullYear());
-// 					$("[name='" + event2Input + "']").val((datex2.getDate() < 10 ? "0" : "") + datex2.getDate() + "." + ((datex2.getMonth() + 1) < 10 ? "0" : "") + (datex2.getMonth() + 1) + "." + datex2.getFullYear());
-// 					$(event1).trigger("change");
-// 					$(".modalRezervationForm .contactForm form .successDate").hide(),
-// 						$(".modalRezervationForm .contactForm form [type='submit']").hide();
-// 					if ($(".modalRezervationForm").length > 0)
-// 						$(".modalRezervationForm").addClass("show");
-// 					else
-// 						$("#reservationdate1").trigger("change");
 
-// 					eval($(eventPick).data("select-date"));
-// 				}
-// 			}
-// 		});
-// 	},
-// 	villasCalendar: function (id, doviz, girisSaati, cikisSaati, villaAdi, islem, number, refreshAjax = 0) {
-// 		if ($(".modalRezervationForm").length > 0)
-// 			$(".modalRezervationForm .girisSaati").html(girisSaati),
-// 				$(".modalRezervationForm .cikisSaati").html(cikisSaati),
-// 				$("#calendarModal .villaCalendar .calendarInfo .villaName").html(villaAdi),
-// 				$(".modalRezervationForm .homesIdValue").val(id);
-// 		$.ajax({
-// 			type: 'post',
-// 			url: '/ajax/' + (islem == "yat" ? "yattarih" : "villatarih"),
-// 			data: 'id=' + id + "&doviz=" + doviz,
-// 			success: function (e) {
-// 				var arr = e.split("##");
-// 				Calendardate1 = undefined,
-// 					Calendardate2 = undefined,
-// 					giristarihler = arr[0].split(","),
-// 					cikistarihler = arr[1].split(","),
-// 					dolutarihler = arr[2].split(","),
-// 					Rgiristarihler = arr[3].split(","),
-// 					Rcikistarihler = arr[4].split(","),
-// 					RezervasyonBekleyenler = arr[5].split(","),
-// 					RezervasyonSaatler = arr[6].split(","),
-// 					calendarFiyatlarTarihler = arr[8].split(",").filter(x => x != ''),
-// 					calendarFiyatlar = arr[9].split(",").filter(x => x != ''),
-// 					calendarhaftasonuTarihler = arr[10].split(",").filter(function (c) { return c !== '' }),
-// 					calendarhaftasonuFiyatlar = arr[11].split(",").filter(function (c) { return c !== '' }),
-// 					calendarFiyatlarDovizIcon = arr[12];
-// 				calendarFiyatlarDovizGiris = arr[13];
-// 				calendarFiyatlarDovizCikis = arr[14];
-// 				activedays = [];
-// 				if (arr[7] != "")
-// 					activedays = $.parseJSON(arr[7]);
-// 				aynilar = [];
-// 				$.each(giristarihler, function (indexInArray, valueOfElement) {
-// 					if ($.inArray(giristarihler[indexInArray], cikistarihler) > -1)
-// 						aynilar.push(giristarihler[indexInArray]);
-// 				});
 
-// 				aynilar_dolu_opsiyon = [];
-// 				$.each(cikistarihler, function (indexInArray, valueOfElement) {
-// 					if ($.inArray(cikistarihler[indexInArray], Rgiristarihler) > -1)
-// 						aynilar_dolu_opsiyon.push(cikistarihler[indexInArray]);
-// 				});
-// 				aynilar_opsiyon_dolu = [];
-// 				$.each(Rcikistarihler, function (indexInArray, valueOfElement) {
-// 					if ($.inArray(Rcikistarihler[indexInArray], giristarihler) > -1)
-// 						aynilar_opsiyon_dolu.push(Rcikistarihler[indexInArray]);
-// 				});
-// 				$.boceksoft.villasCalendarEvents("#reservationdate1", "#reservationdate2");
-// 				if ($("#calendarReservationdate1").length > 0)
-// 					$.boceksoft.villasCalendarEvents("#calendarReservationdate1", "#calendarReservationdate2");
-// 				if (refreshAjax != 1) {
-// 					if ($.urlVeri("q") != "") {
-// 						var a = $.urlVeri("q").split("-");
-// 						$("#reservationdate1").val(a[0]);
-// 						$("#reservationdate2").val(a[1]);
-// 						//$("#reservationdate2").trigger("change");
-// 					}
-// 					$.boceksoft.calendarShow("#calendar", number);
-// 					$("#calendar .ui-state-active").removeClass("ui-state-active");
-// 					$(document).on("mouseover", "#calendar td", function () {
-// 						if (Calendardate1 != undefined || Calendardate2 != undefined) {
-// 							if ($("#calendar .ui-state-active").length > 0 && $("#calendar td.dp-highlight").length == 0) {
-// 								var activeIndexs = {
-// 									td: $("#calendar .ui-state-active").parents("td").index(),
-// 									tr: $("#calendar .ui-state-active").parents("tr").index(),
-// 									group: $("#calendar .ui-state-active").parents(".ui-datepicker-group").index()
-// 								}
-// 								var hoverIndexs = {
-// 									this: $(this),
-// 									td: $(this).index(),
-// 									tr: $(this).parents("tr").index(),
-// 									group: $(this).parents(".ui-datepicker-group").index()
-// 								}
-// 								$("#calendar td").each(function () {
-// 									var eventIndexs = {
-// 										this: $(this),
-// 										td: $(this).index(),
-// 										tr: $(this).parents("tr").index(),
-// 										group: $(this).parents(".ui-datepicker-group").index()
-// 									}
-// 									if (
-// 										(activeIndexs.group < eventIndexs.group || (activeIndexs.group == eventIndexs.group && activeIndexs.tr < eventIndexs.tr) || (activeIndexs.group == eventIndexs.group && activeIndexs.tr == eventIndexs.tr && activeIndexs.td < eventIndexs.td)) &&
-// 										(eventIndexs.group < hoverIndexs.group || (eventIndexs.group == hoverIndexs.group && eventIndexs.tr < hoverIndexs.tr) || (eventIndexs.group == hoverIndexs.group && eventIndexs.tr == hoverIndexs.tr && eventIndexs.td < hoverIndexs.td)) &&
-// 										(activeIndexs.group < hoverIndexs.group || (activeIndexs.group == hoverIndexs.group && activeIndexs.tr < hoverIndexs.tr) || (activeIndexs.group == hoverIndexs.group && activeIndexs.tr == hoverIndexs.tr && activeIndexs.td < hoverIndexs.td))
-// 									) {
-// 										if (eventIndexs.this.find("a").length > 0)
-// 											eventIndexs.this.addClass("in-range");
-// 									}
-// 								});
-// 								if ($("#calendar td.in-range").length > 0)
-// 									hoverIndexs.this.attr("data-night", ($("#calendar td.in-range").length + 1) + " Gece");
-// 							}
-// 						}
-// 					}).on("mousemove", "#calendar td", function (event) {
-// 					}).on("mouseout", "#calendar td", function () {
-// 						$("#calendar td[data-night]").removeAttr("data-night");
-// 						$("#calendar td.in-range").removeClass("in-range");
-// 					});
-// 					$("#calendarModal .villaCalendar .loading").hide();
-// 					$(document).on("mouseover", ".daterangepicker td", function () {
-// 						var a = new Date($(this).data("date"));
-// 						var gun = parseInt(a.getDate());
-// 						var yil = a.getFullYear();
-// 						var ay = a.getMonth() + 1;
-// 						var actualDate = yil + "-" + ay + "-" + gun;
-// 						if (RezervasyonBekleyenler.indexOf(actualDate) >= 0) {
-// 							var ArrayIndexControl = parseInt((RezervasyonBekleyenler.indexOf(actualDate)));
-// 							var attr = RezervasyonSaatler[ArrayIndexControl];
-// 							$(this).attr('data-content', (window.location.pathname.split("/")[1] == "en" ? 'Waiting for Payment (Time remaining ' + attr + ' hours)' : 'Ödeme Bekliyor (Kalan süre ' + attr + ' saat ' + ')'));
-// 						}
-// 						else if (aynilar.indexOf(actualDate) >= 0 || aynilar_dolu_opsiyon.indexOf(actualDate) >= 0 || aynilar_opsiyon_dolu.indexOf(actualDate) >= 0)
-// 							$(this).attr('data-content', (window.location.pathname.split("/")[1] == "en" ? 'Entry / Exit Day' : 'Giriş/Çıkış Günü'));
-// 						else if (giristarihler.indexOf(actualDate) >= 0)
-// 							$(this).attr('data-content', (window.location.pathname.split("/")[1] == "en" ? 'Entry Date' : 'Giriş Tarihi'));
-// 						else if (cikistarihler.indexOf(actualDate) >= 0)
-// 							$(this).attr('data-content', (window.location.pathname.split("/")[1] == "en" ? 'Exit Date' : 'Çıkış Tarihi'));
-// 						else if (dolutarihler.indexOf(actualDate) >= 0)
-// 							$(this).attr('data-content', (window.location.pathname.split("/")[1] == "en" ? 'Not Avaible' : 'Müsait Değil'));
-// 						else if (Rgiristarihler.indexOf(actualDate) >= 0)
-// 							$(this).attr('data-content', (window.location.pathname.split("/")[1] == "en" ? 'Entry Date' : 'Giriş Tarihi'));
-// 						else if (Rcikistarihler.indexOf(actualDate) >= 0)
-// 							$(this).attr('data-content', (window.location.pathname.split("/")[1] == "en" ? 'Exit Date' : 'Çıkış Tarihi'));
-// 						else
-// 							$(this).attr('data-content', (window.location.pathname.split("/")[1] == "en" ? 'Avaible' : 'Müsait'));
-// 					});
-// 					$(document).on("mouseover", ".ui-datepicker tbody tr td a", function () {
-// 						var gun = $(this).html();
-// 						var gun = parseInt(gun);
-// 						var yil = $(this).parent("td").attr("data-year");
-// 						var ay = $(this).parent("td").attr("data-month");
-// 						ay = parseInt(ay) + parseInt(1);
-// 						var actualDate = yil + "-" + ay + "-" + gun;
-// 						if (RezervasyonBekleyenler.indexOf(actualDate) >= 0) {
-// 							var ArrayIndexControl = parseInt((RezervasyonBekleyenler.indexOf(actualDate)));
-// 							var attr = RezervasyonSaatler[ArrayIndexControl];
-// 							$(this).attr('data-content', (window.location.pathname.split("/")[1] == "en" ? 'Waiting for Payment (Time remaining ' + attr + ' hours)' : 'Ödeme Bekliyor (Kalan süre ' + attr + ' saat ' + ')'));
-// 						}
-// 					});
-// 				} else {
+$(".FeaturePlaces .tag:not(.moreFilter) .btn").click(function () {
+	$(this).parent().toggleClass('active')
+	$(this).parent().siblings().removeClass('active')
+})
 
-// 					$.boceksoft.calendarShow("#calendar", number);
-// 				}
-// 			}
-// 		});
-// 	},
-// }
+$(".FeaturePlaces .moreFilter .btn, .moreFilter .popup .closeBtn").click(function () {
+	$('.FeaturePlaces.listings .moreFilter .popup').toggleClass('active')
+	// $(this).parent().siblings().removeClass('active')
+})
+
+
+$(".listingDetailPage .preview .top .share_btn").click(function () {
+	$('.share_popup').toggleClass('active')
+	// $(this).parent().siblings().removeClass('active')
+})
+
+$(document).click(function (event) {
+	if (!$(event.target).closest(".FeaturePlaces .tag:not(.moreFilter) .dropdown, .FeaturePlaces .tag:not(.moreFilter) .btn").length) {
+		$(".FeaturePlaces .tag:not(.moreFilter)").removeClass("active");
+	}
+});
+
+$(document).click(function (event) {
+	if (!$(event.target).closest(".moreFilter .popup .inner, .moreFilter > .btn").length) {
+		$(".moreFilter .popup").removeClass("active");
+	}
+});
+
+$(document).click(function (event) {
+	if (!$(event.target).closest(".share_popup .inner, .listingDetailPage .preview .top .share_btn").length) {
+		$(".share_popup").removeClass("active");
+	}
+});
 
 
 var demo3 = new HotelDatepicker(document.querySelector(".inlineDatePicker"), {
 	inline: true,
 	moveBothMonths: true,
-	showTopbar: false,
-	disabledDates: [
-		'2023-12-12',
-		'2023-12-08',
-		'2023-12-11',
-		'2023-12-13',
-		'2023-12-16',
-		'2023-12-26'
-	],
+	minNights: 2,
+	// showTopbar: false,
+	// disabledDates: [
+	// 	'2023-12-12',
+	// 	'2023-12-08',
+	// 	'2023-12-11',
+	// 	'2023-12-13',
+	// 	'2023-12-16',
+	// 	'2023-12-26'
+	// ],
 	extraDayText: function (date, attributes) {
 		if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
 			return "<span>$110</span>";
@@ -683,13 +399,27 @@ var demo3 = new HotelDatepicker(document.querySelector(".inlineDatePicker"), {
 		if (date === fecha.format(new Date("2024-1-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
 			return "<span>$63</span>";
 		}
-	}
+	},
+	noCheckInDates: [
+        '2023-12-28',
+        '2023-12-29',
+		'2024-01-05'
+    ],
+    noCheckOutDates: [
+        '2023-12-11',
+        '2023-12-20',
+		'2024-01-08',
+		'2024-01-12',
+		'2024-01-18',
+		'2024-01-26',
+    ]
 });
 
 
 var demo14 = new HotelDatepicker(document.querySelector(".listingDetailPage .asideDatePicker"), {
 	moveBothMonths: true,
-	showTopbar: false,
+	minNights: 2,
+	// showTopbar: false,
 
 	extraDayText: function (date, attributes) {
 		if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
@@ -714,51 +444,38 @@ var demo14 = new HotelDatepicker(document.querySelector(".listingDetailPage .asi
 			return "<span>$63</span>";
 		}
 	},
-	disabledDates: [
-		'2023-12-12',
-		'2023-12-08',
-		'2023-12-11',
-		'2023-12-13',
-		'2023-12-16',
-		'2023-12-26'
-	],
+	// disabledDates: [
+	// 	'2023-12-12',
+	// 	'2023-12-08',
+	// 	'2023-12-11',
+	// 	'2023-12-13',
+	// 	'2023-12-16',
+	// 	'2023-12-26'
+	// ],
 	onSelectRange: function () {
 		$('.listingDetailPage .sticky .hiddenForm').slideDown(400)
 		$('.listingDetailPage .dateRange').addClass('active')
 		datepicker.hide();
-	}
+	},
+	noCheckInDates: [
+        '2023-12-28',
+        '2023-12-29'
+    ],
+	noCheckOutDates: [
+        '2023-12-11',
+        '2023-12-20',
+		'2024-01-08',
+		'2024-01-12',
+		'2024-01-18',
+		'2024-01-26',
+    ]
 });
 
 
-
-var demo1 = new HotelDatepicker(
-	document.querySelector(".searchForm .date_item input"),
-	{
-		showTopbar: false,
-		moveBothMonths: true,
-		// noCheckInDaysOfWeek: ['Monday', 'Tuesday']
-	}
-);
-
-// var demo23 = new HotelDatepicker(
-// 	document.querySelector(".inlineDatePicker"),
-// 	{
-// 		// inline: true,
-// 		// clearButton: true,
-// 		// noCheckInDaysOfWeek: ['Monday', 'Tuesday'],
-// 		extraDayText: function (date, attributes) {
-// 			if (date === fecha.format(testDate, "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-// 				return "$150";
-// 			}
-// 		},
-
-// 	}
-// );
 
 Fancybox.bind('.listingGallery a', {
 	groupAll: true,
 });
-
 
 
 
@@ -881,3 +598,5 @@ var demo99 = new HotelDatepicker(document.querySelector(".datePickerPopup .dateP
 		'2023-12-26'
 	],
 });
+
+
