@@ -265,20 +265,17 @@
             color: white;
         }
     }
-    .checkOut .dateRange {
+    .checkOut .dateRange .range:first-child,
+    .checkOut .dateRange,
+    .checkOut .mainContent .block,
+    .checkOut .sticky,
+    .checkOut .sticky .info li.last,
+    .listingDetailPage .listingSection,
+    .listingDetailPage .mainContent .main .btn {
         border-color: var(--gray-700);
     }
-    .checkOut .dateRange .range:first-child {
-        border-color: var(--gray-700);
-    }
-    .checkOut .mainContent .block {
-        border-color: var(--gray-700);
-    }
-    .checkOut .sticky {
-        border-color: var(--gray-700);
-    }
-    .checkOut .sticky .info li.last {
-        border-color: var(--gray-700);
+    .listingDetailPage .line {
+        background-color: var(--gray-700);
     }
     .navMenu .inner {
         background-color: var(--gray-900);
@@ -367,7 +364,7 @@
     .moreFilerPopup .top {
         border-color: var(--gray-700);
     }
-    .FeaturePlaces.listings .tags .tag .quantitySlider .field input{
+    .FeaturePlaces.listings .tags .tag .quantitySlider .field input {
         color: white;
         border-color: var(--gray-700);
     }

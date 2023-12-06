@@ -330,7 +330,7 @@ $(".FeaturePlaces .moreFilter > .btn, .moreFilter .popup .closeBtn").click(funct
 })
 
 
-$(".listingDetailPage .preview .top .share_btn").click(function () {
+$(".listingDetailPage .preview .top .share_btn, .share_popup .top .closeBtn").click(function () {
 	$('.share_popup').toggleClass('active')
 })
 
@@ -355,8 +355,8 @@ $(document).click(function (event) {
 
 var demo3 = new HotelDatepicker(document.querySelector(".inlineDatePicker"), {
 	inline: true,
-	moveBothMonths: true,
-	minNights: 2,
+	// moveBothMonths: true,
+	// minNights: 2,
 	// showTopbar: false,
 	// disabledDates: [
 	// 	'2023-12-12',
@@ -366,73 +366,73 @@ var demo3 = new HotelDatepicker(document.querySelector(".inlineDatePicker"), {
 	// 	'2023-12-16',
 	// 	'2023-12-26'
 	// ],
-	extraDayText: function (date, attributes) {
-		if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$110</span>";
-		}
-		if (date === fecha.format(new Date("2023-12-6"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$110</span>";
-		}
-		if (date === fecha.format(new Date("2023-12-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$110</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-2"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$234</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$150</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-3"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$290</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$63</span>";
-		}
-	},
-	noCheckInDates: [
-        '2023-12-28',
-        '2023-12-29',
-		'2024-01-05'
-    ],
-    noCheckOutDates: [
-        '2023-12-11',
-        '2023-12-20',
-		'2024-01-08',
-		'2024-01-12',
-		'2024-01-18',
-		'2024-01-26',
-    ]
+	// extraDayText: function (date, attributes) {
+	// 	if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$110</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2023-12-6"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$110</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2023-12-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$110</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-2"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$234</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$150</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-3"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$290</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$63</span>";
+	// 	}
+	// },
+	// noCheckInDates: [
+	//     '2023-12-28',
+	//     '2023-12-29',
+	// 	'2024-01-05'
+	// ],
+	// noCheckOutDates: [
+	//     '2023-12-11',
+	//     '2023-12-20',
+	// 	'2024-01-08',
+	// 	'2024-01-12',
+	// 	'2024-01-18',
+	// 	'2024-01-26',
+	// ]
 });
 
 
 var demo14 = new HotelDatepicker(document.querySelector(".listingDetailPage .asideDatePicker"), {
-	moveBothMonths: true,
-	minNights: 2,
+	// moveBothMonths: true,
+	// minNights: 2,
 	// showTopbar: false,
 
-	extraDayText: function (date, attributes) {
-		if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$110</span>";
-		}
-		if (date === fecha.format(new Date("2023-12-6"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$110</span>";
-		}
-		if (date === fecha.format(new Date("2023-12-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$110</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-2"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$234</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$150</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-3"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$290</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$63</span>";
-		}
-	},
+	// extraDayText: function (date, attributes) {
+	// 	if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$110</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2023-12-6"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$110</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2023-12-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$110</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-2"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$234</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$150</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-3"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$290</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$63</span>";
+	// 	}
+	// },
 	// disabledDates: [
 	// 	'2023-12-12',
 	// 	'2023-12-08',
@@ -444,20 +444,19 @@ var demo14 = new HotelDatepicker(document.querySelector(".listingDetailPage .asi
 	onSelectRange: function () {
 		$('.listingDetailPage .sticky .hiddenForm').slideDown(400)
 		$('.listingDetailPage .dateRange').addClass('active')
-		datepicker.hide();
 	},
-	noCheckInDates: [
-        '2023-12-28',
-        '2023-12-29'
-    ],
-	noCheckOutDates: [
-        '2023-12-11',
-        '2023-12-20',
-		'2024-01-08',
-		'2024-01-12',
-		'2024-01-18',
-		'2024-01-26',
-    ]
+	// noCheckInDates: [
+	//     '2023-12-28',
+	//     '2023-12-29'
+	// ],
+	// noCheckOutDates: [
+	//     '2023-12-11',
+	//     '2023-12-20',
+	// 	'2024-01-08',
+	// 	'2024-01-12',
+	// 	'2024-01-18',
+	// 	'2024-01-26',
+	// ]
 });
 
 
@@ -552,40 +551,40 @@ $(".datePickerPopup .closeBtn").click(function () {
 })
 
 var demo99 = new HotelDatepicker(document.querySelector(".datePickerPopup .datePicker"), {
-	moveBothMonths: true,
-	showTopbar: false,
-	inline: true,
-	extraDayText: function (date, attributes) {
-		if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$110</span>";
-		}
-		if (date === fecha.format(new Date("2023-12-6"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$110</span>";
-		}
-		if (date === fecha.format(new Date("2023-12-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$110</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-2"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$234</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$150</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-3"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$290</span>";
-		}
-		if (date === fecha.format(new Date("2024-1-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-			return "<span>$63</span>";
-		}
-	},
-	disabledDates: [
-		'2023-12-12',
-		'2023-12-08',
-		'2023-12-11',
-		'2023-12-13',
-		'2023-12-16',
-		'2023-12-26'
-	],
+	// moveBothMonths: true,
+	// showTopbar: false,
+	// inline: true,
+	// extraDayText: function (date, attributes) {
+	// 	if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$110</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2023-12-6"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$110</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2023-12-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$110</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-2"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$234</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$150</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-3"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$290</span>";
+	// 	}
+	// 	if (date === fecha.format(new Date("2024-1-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
+	// 		return "<span>$63</span>";
+	// 	}
+	// },
+	// disabledDates: [
+	// 	'2023-12-12',
+	// 	'2023-12-08',
+	// 	'2023-12-11',
+	// 	'2023-12-13',
+	// 	'2023-12-16',
+	// 	'2023-12-26'
+	// ],
 });
 
 
