@@ -35,6 +35,7 @@
     }
     .site_header {
         color: white;
+        box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
         .bg {
             background-color: #111827;
         }
@@ -45,8 +46,14 @@
         }
 
         .search_bar {
-            border: 1px solid var(--gray-500);
+            border: 1px solid var(--gray-700);
         }
+    }
+    .site_header .searchForm .tab-menu li.active {
+        color: white;
+    }
+    .site_header .searchForm .tab-menu li {
+        color: var(--gray-400);
     }
     .site_logo #text {
         fill: white !important;
@@ -73,19 +80,49 @@
     .FeaturePlaces .wrapper {
         background-color: rgb(0 0 0 / 20%);
     }
-    .FeaturePlaces .head .btn {
+    .FeaturePlaces .head > .btn {
         background-color: transparent;
         border: 1px solid white;
         color: white;
     }
+    .FeaturePlaces.listings .tags .tag {
+        .dropdown {
+            background-color: var(--gray-900);
+            color: white;
+        }
+        .bottom {
+            background-color: var(--gray-900);
+            .btn {
+                color: white;
+                border-color: var(--gray-700);
+            }
+        }
+    }
+    .FeaturePlaces.listings .tags .tag .popup .inner {
+        background-color: var(--gray-900);
+        color: white;
+    }
+    .FeaturePlaces.listings .tags .range .text h4 {
+        color: white;
+    }
+    .FeaturePlaces.listings .tags .range .qua button {
+        color: white;
+    }
+    .FeaturePlaces.listings .tags .range .qua input {
+        color: white;
+    }
+    .FeaturePlaces.listings .tags .tag .dropdown {
+        border-color: var(--gray-700);
+    }
     .listingCart {
         background-color: rgba(17, 24, 39, 0.5607843137);
+        border-color: var(--gray-800);
     }
     .listingCart .image .arrow {
         background-color: rgba(17, 24, 39, 0.5607843137);
     }
     .discover_slider .wrapper {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.2) !important;
     }
     .pagination .arrow {
         background-color: rgba(0, 0, 0, 0.2);
@@ -96,6 +133,7 @@
     .site_header .searchForm .wrapper {
         background-color: #1f2937;
         border-color: transparent;
+        border-color: var(--gray-700);
     }
     .site_header .date_item input {
         &::placeholder {
@@ -285,7 +323,8 @@
         background-color: var(--gray-800);
         .categortItem {
             img {
-                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
+                    brightness(103%) contrast(103%);
             }
         }
     }
@@ -297,6 +336,43 @@
     }
     .listingCart .save_btn {
         background-color: var(--gray-700);
+        &:hover {
+            background-color: var(--gray-600);
+        }
+    }
+    .sectionVideos .mainVideo .video {
+        background-color: var(--gray-900);
+    }
+    .sectionVideos .wrapper::after {
+        background-color: var(--gray-800);
+    }
+    .clientSay .wrapper {
+        background-color: rgb(14, 19, 31);
+    }
+    .FeaturePlaces.listings .tags .tag .popup .top {
+        border-color: var(--gray-700);
+    }
+    .FeaturePlaces.listings .tags .tag .btn {
+        border-color: var(--gray-700);
+    }
+    .checkbox input {
+        border-color: var(--gray-700) !important;
+    }
+    .moreFilerPopup .inner {
+        background-color: var(--gray-900);
+    }
+    .moreFilerPopup .bottom {
+        background-color: var(--gray-900);
+    }
+    .moreFilerPopup .top {
+        border-color: var(--gray-700);
+    }
+    .FeaturePlaces.listings .tags .tag .quantitySlider .field input{
+        color: white;
+        border-color: var(--gray-700);
+    }
+    .site_header .action_list .list_property {
+        border-color: var(--gray-700);
     }
 }
 

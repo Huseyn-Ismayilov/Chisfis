@@ -8,20 +8,6 @@ $(window).scroll(function () {
 });
 
 
-// $('.site_header .toggle, .mobile_menu .close_btn').click(function () {
-// 	$('.mobile_menu').toggleClass('opened');
-// 	$('.nav_menu').toggleClass('opened');
-// 	$('.site_header .toggle').toggleClass('opened')
-// });
-
-// $('.mobile_menu .menu .dropdown .nav_link').click(function () {
-// 	$(this).next().toggleClass('opened');
-// 	return false;
-// });
-
-// $('.mobile_menu .menu .back_btn').click(function () {
-// 	$(this).parent().removeClass('opened');
-// });
 
 // end
 var demo1 = new HotelDatepicker(
@@ -67,6 +53,12 @@ $(".c-theme-switch").on("click", () => {
 });
 
 
+$(".listingCart  .save_btn").click(function () {
+	$(this).toggleClass('active')
+});
+
+
+
 
 $('ul.tabs li').click(function () {
 	var $this = $(this);
@@ -78,7 +70,6 @@ $('ul.tabs li').click(function () {
 		$this.closest('.tabs_wrapper').find('ul.tabs li, .tabs_container .tab_content').removeClass('active');
 		$('.tabs_container .tab_content[data-tab="' + $theTab + '"], ul.tabs li[id="' + $theTab + '"]').addClass('active');
 	}
-
 });
 
 
@@ -334,15 +325,13 @@ $(".FeaturePlaces .tag:not(.moreFilter) .btn").click(function () {
 	$(this).parent().siblings().removeClass('active')
 })
 
-$(".FeaturePlaces .moreFilter .btn, .moreFilter .popup .closeBtn").click(function () {
-	$('.FeaturePlaces.listings .moreFilter .popup').toggleClass('active')
-	// $(this).parent().siblings().removeClass('active')
+$(".FeaturePlaces .moreFilter > .btn, .moreFilter .popup .closeBtn").click(function () {
+	$('.moreFilerPopup').toggleClass('active')
 })
 
 
 $(".listingDetailPage .preview .top .share_btn").click(function () {
 	$('.share_popup').toggleClass('active')
-	// $(this).parent().siblings().removeClass('active')
 })
 
 $(document).click(function (event) {
@@ -352,8 +341,8 @@ $(document).click(function (event) {
 });
 
 $(document).click(function (event) {
-	if (!$(event.target).closest(".moreFilter .popup .inner, .moreFilter > .btn").length) {
-		$(".moreFilter .popup").removeClass("active");
+	if (!$(event.target).closest(".moreFilter > .btn, .moreFilerPopup .inner").length) {
+		$(".moreFilerPopup").removeClass("active");
 	}
 });
 

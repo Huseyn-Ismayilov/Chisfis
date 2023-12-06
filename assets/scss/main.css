@@ -157,6 +157,7 @@ h1 {
 }
 .dark_theme .site_header {
   color: white;
+  box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
 }
 .dark_theme .site_header .bg {
   background-color: #111827;
@@ -165,7 +166,13 @@ h1 {
   color: white;
 }
 .dark_theme .site_header .search_bar {
-  border: 1px solid var(--gray-500);
+  border: 1px solid var(--gray-700);
+}
+.dark_theme .site_header .searchForm .tab-menu li.active {
+  color: white;
+}
+.dark_theme .site_header .searchForm .tab-menu li {
+  color: var(--gray-400);
 }
 .dark_theme .site_logo #text {
   fill: white !important;
@@ -194,19 +201,47 @@ h1 {
 .dark_theme .FeaturePlaces .wrapper {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.dark_theme .FeaturePlaces .head .btn {
+.dark_theme .FeaturePlaces .head > .btn {
   background-color: transparent;
   border: 1px solid white;
   color: white;
 }
+.dark_theme .FeaturePlaces.listings .tags .tag .dropdown {
+  background-color: var(--gray-900);
+  color: white;
+}
+.dark_theme .FeaturePlaces.listings .tags .tag .bottom {
+  background-color: var(--gray-900);
+}
+.dark_theme .FeaturePlaces.listings .tags .tag .bottom .btn {
+  color: white;
+  border-color: var(--gray-700);
+}
+.dark_theme .FeaturePlaces.listings .tags .tag .popup .inner {
+  background-color: var(--gray-900);
+  color: white;
+}
+.dark_theme .FeaturePlaces.listings .tags .range .text h4 {
+  color: white;
+}
+.dark_theme .FeaturePlaces.listings .tags .range .qua button {
+  color: white;
+}
+.dark_theme .FeaturePlaces.listings .tags .range .qua input {
+  color: white;
+}
+.dark_theme .FeaturePlaces.listings .tags .tag .dropdown {
+  border-color: var(--gray-700);
+}
 .dark_theme .listingCart {
   background-color: rgba(17, 24, 39, 0.5607843137);
+  border-color: var(--gray-800);
 }
 .dark_theme .listingCart .image .arrow {
   background-color: rgba(17, 24, 39, 0.5607843137);
 }
 .dark_theme .discover_slider .wrapper {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .dark_theme .pagination .arrow {
   background-color: rgba(0, 0, 0, 0.2);
@@ -214,6 +249,7 @@ h1 {
 .dark_theme .site_header .searchForm .wrapper {
   background-color: #1f2937;
   border-color: transparent;
+  border-color: var(--gray-700);
 }
 .dark_theme .site_header .date_item input::-moz-placeholder {
   color: white;
@@ -410,6 +446,43 @@ h1 {
 }
 .dark_theme .listingCart .save_btn {
   background-color: var(--gray-700);
+}
+.dark_theme .listingCart .save_btn:hover {
+  background-color: var(--gray-600);
+}
+.dark_theme .sectionVideos .mainVideo .video {
+  background-color: var(--gray-900);
+}
+.dark_theme .sectionVideos .wrapper::after {
+  background-color: var(--gray-800);
+}
+.dark_theme .clientSay .wrapper {
+  background-color: rgb(14, 19, 31);
+}
+.dark_theme .FeaturePlaces.listings .tags .tag .popup .top {
+  border-color: var(--gray-700);
+}
+.dark_theme .FeaturePlaces.listings .tags .tag .btn {
+  border-color: var(--gray-700);
+}
+.dark_theme .checkbox input {
+  border-color: var(--gray-700) !important;
+}
+.dark_theme .moreFilerPopup .inner {
+  background-color: var(--gray-900);
+}
+.dark_theme .moreFilerPopup .bottom {
+  background-color: var(--gray-900);
+}
+.dark_theme .moreFilerPopup .top {
+  border-color: var(--gray-700);
+}
+.dark_theme .FeaturePlaces.listings .tags .tag .quantitySlider .field input {
+  color: white;
+  border-color: var(--gray-700);
+}
+.dark_theme .site_header .action_list .list_property {
+  border-color: var(--gray-700);
 }
 
 .light_theme .mbsc-windows.mbsc-popup {
@@ -1122,6 +1195,7 @@ button.swiper-pagination-bullet {
   border-radius: 24px;
   overflow: hidden;
   background-color: white;
+  border: 1px solid transparent;
   display: flex;
   align-items: center;
   position: relative;
@@ -1221,6 +1295,13 @@ button.swiper-pagination-bullet {
 }
 .listingCart .save_btn:hover {
   background-color: var(--gray-200);
+}
+.listingCart .save_btn svg path {
+  transition: 0.15s;
+}
+.listingCart .save_btn.active svg path {
+  fill: red;
+  stroke: red;
 }
 .listingCart .details {
   padding: 16px;
@@ -2452,6 +2533,7 @@ datepicker__buttons {
 .site_footer h5 {
   font-size: 14px;
   font-weight: 700;
+  margin-bottom: 8px;
 }
 .site_footer .menu ul a {
   font-size: 14px;
@@ -3036,64 +3118,6 @@ datepicker__buttons {
 .FeaturePlaces.listings .tags .tag.purple > .btn:hover {
   background-color: var(--indigo-100);
 }
-.FeaturePlaces.listings .tags .tag .popup {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 30px 16px;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.452);
-  transition: 0.15s;
-  opacity: 0;
-  visibility: hidden;
-}
-.FeaturePlaces.listings .tags .tag .popup .inner {
-  background-color: white;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  transition: 0.15s;
-  overflow: hidden;
-  transform: scale(0.7);
-}
-.FeaturePlaces.listings .tags .tag .popup.active {
-  opacity: 1;
-  visibility: visible;
-}
-.FeaturePlaces.listings .tags .tag .popup.active .inner {
-  transform: scale(1);
-}
-.FeaturePlaces.listings .tags .tag .popup .top {
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 0;
-}
-.FeaturePlaces.listings .tags .tag .popup .top h3 {
-  font-weight: 500;
-}
-.FeaturePlaces.listings .tags .tag .popup .closeBtn {
-  position: absolute;
-  left: 15px;
-}
-.FeaturePlaces.listings .tags .tag .popup .content {
-  padding: 20px;
-  display: flex;
-}
-.FeaturePlaces.listings .tags .tag .popup .content > div {
-  width: 50%;
-}
-.FeaturePlaces.listings .tags .tag .popup .content .checkbox {
-  padding: 10px 0;
-}
 .FeaturePlaces.listings .tags .tag .quantitySlider {
   padding: 20px;
   /* Support */
@@ -3101,6 +3125,7 @@ datepicker__buttons {
 .FeaturePlaces.listings .tags .tag .quantitySlider .price-input {
   width: 100%;
   display: flex;
+  gap: 16px;
   padding: 30px 0 0;
 }
 .FeaturePlaces.listings .tags .tag .quantitySlider .price-input .field {
@@ -3118,6 +3143,7 @@ datepicker__buttons {
 .FeaturePlaces.listings .tags .tag .quantitySlider span {
   display: block;
   font-size: 14px;
+  margin-bottom: 8px;
 }
 .FeaturePlaces.listings .tags .tag .quantitySlider .field input {
   width: 100%;
@@ -3126,6 +3152,7 @@ datepicker__buttons {
   border-radius: 99px;
   padding-left: 28px;
   border: 1px solid var(--gray-300);
+  background-color: transparent;
 }
 .FeaturePlaces.listings .tags .tag .quantitySlider input[type=number]::-webkit-outer-spin-button,
 .FeaturePlaces.listings .tags .tag .quantitySlider input[type=number]::-webkit-inner-spin-button {
@@ -3268,6 +3295,97 @@ datepicker__buttons {
 }
 .FeaturePlaces.listings .listingCart {
   border: 1px solid var(--gray-100);
+}
+
+.moreFilerPopup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px 16px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.452);
+  transition: 0.15s;
+  opacity: 0;
+  visibility: hidden;
+}
+.moreFilerPopup .inner {
+  background-color: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  transition: 0.15s;
+  overflow: hidden;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.7);
+}
+.moreFilerPopup .scroll {
+  overflow-y: auto;
+  flex-grow: 1;
+}
+.moreFilerPopup.active {
+  opacity: 1;
+  visibility: visible;
+}
+.moreFilerPopup.active .inner {
+  transform: scale(1);
+}
+.moreFilerPopup .top {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.moreFilerPopup .top h3 {
+  font-weight: 500;
+}
+.moreFilerPopup .closeBtn {
+  position: absolute;
+  left: 15px;
+  z-index: 2;
+  cursor: pointer;
+}
+.moreFilerPopup .content {
+  padding: 20px;
+}
+.moreFilerPopup .content:not(:last-child) {
+  border-bottom: 1px solid var(--gray-200);
+}
+.moreFilerPopup .content h4 {
+  font-size: 22px;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.moreFilerPopup .content .wrapper {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.moreFilerPopup .content .wrapper > div {
+  width: 50%;
+}
+.moreFilerPopup .content .checkbox {
+  padding: 10px 0;
+}
+.moreFilerPopup .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--gray-50);
+}
+.moreFilerPopup .bottom .clear_btn {
+  border: 1px solid var(--gray-300);
 }
 
 @media (max-width: 1200px) {
@@ -3472,6 +3590,7 @@ datepicker__buttons {
   justify-content: center;
   border-radius: 50%;
   background-color: white;
+  color: var(--indigo-600);
 }
 .sectionVideos .playBtn {
   position: absolute;
