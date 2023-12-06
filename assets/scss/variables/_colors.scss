@@ -29,6 +29,9 @@
         background-color: #1f2937 !important;
         min-width: 500px;
     }
+    .btn {
+        color: white;
+    }
     body {
         background-color: #111827;
         color: white;
@@ -346,23 +349,15 @@
     .clientSay .wrapper {
         background-color: rgb(14, 19, 31);
     }
-    .FeaturePlaces.listings .tags .tag .popup .top {
-        border-color: var(--gray-700);
-    }
-    .FeaturePlaces.listings .tags .tag .btn {
+    .FeaturePlaces.listings .tags .tag .btn,
+    .FeaturePlaces.listings .tags .tag .popup .top,
+    .moreFilerPopup .inner,
+    .moreFilerPopup .bottom,
+    .moreFilerPopup .top {
         border-color: var(--gray-700);
     }
     .checkbox input {
         border-color: var(--gray-700) !important;
-    }
-    .moreFilerPopup .inner {
-        background-color: var(--gray-900);
-    }
-    .moreFilerPopup .bottom {
-        background-color: var(--gray-900);
-    }
-    .moreFilerPopup .top {
-        border-color: var(--gray-700);
     }
     .FeaturePlaces.listings .tags .tag .quantitySlider .field input {
         color: white;
@@ -370,6 +365,31 @@
     }
     .site_header .action_list .list_property {
         border-color: var(--gray-700);
+    }
+    .article_single {
+        .article_content {
+            > * {
+                color: var(--gray-300) !important;
+
+            }
+
+        }
+        .single_comment {
+            textarea {
+                border-color: var(--gray-700);
+            }
+            .cancel_btn {
+                border-color: var(--gray-700);
+                &:hover {
+                    background-color: var(--gray-700);
+                }
+            }
+        }
+        .writtenBy {
+            p {
+                color: var(--gray-300);
+            }
+        }
     }
 }
 

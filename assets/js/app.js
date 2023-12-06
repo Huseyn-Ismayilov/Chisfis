@@ -330,7 +330,7 @@ $(".FeaturePlaces .moreFilter > .btn, .moreFilter .popup .closeBtn").click(funct
 })
 
 
-$(".listingDetailPage .preview .top .share_btn, .share_popup .top .closeBtn").click(function () {
+$(".btn.share_btn, .share_popup .top .closeBtn").click(function () {
 	$('.share_popup').toggleClass('active')
 })
 
@@ -347,7 +347,7 @@ $(document).click(function (event) {
 });
 
 $(document).click(function (event) {
-	if (!$(event.target).closest(".share_popup .inner, .listingDetailPage .preview .top .share_btn").length) {
+	if (!$(event.target).closest(".share_popup .inner, .share_btn").length) {
 		$(".share_popup").removeClass("active");
 	}
 });
