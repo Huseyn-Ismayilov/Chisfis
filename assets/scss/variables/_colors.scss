@@ -125,6 +125,9 @@
             }
         }
     }
+    .category_slider .pagination .arrow {
+        border-color: var(--gray-700);
+    }
     .reservation_done .features_list .list li {
         background-color: var(--gray-700);
         color: white;
