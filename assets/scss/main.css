@@ -2568,6 +2568,9 @@ datepicker__buttons {
   .stickyCategorySlider .arrow {
     display: none;
   }
+  .stickyCategorySlider .categortItem {
+    padding-top: 5px;
+  }
   .stickyCategorySlider .swiper-slide {
     margin-right: 16px;
   }
