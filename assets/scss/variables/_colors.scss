@@ -82,6 +82,12 @@
             color: white;
         }
     }
+    .bottomNavbar {
+        background-color: var(--gray-800);
+        .navItem {
+            color: white;
+        }
+    }
     .FeaturePlaces .wrapper {
         background-color: rgb(0 0 0 / 20%);
     }
@@ -325,7 +331,7 @@
     .listingDetailPage .mainContent .main .btn {
         color: white;
     }
-    .stickyCagorySlider {
+    .stickyCategorySlider {
         background-color: var(--gray-800);
         .categortItem {
             img {
@@ -334,10 +340,10 @@
             }
         }
     }
-    .stickyCagorySlider .arrow {
+    .stickyCategorySlider .arrow {
         background-color: var(--gray-500);
     }
-    .stickyCagorySlider .categortItem::after {
+    .stickyCategorySlider .categortItem::after {
         background-color: white;
     }
     .listingCart .save_btn {

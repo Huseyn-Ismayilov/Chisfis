@@ -203,6 +203,12 @@ h1 {
 .dark_theme .hero .search_bar .date_item input::placeholder {
   color: white;
 }
+.dark_theme .bottomNavbar {
+  background-color: var(--gray-800);
+}
+.dark_theme .bottomNavbar .navItem {
+  color: white;
+}
 .dark_theme .FeaturePlaces .wrapper {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -438,16 +444,16 @@ h1 {
 .dark_theme .listingDetailPage .mainContent .main .btn {
   color: white;
 }
-.dark_theme .stickyCagorySlider {
+.dark_theme .stickyCategorySlider {
   background-color: var(--gray-800);
 }
-.dark_theme .stickyCagorySlider .categortItem img {
+.dark_theme .stickyCategorySlider .categortItem img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
-.dark_theme .stickyCagorySlider .arrow {
+.dark_theme .stickyCategorySlider .arrow {
   background-color: var(--gray-500);
 }
-.dark_theme .stickyCagorySlider .categortItem::after {
+.dark_theme .stickyCategorySlider .categortItem::after {
   background-color: white;
 }
 .dark_theme .listingCart .save_btn {
@@ -1525,6 +1531,9 @@ button.swiper-pagination-bullet {
     flex-wrap: wrap;
     gap: 12px;
   }
+  .sec_title h1 {
+    font-size: var(--text-3xl);
+  }
 }
 .category_slider .item .image {
   margin-bottom: 20px;
@@ -2340,7 +2349,7 @@ datepicker__buttons {
   height: 185px;
 }
 
-.stickyCagorySlider {
+.stickyCategorySlider {
   position: sticky;
   top: 88px;
   left: 0;
@@ -2348,17 +2357,17 @@ datepicker__buttons {
   z-index: 10;
   background-color: white;
 }
-.stickyCagorySlider .swiper-slide {
+.stickyCategorySlider .swiper-slide {
   width: -moz-fit-content !important;
   width: fit-content !important;
   margin-right: 36px;
 }
-.stickyCagorySlider .slider {
+.stickyCategorySlider .slider {
   overflow: hidden;
   position: relative;
   padding: 0 20px;
 }
-.stickyCagorySlider .arrow {
+.stickyCategorySlider .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -2372,16 +2381,16 @@ datepicker__buttons {
   background-color: white;
   z-index: 4;
 }
-.stickyCagorySlider .arrow.swiper-button-disabled {
+.stickyCategorySlider .arrow.swiper-button-disabled {
   opacity: 0;
 }
-.stickyCagorySlider .prev_arrow {
+.stickyCategorySlider .prev_arrow {
   left: 0;
 }
-.stickyCagorySlider .next_arrow {
+.stickyCategorySlider .next_arrow {
   right: 0;
 }
-.stickyCagorySlider .categortItem {
+.stickyCategorySlider .categortItem {
   text-align: center;
   opacity: 0.7;
   position: relative;
@@ -2393,21 +2402,21 @@ datepicker__buttons {
   align-items: center;
   cursor: pointer;
 }
-.stickyCagorySlider .categortItem .icon {
+.stickyCategorySlider .categortItem .icon {
   display: inline-block;
   width: 24px;
   height: 24px;
 }
-.stickyCagorySlider .categortItem img {
+.stickyCategorySlider .categortItem img {
   width: 100%;
   height: 100%;
 }
-.stickyCagorySlider .categortItem span {
+.stickyCategorySlider .categortItem span {
   font-size: 11px;
   font-weight: 500;
   display: block;
 }
-.stickyCagorySlider .categortItem::after {
+.stickyCategorySlider .categortItem::after {
   content: "";
   position: absolute;
   left: 0;
@@ -2417,19 +2426,19 @@ datepicker__buttons {
   opacity: 0;
   background-color: black;
 }
-.stickyCagorySlider .categortItem.active {
+.stickyCategorySlider .categortItem.active {
   opacity: 1;
 }
-.stickyCagorySlider .categortItem.active span {
+.stickyCategorySlider .categortItem.active span {
   font-weight: 600;
 }
-.stickyCagorySlider .categortItem.active::after {
+.stickyCategorySlider .categortItem.active::after {
   opacity: 1;
 }
-.stickyCagorySlider .categortItem:not(.active):hover {
+.stickyCategorySlider .categortItem:not(.active):hover {
   opacity: 1;
 }
-.stickyCagorySlider .categortItem:not(.active):hover::after {
+.stickyCategorySlider .categortItem:not(.active):hover::after {
   opacity: 0.1;
 }
 
@@ -2549,17 +2558,17 @@ datepicker__buttons {
   .site_header {
     display: none;
   }
-  .stickyCagorySlider {
-    top: 79px;
+  .stickyCategorySlider {
+    top: 68px;
   }
-  .stickyCagorySlider .slider {
+  .stickyCategorySlider .slider {
     padding: 0 24px;
     margin: 0 -16px;
   }
-  .stickyCagorySlider .arrow {
+  .stickyCategorySlider .arrow {
     display: none;
   }
-  .stickyCagorySlider .swiper-slide {
+  .stickyCategorySlider .swiper-slide {
     margin-right: 16px;
   }
 }
@@ -2747,6 +2756,11 @@ datepicker__buttons {
 .mobileSearchForm .trigger svg {
   display: block;
 }
+.mobileSearchForm .filterForm {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 24px;
+}
 .mobileSearchForm .filterForm .tab-menu {
   height: 88px;
   display: flex;
@@ -2804,6 +2818,11 @@ datepicker__buttons {
   transform: translateY(50px);
   background-color: var(--gray-100);
 }
+.mobileSearchForm .hiddenContent .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .mobileSearchForm .hiddenContent .close_btn {
   position: absolute;
   left: 12px;
@@ -2815,6 +2834,12 @@ datepicker__buttons {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+.mobileSearchForm .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
 }
 .mobileSearchForm .block {
   background-color: white;
@@ -2959,6 +2984,10 @@ datepicker__buttons {
   width: 100%;
   z-index: 90;
   background-color: white;
+  transition: 0.15s;
+}
+.bottomNavbar.hide {
+  transform: translateY(100%);
 }
 .bottomNavbar .menu {
   display: flex;

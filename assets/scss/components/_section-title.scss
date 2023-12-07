@@ -19,5 +19,8 @@
             flex-wrap: wrap;
             gap: 12px;
         }
+        h1 {
+            font-size: var(--text-3xl);
+        }
     }
 }

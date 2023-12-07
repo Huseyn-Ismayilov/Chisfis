@@ -1,13 +1,20 @@
-$(window).scroll(function () {
-	var scroll = $(window).scrollTop();
-	if (scroll >= 60) {
-		$(".site_header").addClass("scroll_down");
+
+var header = document.querySelector(".bottomNavbar");
+var navbarHeight = header.offsetHeight;
+var lastScrollTop = 0;
+
+window.onscroll = function () { scrollHide() };
+
+function scrollHide() {
+	var st = window.pageYOffset || document.documentElement.scrollTop;
+	console.log(st);
+	if (st > lastScrollTop) {
+		header.classList.add('hide');
 	} else {
-		$(".site_header").removeClass("scroll_down");
+		header.classList.remove('hide');
 	}
-});
-
-
+	lastScrollTop = st <= 0 ? 0 : st;
+}
 
 // end
 var demo1 = new HotelDatepicker(
@@ -320,15 +327,22 @@ $(".mobileSearchForm .block .head").click(function () {
 });
 
 
-var stickyCagorySlider = new Swiper(".stickyCagorySlider .slider", {
+var stickyCategorySlider = new Swiper(".stickyCategorySlider .slider", {
 	slidesPerView: "auto",
+	freeMode: true,
+
 	pagination: {
-		el: ".stickyCagorySlider .swiper-pagination",
+		el: ".stickyCategorySlider .swiper-pagination",
 		clickable: true,
 	},
 	navigation: {
-		nextEl: '.stickyCagorySlider .next_arrow',
-		prevEl: '.stickyCagorySlider .prev_arrow',
+		nextEl: '.stickyCategorySlider .next_arrow',
+		prevEl: '.stickyCategorySlider .prev_arrow',
+	},
+	breakpoints: {
+		1024: {
+			freeMode: false,
+		},
 	},
 });
 
