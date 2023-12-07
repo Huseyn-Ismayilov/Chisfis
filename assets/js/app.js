@@ -1,20 +1,12 @@
+var prev = 0;
+var $window = $(window);
+var nav = $('.bottomNavbar');
 
-var header = document.querySelector(".bottomNavbar");
-var navbarHeight = header.offsetHeight;
-var lastScrollTop = 0;
-
-window.onscroll = function () { scrollHide() };
-
-function scrollHide() {
-	var st = window.pageYOffset || document.documentElement.scrollTop;
-	console.log(st);
-	if (st > lastScrollTop) {
-		header.classList.add('hide');
-	} else {
-		header.classList.remove('hide');
-	}
-	lastScrollTop = st <= 0 ? 0 : st;
-}
+$window.on('scroll', function () {
+	var scrollTop = $window.scrollTop();
+	nav.toggleClass('hide', scrollTop > prev);
+	prev = scrollTop;
+});
 
 // end
 var demo1 = new HotelDatepicker(
@@ -52,7 +44,7 @@ $(".c-theme-switch").on("click", () => {
 });
 
 
-$(".listingCart .save_btn").click(function () {
+$(".save_btn").click(function () {
 	$(this).toggleClass('active')
 });
 
@@ -120,6 +112,31 @@ var swiper = new Swiper(".discover_slider .slider", {
 		prevEl: '.discover_slider .prev_arrow',
 	},
 });
+
+
+var swiper = new Swiper(".blog_slider .slider", {
+	slidesPerView: 2,
+	spaceBetween: 20,
+	pagination: {
+		el: ".blog_slider .swiper-pagination",
+		clickable: true,
+	},
+	breakpoints: {
+		640: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1024: {
+			slidesPerView: 4,
+			spaceBetween: 28,
+		},
+	},
+	navigation: {
+		nextEl: '.blog_slider .next_arrow',
+		prevEl: '.blog_slider .prev_arrow',
+	},
+});
+
 
 const largeSlider = () => {
 	let largeSliders = document.querySelectorAll('.listingCart .image_slider')
@@ -262,16 +279,6 @@ $('.sub').click(function () {
 
 
 
-$(function () {
-	$('#value1, #value2, #value3').keyup(function () {
-		var value1 = parseFloat($('#value1').val()) || 0;
-		var value2 = parseFloat($('#value2').val()) || 0;
-		var value3 = parseFloat($('#value2').val()) || 0;
-		$('#sum').html(val(value1 + value2 + value3))
-	});
-});
-
-
 
 var swiper = new Swiper(".clientSay .slider", {
 	pagination: {
@@ -320,10 +327,21 @@ $(".bottomNavbar .navItem:not(.menuToggle)").click(function () {
 	$(this).siblings().removeClass('active')
 });
 
-
+$(".mobileSearchForm .block:first-child").addClass('active')
 $(".mobileSearchForm .block .head").click(function () {
 	$(this).parent().toggleClass('active')
 	$(this).parent().siblings().removeClass('active')
+});
+
+
+$(".amenities_btn, .amenities_popup .closeBtn").click(function () {
+	$('.amenities_popup').toggleClass('active')
+});
+
+$(document).click(function (event) {
+	if (!$(event.target).closest(".amenities_btn, .amenities_popup .inner").length) {
+		$("body").find(".amenities_popup").removeClass("active");
+	}
 });
 
 
@@ -349,7 +367,6 @@ var stickyCategorySlider = new Swiper(".stickyCategorySlider .slider", {
 
 if ($(window).width() < 991) {
 	$('.listings .tag:not(.moreFilter.mobile)').remove()
-
 }
 
 $(".FeaturePlaces .tag:not(.moreFilter) .btn").click(function () {
@@ -369,6 +386,11 @@ $(".btn.share_btn, .share_popup .top .closeBtn").click(function () {
 	$('.share_popup').toggleClass('active')
 })
 
+$(".mobileSearchForm .trigger, .mobileSearchForm .hiddenContent .close_btn").click(function () {
+	$('.mobileSearchForm .hiddenContent').toggleClass('active')
+})
+
+
 $(document).click(function (event) {
 	if (!$(event.target).closest(".FeaturePlaces .tag:not(.moreFilter) .dropdown, .FeaturePlaces .tag:not(.moreFilter) .btn").length) {
 		$(".FeaturePlaces .tag:not(.moreFilter)").removeClass("active");
@@ -387,9 +409,6 @@ $(document).click(function (event) {
 	}
 });
 
-$(".mobileSearchForm .trigger, .mobileSearchForm .hiddenContent .close_btn").click(function () {
-	$('.mobileSearchForm .hiddenContent').toggleClass('active')
-})
 
 var demo99 = new HotelDatepicker(document.querySelector("#mobileDatePicker"), {
 	inline: true,

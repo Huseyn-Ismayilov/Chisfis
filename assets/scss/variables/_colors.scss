@@ -82,6 +82,14 @@
             color: white;
         }
     }
+    .reservation_done .message .content {
+        border-color: var(--gray-700);
+    }
+    .reservation_done .message .contact_btn {
+        &:hover {
+            background-color: var(--gray-800);
+        }
+    }
     .bottomNavbar {
         background-color: var(--gray-800);
         .navItem {
@@ -96,6 +104,13 @@
         border: 1px solid white;
         color: white;
     }
+    .reservation_done .hero_sec .content .down_btn::after {
+        filter: brightness(0) saturate(100%) invert(7%) sepia(12%) saturate(2450%) hue-rotate(183deg) brightness(100%)
+            contrast(96%);
+    }
+    .reservation_done .hero_sec .content .down_btn svg {
+        color: white;
+    }
     .FeaturePlaces.listings .tags .tag {
         .dropdown {
             background-color: var(--gray-900);
@@ -108,6 +123,26 @@
                 border-color: var(--gray-700);
             }
         }
+    }
+    .reservation_done .features_list .list li {
+        background-color: var(--gray-700);
+        color: white;
+    }
+    .listingDetailPage .sticky .dateRange .range,
+    .dateRange {
+        border-color: var(--gray-700);
+    }
+    .listingDetailPage .sticky .hiddenForm .form_element input,
+    .listingDetailPage .sticky .hiddenForm .form_element textarea {
+        color: white;
+        border-color: var(--gray-700);
+        &::placeholder {
+            color: white;
+            opacity: 0.7;
+        }
+    }
+    .listingDetailPage .sticky .hiddenForm .form_element .inptWithIcon svg {
+        color: white;
     }
     .FeaturePlaces.listings .tags .tag .popup .inner {
         background-color: var(--gray-900);
@@ -154,6 +189,7 @@
     .quantity_item .quantity .dropdown {
         background-color: #1f2937;
         color: white;
+        border-color: var(--gray-700) !important;
         h4 {
             color: white;
         }
@@ -232,6 +268,21 @@
     .addListing .form_wrap .form_element select {
         color: white;
         background-color: var(--gray-900);
+    }
+    .mobileSearchForm .search .search_btn {
+        color: white;
+    }
+    .mobileSearchForm {
+        background-color: var(--gray-900);
+        border-bottom: 1px solid var(--gray-700);
+        .trigger {
+            background-color: transparent;
+            color: white;
+            border: 1px solid var(--gray-700);
+            .icon {
+                border-color: var(--gray-700);
+            }
+        }
     }
     .addListing .form_wrap .form_element .currentLocation {
         color: white;
@@ -332,13 +383,38 @@
         color: white;
     }
     .stickyCategorySlider {
-        background-color: var(--gray-800);
+        background-color: var(--gray-900);
+        border-bottom: 1px solid var(--gray-700);
         .categortItem {
             img {
                 filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
                     brightness(103%) contrast(103%);
             }
         }
+    }
+    .mobileSearchForm .block .range .text span {
+        color: var(--gray-200);
+    }
+    .mobileSearchForm .search {
+        input {
+            border: 1px solid var(--gray-200);
+        }
+    }
+    .mobileSearchForm .hiddenContent {
+        background-color: var(--gray-900);
+        .block {
+            background-color: var(--gray-800);
+            color: white;
+        }
+    }
+    .mobileSearchForm .filterForm .tab-menu li.active {
+        color: var(--gray-200);
+    }
+    .mobileSearchForm .block .head span {
+        color: white;
+    }
+    .mobileSearchForm .search .search_result ul li {
+        color: var(--gray-200);
     }
     .stickyCategorySlider .arrow {
         background-color: var(--gray-500);
@@ -468,8 +544,10 @@
     .moreFilerPopup .range .qua input {
         color: white;
     }
-    input {
+    input,
+    textarea {
         color: white;
+        background-color: transparent;
     }
     .mobileSearchForm .searchForm .tab-menu li.active {
         color: white;

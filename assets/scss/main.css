@@ -203,6 +203,12 @@ h1 {
 .dark_theme .hero .search_bar .date_item input::placeholder {
   color: white;
 }
+.dark_theme .reservation_done .message .content {
+  border-color: var(--gray-700);
+}
+.dark_theme .reservation_done .message .contact_btn:hover {
+  background-color: var(--gray-800);
+}
 .dark_theme .bottomNavbar {
   background-color: var(--gray-800);
 }
@@ -217,6 +223,12 @@ h1 {
   border: 1px solid white;
   color: white;
 }
+.dark_theme .reservation_done .hero_sec .content .down_btn::after {
+  filter: brightness(0) saturate(100%) invert(7%) sepia(12%) saturate(2450%) hue-rotate(183deg) brightness(100%) contrast(96%);
+}
+.dark_theme .reservation_done .hero_sec .content .down_btn svg {
+  color: white;
+}
 .dark_theme .FeaturePlaces.listings .tags .tag .dropdown {
   background-color: var(--gray-900);
   color: white;
@@ -227,6 +239,31 @@ h1 {
 .dark_theme .FeaturePlaces.listings .tags .tag .bottom .btn {
   color: white;
   border-color: var(--gray-700);
+}
+.dark_theme .reservation_done .features_list .list li {
+  background-color: var(--gray-700);
+  color: white;
+}
+.dark_theme .listingDetailPage .sticky .dateRange .range,
+.dark_theme .dateRange {
+  border-color: var(--gray-700);
+}
+.dark_theme .listingDetailPage .sticky .hiddenForm .form_element input,
+.dark_theme .listingDetailPage .sticky .hiddenForm .form_element textarea {
+  color: white;
+  border-color: var(--gray-700);
+}
+.dark_theme .listingDetailPage .sticky .hiddenForm .form_element input::-moz-placeholder, .dark_theme .listingDetailPage .sticky .hiddenForm .form_element textarea::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.dark_theme .listingDetailPage .sticky .hiddenForm .form_element input::placeholder,
+.dark_theme .listingDetailPage .sticky .hiddenForm .form_element textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.dark_theme .listingDetailPage .sticky .hiddenForm .form_element .inptWithIcon svg {
+  color: white;
 }
 .dark_theme .FeaturePlaces.listings .tags .tag .popup .inner {
   background-color: var(--gray-900);
@@ -271,6 +308,7 @@ h1 {
 .dark_theme .quantity_item .quantity .dropdown {
   background-color: #1f2937;
   color: white;
+  border-color: var(--gray-700) !important;
 }
 .dark_theme .quantity_item .quantity .dropdown h4 {
   color: white;
@@ -347,6 +385,21 @@ h1 {
 .dark_theme .addListing .form_wrap .form_element select {
   color: white;
   background-color: var(--gray-900);
+}
+.dark_theme .mobileSearchForm .search .search_btn {
+  color: white;
+}
+.dark_theme .mobileSearchForm {
+  background-color: var(--gray-900);
+  border-bottom: 1px solid var(--gray-700);
+}
+.dark_theme .mobileSearchForm .trigger {
+  background-color: transparent;
+  color: white;
+  border: 1px solid var(--gray-700);
+}
+.dark_theme .mobileSearchForm .trigger .icon {
+  border-color: var(--gray-700);
 }
 .dark_theme .addListing .form_wrap .form_element .currentLocation {
   color: white;
@@ -445,10 +498,33 @@ h1 {
   color: white;
 }
 .dark_theme .stickyCategorySlider {
-  background-color: var(--gray-800);
+  background-color: var(--gray-900);
+  border-bottom: 1px solid var(--gray-700);
 }
 .dark_theme .stickyCategorySlider .categortItem img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+.dark_theme .mobileSearchForm .block .range .text span {
+  color: var(--gray-200);
+}
+.dark_theme .mobileSearchForm .search input {
+  border: 1px solid var(--gray-200);
+}
+.dark_theme .mobileSearchForm .hiddenContent {
+  background-color: var(--gray-900);
+}
+.dark_theme .mobileSearchForm .hiddenContent .block {
+  background-color: var(--gray-800);
+  color: white;
+}
+.dark_theme .mobileSearchForm .filterForm .tab-menu li.active {
+  color: var(--gray-200);
+}
+.dark_theme .mobileSearchForm .block .head span {
+  color: white;
+}
+.dark_theme .mobileSearchForm .search .search_result ul li {
+  color: var(--gray-200);
 }
 .dark_theme .stickyCategorySlider .arrow {
   background-color: var(--gray-500);
@@ -558,8 +634,10 @@ h1 {
 .dark_theme .moreFilerPopup .range .qua input {
   color: white;
 }
-.dark_theme input {
+.dark_theme input,
+.dark_theme textarea {
   color: white;
+  background-color: transparent;
 }
 .dark_theme .mobileSearchForm .searchForm .tab-menu li.active {
   color: white;
@@ -2506,6 +2584,9 @@ datepicker__buttons {
 }
 
 @media (max-width: 992px) {
+  .site_header {
+    display: none;
+  }
   .site_header .site_logo {
     margin-right: auto;
     display: none;
@@ -2555,11 +2636,8 @@ datepicker__buttons {
   .site_header > .container > .wrapper {
     height: 65px;
   }
-  .site_header {
-    display: none;
-  }
   .stickyCategorySlider {
-    top: 75px;
+    top: 81px;
   }
   .stickyCategorySlider .slider {
     padding: 0 24px;
@@ -2725,7 +2803,7 @@ datepicker__buttons {
   gap: 16px;
   text-align: left;
   width: 100%;
-  padding: 8px 16px;
+  padding: 9.5px 16px;
   border-radius: 99px;
   margin: 0 auto;
   max-width: 32rem;
@@ -2748,6 +2826,7 @@ datepicker__buttons {
 .mobileSearchForm .trigger h4 {
   font-size: 14px;
   font-weight: 500;
+  margin-bottom: 3px;
   line-height: 1;
 }
 .mobileSearchForm .trigger span {
@@ -2923,6 +3002,7 @@ datepicker__buttons {
   justify-content: center;
   width: 32px;
   height: 32px;
+  color: currentColor;
   border: 1px solid var(--gray-400);
 }
 .mobileSearchForm .block .range .qua input {
@@ -2931,6 +3011,7 @@ datepicker__buttons {
   text-align: center;
   border: unset;
   background-color: transparent;
+  color: currentColor;
 }
 .mobileSearchForm .block .range .item {
   display: flex;
@@ -2955,6 +3036,8 @@ datepicker__buttons {
   border-radius: 12px;
   padding: 16px;
   font-weight: 600;
+  background-color: transparent;
+  border: unset;
 }
 .mobileSearchForm .search .search_btn {
   position: absolute;
@@ -4611,6 +4694,12 @@ datepicker__buttons {
 .listingDetailPage .preview .top .share_btn {
   margin-right: 24px;
 }
+.listingDetailPage .preview .top .save_btn.active svg {
+  color: red;
+}
+.listingDetailPage .preview .top .save_btn.active svg path {
+  fill: red;
+}
 .listingDetailPage .preview h1 {
   line-height: 1;
 }
@@ -4758,6 +4847,7 @@ datepicker__buttons {
   border-radius: 10px;
   padding: 16px;
   border: 1px solid var(--gray-300);
+  background-color: transparent;
 }
 .listingDetailPage .sticky .hiddenForm .form_element textarea {
   width: 100% !important;
@@ -4855,6 +4945,7 @@ datepicker__buttons {
   align-items: center;
   justify-content: center;
   transition: 0.15s;
+  padding: 0 16px;
   opacity: 0;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.45);
@@ -4946,6 +5037,76 @@ datepicker__buttons {
 }
 .share_popup.active .inner {
   transform: scale(1);
+}
+
+.amenities_popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  transition: 0.15s;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 99;
+}
+.amenities_popup .inner {
+  background-color: white;
+  width: 100%;
+  max-width: 56rem;
+  max-height: 90%;
+  border-radius: 16px;
+  transition: 0.15s;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.7);
+}
+.amenities_popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+.amenities_popup.active .inner {
+  transform: scale(1);
+}
+.amenities_popup .top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gray-300);
+}
+.amenities_popup .top .closeBtn {
+  position: absolute;
+  left: 12px;
+  z-index: 2;
+  cursor: pointer;
+}
+.amenities_popup .top h4 {
+  font-weight: 600;
+}
+.amenities_popup .features_items {
+  padding: 0 32px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.amenities_popup .features_items > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+}
+.amenities_popup .features_items > div:not(:last-child) {
+  border-bottom: 1px solid var(--gray-200);
+}
+.amenities_popup .features_items > div svg {
+  width: 36px;
+  height: auto;
 }
 
 .datePickerForm {
@@ -5305,6 +5466,10 @@ datepicker__buttons {
   .listingDetailPage .listingSection {
     padding: 0;
     border: unset;
+    box-shadow: unset;
+  }
+  .listingDetailPage .listingSection .features_items > div {
+    width: 100%;
   }
   .listingDetailPage h1,
   .listingDetailPage h2 {
@@ -5430,6 +5595,10 @@ datepicker__buttons {
 }
 .checkOut .sticky .info li.last span {
   font-weight: 600;
+}
+.checkOut .sticky .info li span {
+  display: block;
+  width: 50%;
 }
 .checkOut .tab-menu {
   display: flex;
@@ -6626,9 +6795,9 @@ datepicker__buttons {
   border: 1px solid var(--gray-300) !important;
 }
 .checkbox input:checked {
-  border-color: transparent;
-  background-color: var(--indigo-600);
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E");
+  border-color: transparent !important;
+  background-color: var(--indigo-600) !important;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E") !important;
 }
 .checkbox span {
   font-size: 14px;
@@ -6671,4 +6840,215 @@ datepicker__buttons {
 }
 .reservCheck button {
   float: right;
+}
+
+.reservation_done .hero_sec {
+  padding: 140px 0;
+  position: relative;
+}
+.reservation_done .hero_sec .bg_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.reservation_done .hero_sec .bg_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.reservation_done .hero_sec .bg_img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+.reservation_done .hero_sec .content {
+  text-align: center;
+  color: white;
+}
+.reservation_done .hero_sec .content h1 {
+  position: relative;
+}
+.reservation_done .hero_sec .content h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  height: 3px;
+  margin-left: -25px;
+  width: 50px;
+  border-radius: 3px;
+  z-index: 2;
+  background-color: var(--indigo-600);
+}
+.reservation_done .hero_sec .content .down_btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.reservation_done .hero_sec .content .down_btn::after {
+  content: "";
+  width: 220px;
+  height: 80px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA3NiAzMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNzYgMzE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjx0aXRsZT5iZ19zb3VyY2VfYmFkZ2VfMTwvdGl0bGU+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTcuNywxMS40Yy0xLjQtMS40LTIuNy0yLjktNC4xLTQuNGMtMC4yLTAuMy0wLjUtMC41LTAuOC0wLjhjLTAuMi0wLjItMC4zLTAuMy0wLjUtMC41bDAsMA0KCUM0OC42LDIuMiw0My41LDAsMzgsMFMyNy40LDIuMiwyMy42LDUuN2wwLDBjLTAuMiwwLjItMC4zLDAuMy0wLjUsMC41Yy0wLjMsMC4zLTAuNSwwLjUtMC44LDAuOGMtMS40LDEuNS0yLjcsMy00LjEsNC40DQoJYy01LDUuMS0xMS43LDYuMS0xOC4zLDYuM1YzMWg5LjRoOC45aDM5LjRoNC45SDc2VjE3LjZDNjkuNCwxNy40LDYyLjcsMTYuNSw1Ny43LDExLjR6Ii8+DQo8L3N2Zz4NCg==);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 400px 58px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 25px;
+  left: 0;
+  z-index: -1;
+}
+.reservation_done .hero_sec .content .down_btn svg {
+  color: var(--indigo-600);
+}
+.reservation_done .message {
+  text-align: center;
+  padding: 100px 0;
+}
+.reservation_done .message .alert {
+  background-color: var(--indigo-100);
+  color: var(--indigo-600);
+  padding: 14px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.reservation_done .message .content {
+  padding: 30px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--gray-200);
+}
+.reservation_done .message .content h3 {
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+.reservation_done .message .contact_btn {
+  border: 1px solid var(--gray-300);
+}
+.reservation_done .message .contact_btn:hover {
+  background-color: var(--gray-100);
+}
+.reservation_done .features_list {
+  padding-bottom: 100px;
+}
+.reservation_done .features_list .list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 60px;
+}
+.reservation_done .features_list .list li {
+  background-color: var(--gray-100);
+  padding: 20px 20px 50px;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.15s;
+  text-align: center;
+}
+.reservation_done .features_list .list li:hover {
+  transform: scale(1.05);
+}
+.reservation_done .features_list .list li .process-count {
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: bold;
+  left: 50%;
+  margin-left: -25px;
+  bottom: -25px;
+  background: #fff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: var(--indigo-600);
+  border: 1px solid #eee;
+  box-shadow: 0 9px 16px rgba(58, 87, 135, 0.15);
+}
+.reservation_done .features_list .list li .time-line-icon {
+  margin-bottom: 10px;
+}
+.reservation_done .features_list .list li .time-line-icon svg {
+  height: 50px;
+  width: auto;
+  color: var(--indigo-600);
+}
+.reservation_done .features_list .list li p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+.reservation_done .features_list .process_end {
+  margin-top: 80px;
+  position: relative;
+}
+.reservation_done .features_list .process_end::after {
+  content: "";
+  height: 140px;
+  width: 1px;
+  background-color: black;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: -1;
+}
+.reservation_done .features_list .process_end svg {
+  display: block;
+}
+.reservation_done .features_list .process_end .icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--indigo-600);
+  color: white;
+  border-radius: 50%;
+}
+.reservation_done .features_list .process_end .icon::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  bottom: -10px;
+  right: -10px;
+  background-color: var(--indigo-600);
+  border-radius: 50%;
+  opacity: 0.07;
+}
+
+@media (max-width: 768px) {
+  .reservation_done .hero_sec .content h1 {
+    font-size: 32px;
+    line-height: 1;
+  }
+  .reservation_done .message {
+    padding: 60px 0;
+  }
+  .reservation_done .features_list .list {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
 }/*# sourceMappingURL=main.css.map */
