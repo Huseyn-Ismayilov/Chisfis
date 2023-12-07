@@ -619,9 +619,6 @@
         .arrow {
             display: none;
         }
-        .categortItem {
-            padding-top: 5px;
-        }
         .swiper-slide {
             margin-right: 16px;
         }
@@ -1057,6 +1054,7 @@
     width: 100%;
     z-index: 90;
     background-color: white;
+    border-top: 1px solid var(--gray-200);
     transition: .15s;
     &.hide {
         transform: translateY(100%);
