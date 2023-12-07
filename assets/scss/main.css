@@ -2747,16 +2747,13 @@ datepicker__buttons {
 .mobileSearchForm .trigger svg {
   display: block;
 }
-.mobileSearchForm .container {
-  padding: 0;
-}
-.mobileSearchForm .searchForm .tab-menu {
+.mobileSearchForm .filterForm .tab-menu {
   height: 88px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.mobileSearchForm .searchForm .tab-menu li {
+.mobileSearchForm .filterForm .tab-menu li {
   display: flex;
   align-items: center;
   position: relative;
@@ -2764,20 +2761,20 @@ datepicker__buttons {
   color: var(--gray-500);
   cursor: pointer;
 }
-.mobileSearchForm .searchForm .tab-menu li:not(:first-child) {
+.mobileSearchForm .filterForm .tab-menu li:not(:first-child) {
   margin-left: 30px;
 }
-.mobileSearchForm .searchForm .tab-menu li.active {
+.mobileSearchForm .filterForm .tab-menu li.active {
   font-weight: 500;
   color: var(--gray-800);
 }
-.mobileSearchForm .searchForm .tab-menu li.active::after {
+.mobileSearchForm .filterForm .tab-menu li.active::after {
   opacity: 1;
 }
-.mobileSearchForm .searchForm .tab-menu li.active span {
+.mobileSearchForm .filterForm .tab-menu li.active span {
   font-weight: 500;
 }
-.mobileSearchForm .searchForm .tab-menu li::after {
+.mobileSearchForm .filterForm .tab-menu li::after {
   content: "";
   position: absolute;
   left: 0;
@@ -2787,7 +2784,7 @@ datepicker__buttons {
   opacity: 0;
   background-color: currentColor;
 }
-.mobileSearchForm .searchForm .tab-menu span {
+.mobileSearchForm .filterForm .tab-menu span {
   display: block;
   font-size: var(--text-sm);
   font-weight: 400;
@@ -2801,7 +2798,158 @@ datepicker__buttons {
   width: 100%;
   height: 100%;
   z-index: 99;
+  transition: 0.15s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  background-color: var(--gray-100);
+}
+.mobileSearchForm .hiddenContent .close_btn {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 2;
+  cursor: pointer;
+}
+.mobileSearchForm .hiddenContent.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.mobileSearchForm .block {
   background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
+}
+.mobileSearchForm .block:not(:last-child) {
+  margin-bottom: 20px;
+}
+.mobileSearchForm .block .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.mobileSearchForm .block .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobileSearchForm .block .head .sub_title {
+  opacity: 0.6;
+}
+.mobileSearchForm .block .head span {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+.mobileSearchForm .block .body {
+  display: none;
+}
+.mobileSearchForm .block.active .head {
+  display: none;
+}
+.mobileSearchForm .block.active .body {
+  display: block;
+}
+.mobileSearchForm .block .range {
+  text-align: left;
+  border-radius: 999px;
+  position: relative;
+}
+.mobileSearchForm .block .range .items {
+  padding: 20px;
+}
+.mobileSearchForm .block .range h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.mobileSearchForm .block .range span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-400);
+}
+.mobileSearchForm .block .range .text {
+  display: flex;
+  flex-direction: column;
+}
+.mobileSearchForm .block .range .text h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray-800);
+}
+.mobileSearchForm .block .range .text span {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--gray-500);
+}
+.mobileSearchForm .block .range .qua {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.mobileSearchForm .block .range .qua button {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--gray-400);
+}
+.mobileSearchForm .block .range .qua input {
+  width: 20px;
+  padding: 0;
+  text-align: center;
+  border: unset;
+  background-color: transparent;
+}
+.mobileSearchForm .block .range .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobileSearchForm .block .range .item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.mobileSearchForm .block .range.active {
+  box-shadow: 0 4px 16px rgba(17, 17, 26, 0.05), 0 8px 32px rgba(17, 17, 26, 0.05);
+}
+.mobileSearchForm .search form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.mobileSearchForm .search input {
+  width: 100%;
+  height: 51px;
+  border-radius: 12px;
+  padding: 16px;
+  font-weight: 600;
+}
+.mobileSearchForm .search .search_btn {
+  position: absolute;
+  right: 12px;
+}
+.mobileSearchForm .search .search_btn svg {
+  display: block;
+}
+.mobileSearchForm .search .search_result p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.mobileSearchForm .search .search_result ul li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--gray-600);
+}
+.mobileSearchForm .search .search_result ul li svg {
+  width: 20px;
 }
 
 .bottomNavbar {
@@ -3901,6 +4049,9 @@ datepicker__buttons {
   }
   .FeaturePlaces .listItems {
     grid-template-columns: 1fr;
+  }
+  .FeaturePlaces.listings .tags .tag.mobile {
+    display: block;
   }
 }
 .howItWork {

@@ -314,6 +314,12 @@ $(".bottomNavbar .navItem:not(.menuToggle)").click(function () {
 });
 
 
+$(".mobileSearchForm .block .head").click(function () {
+	$(this).parent().toggleClass('active')
+	$(this).parent().siblings().removeClass('active')
+});
+
+
 var stickyCagorySlider = new Swiper(".stickyCagorySlider .slider", {
 	slidesPerView: "auto",
 	pagination: {
@@ -367,7 +373,13 @@ $(document).click(function (event) {
 	}
 });
 
+$(".mobileSearchForm .trigger, .mobileSearchForm .hiddenContent .close_btn").click(function () {
+	$('.mobileSearchForm .hiddenContent').toggleClass('active')
+})
 
+var demo99 = new HotelDatepicker(document.querySelector("#mobileDatePicker"), {
+	inline: true,
+});
 var demo3 = new HotelDatepicker(document.querySelector(".inlineDatePicker"), {
 	inline: true,
 	// moveBothMonths: true,
@@ -473,6 +485,7 @@ var demo14 = new HotelDatepicker(document.querySelector(".listingDetailPage .asi
 	// 	'2024-01-26',
 	// ]
 });
+
 
 
 

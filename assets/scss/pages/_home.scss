@@ -1100,11 +1100,11 @@
         }
         &.listings {
             .tags {
-                // .tag {
-                //     &:not(.moreFilter.mobile) {
-                //         display: none;
-                //     }
-                // }
+                .tag {
+                    &.mobile {
+                        display: block;
+                    }
+                }
             }
         }
     }

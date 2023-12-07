@@ -1386,7 +1386,7 @@
                                         3 baths
                                     </div>
                                     <div>
-                                       <svg width="18" viewBox="0 0 668 668" fill="none"
+                                        <svg width="18" viewBox="0 0 668 668" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M467.333 200.667L634 34M634 34H467.333M634 34V200.667M200.667 200.667L34 34M34 34V200.667M34 34H200.667M200.667 467.333L34 634M34 634H200.667M34 634V467.333M467.333 467.333L634 634M634 634V467.333M634 634H467.333"
@@ -1523,7 +1523,7 @@
                                         3 baths
                                     </div>
                                     <div>
-                                       <svg width="18" viewBox="0 0 668 668" fill="none"
+                                        <svg width="18" viewBox="0 0 668 668" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M467.333 200.667L634 34M634 34H467.333M634 34V200.667M200.667 200.667L34 34M34 34V200.667M34 34H200.667M200.667 467.333L34 634M34 634H200.667M34 634V467.333M467.333 467.333L634 634M634 634V467.333M634 634H467.333"
@@ -1660,7 +1660,7 @@
                                         3 baths
                                     </div>
                                     <div>
-                                       <svg width="18" viewBox="0 0 668 668" fill="none"
+                                        <svg width="18" viewBox="0 0 668 668" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M467.333 200.667L634 34M634 34H467.333M634 34V200.667M200.667 200.667L34 34M34 34V200.667M34 34H200.667M200.667 467.333L34 634M34 634H200.667M34 634V467.333M467.333 467.333L634 634M634 634V467.333M634 634H467.333"
@@ -1797,7 +1797,7 @@
                                         3 baths
                                     </div>
                                     <div>
-                                       <svg width="18" viewBox="0 0 668 668" fill="none"
+                                        <svg width="18" viewBox="0 0 668 668" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M467.333 200.667L634 34M634 34H467.333M634 34V200.667M200.667 200.667L34 34M34 34V200.667M34 34H200.667M200.667 467.333L34 634M34 634H200.667M34 634V467.333M467.333 467.333L634 634M634 634V467.333M634 634H467.333"
@@ -1934,7 +1934,7 @@
                                         3 baths
                                     </div>
                                     <div>
-                                       <svg width="18" viewBox="0 0 668 668" fill="none"
+                                        <svg width="18" viewBox="0 0 668 668" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M467.333 200.667L634 34M634 34H467.333M634 34V200.667M200.667 200.667L34 34M34 34V200.667M34 34H200.667M200.667 467.333L34 634M34 634H200.667M34 634V467.333M467.333 467.333L634 634M634 634V467.333M634 634H467.333"
@@ -2071,7 +2071,7 @@
                                         3 baths
                                     </div>
                                     <div>
-                                       <svg width="18" viewBox="0 0 668 668" fill="none"
+                                        <svg width="18" viewBox="0 0 668 668" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M467.333 200.667L634 34M634 34H467.333M634 34V200.667M200.667 200.667L34 34M34 34V200.667M34 34H200.667M200.667 467.333L34 634M34 634H200.667M34 634V467.333M467.333 467.333L634 634M634 634V467.333M634 634H467.333"
@@ -2208,7 +2208,7 @@
                                         3 baths
                                     </div>
                                     <div>
-                                       <svg width="18" viewBox="0 0 668 668" fill="none"
+                                        <svg width="18" viewBox="0 0 668 668" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M467.333 200.667L634 34M634 34H467.333M634 34V200.667M200.667 200.667L34 34M34 34V200.667M34 34H200.667M200.667 467.333L34 634M34 634H200.667M34 634V467.333M467.333 467.333L634 634M634 634V467.333M634 634H467.333"
@@ -2988,6 +2988,96 @@
     <script src="../js/hotel-datepicker.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="../js/jquery.min.js"></script>
+    <script>
+
+        const rangeInput = document.querySelectorAll(".range-input.last input")
+        const priceInput = document.querySelectorAll(".price-input.last input")
+        const range = document.querySelector(".slider.last .progress");
+        let priceGap = 1000;
+
+        priceInput.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minPrice = parseInt(priceInput[0].value),
+                    maxPrice = parseInt(priceInput[1].value);
+
+                if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+                    if (e.target.className === "input-min") {
+                        rangeInput[0].value = minPrice;
+                        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+                    } else {
+                        rangeInput[1].value = maxPrice;
+                        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+                    }
+                }
+            });
+        });
+
+        rangeInput.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minVal = parseInt(rangeInput[0].value),
+                    maxVal = parseInt(rangeInput[1].value);
+
+                if (maxVal - minVal < priceGap) {
+                    if (e.target.className === "range-min") {
+                        rangeInput[0].value = maxVal - priceGap;
+                    } else {
+                        rangeInput[1].value = minVal + priceGap;
+                    }
+                } else {
+                    priceInput[0].value = minVal;
+                    priceInput[1].value = maxVal;
+                    range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+                    range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+                }
+            });
+        });
+        // 
+        // 
+        // 
+        // 
+
+        const range0Input0 = document.querySelectorAll(".range-input.first input")
+        const priceInput0 = document.querySelectorAll(".price-input.first input")
+        const range0 = document.querySelector(".slider.first .progress");
+        let priceGap0 = 1000;
+
+        priceInput0.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minPrice = parseInt(priceInput0[0].value),
+                    maxPrice = parseInt(priceInput0[1].value);
+
+                if (maxPrice - minPrice >= priceGap0 && maxPrice <= range0Input0[1].max) {
+                    if (e.target.className === "input-min") {
+                        range0Input0[0].value = minPrice;
+                        range0.style.left = (minPrice / range0Input0[0].max) * 100 + "%";
+                    } else {
+                        range0Input0[1].value = maxPrice;
+                        range0.style.right = 100 - (maxPrice / range0Input0[1].max) * 100 + "%";
+                    }
+                }
+            });
+        });
+
+        range0Input0.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minVal = parseInt(range0Input0[0].value),
+                    maxVal = parseInt(range0Input0[1].value);
+
+                if (maxVal - minVal < priceGap0) {
+                    if (e.target.className === "range0-min") {
+                        range0Input0[0].value = maxVal - priceGap0;
+                    } else {
+                        range0Input0[1].value = minVal + priceGap0;
+                    }
+                } else {
+                    priceInput0[0].value = minVal;
+                    priceInput0[1].value = maxVal;
+                    range0.style.left = (minVal / range0Input0[0].max) * 100 + "%";
+                    range0.style.right = 100 - (maxVal / range0Input0[1].max) * 100 + "%";
+                }
+            });
+        });
+    </script>
     <script src="../js/app.js"></script>
 </body>
 
