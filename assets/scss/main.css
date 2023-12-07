@@ -1587,7 +1587,8 @@ button.swiper-pagination-bullet {
     flex-direction: column;
   }
   .listingCart .image {
-    width: calc(100% - 24px);
+    width: 100%;
+    margin: 0;
   }
   .listingCart .details {
     width: 100%;
@@ -2641,7 +2642,7 @@ datepicker__buttons {
     height: 65px;
   }
   .stickyCategorySlider {
-    top: 88px;
+    top: 85px;
   }
   .stickyCategorySlider .slider {
     padding: 0 24px;
