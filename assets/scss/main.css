@@ -145,6 +145,8 @@ h1 {
   --indigo-400: #818cf8;
   --indigo-100: #e0e7ff;
   --indigo-50: #eef2ff;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
 }
 
 .dark_theme .mbsc-windows.mbsc-popup {
@@ -537,6 +539,24 @@ h1 {
 }
 .dark_theme .site_header .action_list .notifications .items li:hover {
   background-color: var(--gray-700);
+}
+.dark_theme .moreFilerPopup .content .wrapper {
+  border-color: var(--gray-700);
+}
+.dark_theme .moreFilerPopup .range .text h4 {
+  color: white;
+}
+.dark_theme .moreFilerPopup .range .qua button {
+  color: white;
+}
+.dark_theme .moreFilerPopup .range .qua input {
+  color: white;
+}
+.dark_theme input {
+  color: white;
+}
+.dark_theme .mobileSearchForm .searchForm .tab-menu li.active {
+  color: white;
 }
 
 .light_theme .mbsc-windows.mbsc-popup {
@@ -2526,8 +2546,11 @@ datepicker__buttons {
   .site_header > .container > .wrapper {
     height: 65px;
   }
+  .site_header {
+    display: none;
+  }
   .stickyCagorySlider {
-    top: 65px;
+    top: 79px;
   }
   .stickyCagorySlider .slider {
     padding: 0 24px;
@@ -2543,6 +2566,14 @@ datepicker__buttons {
 @media (max-width: 576px) {
   .datepicker {
     min-width: 90%;
+  }
+}
+@media (min-width: 992px) {
+  .mobileSearchForm {
+    display: none;
+  }
+  .bottomNavbar {
+    display: none;
   }
 }
 .navMenu {
@@ -2665,6 +2696,138 @@ datepicker__buttons {
 }
 .navMenu.opened .inner {
   transform: translateX(0);
+}
+
+.mobileSearchForm {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 16px;
+  background-color: white;
+}
+.mobileSearchForm .trigger {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 99px;
+  margin: 0 auto;
+  max-width: 32rem;
+  position: relative;
+  background-color: white;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
+}
+.mobileSearchForm .trigger .icon {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--gray-200);
+  position: absolute;
+  right: 8px;
+}
+.mobileSearchForm .trigger h4 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}
+.mobileSearchForm .trigger span {
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  color: var(--gray-400);
+}
+.mobileSearchForm .trigger svg {
+  display: block;
+}
+.mobileSearchForm .container {
+  padding: 0;
+}
+.mobileSearchForm .searchForm .tab-menu {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobileSearchForm .searchForm .tab-menu li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 400;
+  color: var(--gray-500);
+  cursor: pointer;
+}
+.mobileSearchForm .searchForm .tab-menu li:not(:first-child) {
+  margin-left: 30px;
+}
+.mobileSearchForm .searchForm .tab-menu li.active {
+  font-weight: 500;
+  color: var(--gray-800);
+}
+.mobileSearchForm .searchForm .tab-menu li.active::after {
+  opacity: 1;
+}
+.mobileSearchForm .searchForm .tab-menu li.active span {
+  font-weight: 500;
+}
+.mobileSearchForm .searchForm .tab-menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  background-color: currentColor;
+}
+.mobileSearchForm .searchForm .tab-menu span {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 12px 0;
+}
+.mobileSearchForm .hiddenContent {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: white;
+}
+
+.bottomNavbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 90;
+  background-color: white;
+}
+.bottomNavbar .menu {
+  display: flex;
+}
+.bottomNavbar .menu .navItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 16px;
+}
+.bottomNavbar .menu .navItem span {
+  font-size: 11px;
+}
+.bottomNavbar .menu .navItem.active {
+  color: var(--red-700);
 }
 
 .site_footer {
@@ -3267,6 +3430,9 @@ datepicker__buttons {
 }
 .FeaturePlaces.listings .tags .tag.purple > .btn:hover {
   background-color: var(--indigo-100);
+}
+.FeaturePlaces.listings .tags .tag.mobile {
+  display: none;
 }
 .FeaturePlaces.listings .tags .tag .quantitySlider {
   padding: 20px;

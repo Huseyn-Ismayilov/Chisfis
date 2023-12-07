@@ -21,14 +21,6 @@ var demo1 = new HotelDatepicker(
 
 
 // end
-$(document).click(function (event) {
-	if (!$(event.target).closest(".site_header .toggle, .mobile_menu .inner").length) {
-		$("body").find(".mobile_menu .inner").parent().removeClass("opened");
-		$('.site_header .toggle').removeClass('opened');
-	}
-});
-
-
 
 $('.site_header .search_bar').click(function () {
 	$(this).next().toggleClass('opened');
@@ -293,7 +285,7 @@ $('.navMenu .menu .nav_link').click(function () {
 })
 
 
-$('.site_header .action_list .toggle, .navMenu .closeBtn').click(function () {
+$('.site_header .action_list .toggle, .navMenu .closeBtn, .bottomNavbar .menuToggle').click(function () {
 	$('.navMenu').toggleClass('opened')
 })
 
@@ -310,11 +302,16 @@ $(document).click(function (event) {
 
 
 $(document).click(function (event) {
-	if (!$(event.target).closest(".navMenu .inner, .site_header .action_list .toggle").length) {
+	if (!$(event.target).closest(".navMenu .inner, .site_header .action_list .toggle, .navItem.menuToggle").length) {
 		$("body").find(".navMenu").removeClass("opened");
 	}
 });
 
+
+$(".bottomNavbar .navItem:not(.menuToggle)").click(function () {
+	$(this).toggleClass('active')
+	$(this).siblings().removeClass('active')
+});
 
 
 var stickyCagorySlider = new Swiper(".stickyCagorySlider .slider", {

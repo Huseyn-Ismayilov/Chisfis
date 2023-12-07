@@ -22,6 +22,8 @@
     --indigo-400: #818cf8;
     --indigo-100: #e0e7ff;
     --indigo-50: #eef2ff;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
 }
 
 .dark_theme {
@@ -447,6 +449,24 @@
     }
     .site_header .action_list .notifications .items li:hover {
         background-color: var(--gray-700);
+    }
+    .moreFilerPopup .content .wrapper {
+        border-color: var(--gray-700);
+    }
+    .moreFilerPopup .range .text h4 {
+        color: white;
+    }
+    .moreFilerPopup .range .qua button {
+        color: white;
+    }
+    .moreFilerPopup .range .qua input {
+        color: white;
+    }
+    input {
+        color: white;
+    }
+    .mobileSearchForm .searchForm .tab-menu li.active {
+        color: white;
     }
 }
 
