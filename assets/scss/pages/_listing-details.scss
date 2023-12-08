@@ -245,7 +245,7 @@
                 color: var(--gray-500);
                 border: unset;
                 &:hover {
-                    background-color: transparent;
+                    background-color: transparent !important;
                 }
             }
             .share_btn {

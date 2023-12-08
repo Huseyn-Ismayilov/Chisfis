@@ -303,6 +303,11 @@
             fill: white;
         }
     }
+    .listingDetailPage .mainContent  .main .btn {
+        &:hover {
+            background-color: var(--gray-700);
+        }
+    }
     .listingDetailPage .profileInfo li {
         color: white;
     }

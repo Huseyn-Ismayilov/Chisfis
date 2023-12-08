@@ -419,6 +419,9 @@ h1 {
 .dark_theme .amenities_popup .features_items > div svg path {
   fill: white;
 }
+.dark_theme .listingDetailPage .mainContent .main .btn:hover {
+  background-color: var(--gray-700);
+}
 .dark_theme .listingDetailPage .profileInfo li {
   color: white;
 }
@@ -4781,7 +4784,7 @@ datepicker__buttons {
   border: unset;
 }
 .listingDetailPage .preview .top .btn:hover {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .listingDetailPage .preview .top .share_btn {
   margin-right: 24px;
