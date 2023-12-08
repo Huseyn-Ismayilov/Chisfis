@@ -18,12 +18,10 @@ var demo1 = new HotelDatepicker(
 	}
 );
 
-
+// Dark light mode
 $('html').toggleClass(localStorage.toggled);
 
 $('.c-theme-switch').on('click', function () {
-
-
 	if (localStorage.toggled != "dark_theme") {
 		$('html').toggleClass("dark_theme", true);
 		localStorage.toggled = "dark_theme";
@@ -35,6 +33,9 @@ $('.c-theme-switch').on('click', function () {
 });
 
 // end
+
+
+
 
 $('.site_header .search_bar').click(function () {
 	$(this).next().toggleClass('opened');
