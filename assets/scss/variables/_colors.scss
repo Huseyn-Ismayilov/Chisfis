@@ -277,7 +277,7 @@
         color: white;
     }
     .mobileSearchForm {
-        background-color: var(--gray-900);
+        background-color: rgb(17 24 39 / 68%);
         border-bottom: 1px solid var(--gray-700);
         .trigger {
             background-color: transparent;
@@ -287,6 +287,23 @@
                 border-color: var(--gray-700);
             }
         }
+    }
+    .listingDetailPage .mainContent .main .btn:hover {
+        background-color: var(--gray-700);
+    }
+    .amenities_popup .inner {
+        background-color: var(--gray-800);
+    }
+    .listingDetailPage .reviews .search_bar input {
+        border-color: var(--gray-700);
+    }
+    .amenities_popup .features_items > div svg {
+        path {
+            fill: white;
+        }
+    }
+    .listingDetailPage .profileInfo li {
+        color: white;
     }
     .addListing .form_wrap .form_element .currentLocation {
         color: white;
@@ -555,5 +572,36 @@
     }
     .mobileSearchForm .searchForm .tab-menu li.active {
         color: white;
+    }
+    .listingDetailNav {
+        background-color: var(--gray-800);
+        border-color: var(--gray-700);
+        color: white;
+        .price {
+            span {
+                color: white;
+            }
+        }
+    }
+    .datePickerForm {
+        background-color: var(--gray-900);
+    }
+    .datePickerForm .sticky .dateRange .range {
+        border-color: var(--gray-700);
+    }
+    .datePickerForm .sticky .hiddenForm .form_element input, .datePickerForm .sticky .hiddenForm .form_element textarea {
+        border-color: var(--gray-700);
+    }
+    .datePickerForm .bookingDetails .inner {
+        background-color: var(--gray-800);
+    }
+    .datePickerPopup {
+        background-color: var(--gray-800);
+        .bottom {
+            background-color: var(--gray-900);
+            .clear_btn {
+                color: white;
+            }
+        }
     }
 }

@@ -395,7 +395,7 @@ h1 {
   color: white;
 }
 .dark_theme .mobileSearchForm {
-  background-color: var(--gray-900);
+  background-color: rgba(17, 24, 39, 0.68);
   border-bottom: 1px solid var(--gray-700);
 }
 .dark_theme .mobileSearchForm .trigger {
@@ -405,6 +405,21 @@ h1 {
 }
 .dark_theme .mobileSearchForm .trigger .icon {
   border-color: var(--gray-700);
+}
+.dark_theme .listingDetailPage .mainContent .main .btn:hover {
+  background-color: var(--gray-700);
+}
+.dark_theme .amenities_popup .inner {
+  background-color: var(--gray-800);
+}
+.dark_theme .listingDetailPage .reviews .search_bar input {
+  border-color: var(--gray-700);
+}
+.dark_theme .amenities_popup .features_items > div svg path {
+  fill: white;
+}
+.dark_theme .listingDetailPage .profileInfo li {
+  color: white;
 }
 .dark_theme .addListing .form_wrap .form_element .currentLocation {
   color: white;
@@ -645,6 +660,35 @@ h1 {
   background-color: transparent;
 }
 .dark_theme .mobileSearchForm .searchForm .tab-menu li.active {
+  color: white;
+}
+.dark_theme .listingDetailNav {
+  background-color: var(--gray-800);
+  border-color: var(--gray-700);
+  color: white;
+}
+.dark_theme .listingDetailNav .price span {
+  color: white;
+}
+.dark_theme .datePickerForm {
+  background-color: var(--gray-900);
+}
+.dark_theme .datePickerForm .sticky .dateRange .range {
+  border-color: var(--gray-700);
+}
+.dark_theme .datePickerForm .sticky .hiddenForm .form_element input, .dark_theme .datePickerForm .sticky .hiddenForm .form_element textarea {
+  border-color: var(--gray-700);
+}
+.dark_theme .datePickerForm .bookingDetails .inner {
+  background-color: var(--gray-800);
+}
+.dark_theme .datePickerPopup {
+  background-color: var(--gray-800);
+}
+.dark_theme .datePickerPopup .bottom {
+  background-color: var(--gray-900);
+}
+.dark_theme .datePickerPopup .bottom .clear_btn {
   color: white;
 }
 
@@ -2455,6 +2499,7 @@ datepicker__buttons {
   align-items: center;
   justify-content: center;
   background-color: white;
+  cursor: pointer;
   z-index: 4;
 }
 .stickyCategorySlider .arrow.swiper-button-disabled {
@@ -2790,8 +2835,10 @@ datepicker__buttons {
   width: 100%;
   z-index: 99;
   padding: 16px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.651);
   border-bottom: 1px solid var(--gray-200);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
 }
 .mobileSearchForm .trigger {
   display: flex;
@@ -2804,7 +2851,7 @@ datepicker__buttons {
   margin: 0 auto;
   max-width: 32rem;
   position: relative;
-  background-color: white;
+  background-color: transparent;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
 }
 .mobileSearchForm .trigger .icon {
@@ -2888,7 +2935,7 @@ datepicker__buttons {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 99;
   transition: 0.15s;
   opacity: 0;
@@ -5913,6 +5960,9 @@ datepicker__buttons {
   width: 50%;
   padding: 0 14px;
 }
+.blogs_latest .blog_item {
+  position: relative;
+}
 .blogs_latest .blog_item:not(.single) {
   display: flex;
   flex-direction: row-reverse;
@@ -5999,6 +6049,13 @@ datepicker__buttons {
 .blogs_latest .blog_item .image img {
   border-radius: 24px;
   width: 100%;
+}
+.blogs_latest .blog_item .link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 991px) {

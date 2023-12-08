@@ -551,6 +551,7 @@ var demo14 = new HotelDatepicker(document.querySelector(".listingDetailPage .asi
 
 
 
+
 Fancybox.bind('.listingGallery a', {
 	groupAll: true,
 });
@@ -640,41 +641,8 @@ $(".datePickerPopup .closeBtn").click(function () {
 	$(".datePickerPopup").removeClass('active')
 })
 
-var demo99 = new HotelDatepicker(document.querySelector(".datePickerPopup .datePicker"), {
-	// moveBothMonths: true,
-	// showTopbar: false,
-	// inline: true,
-	// extraDayText: function (date, attributes) {
-	// 	if (date === fecha.format(new Date("2023-12-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-	// 		return "<span>$110</span>";
-	// 	}
-	// 	if (date === fecha.format(new Date("2023-12-6"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-	// 		return "<span>$110</span>";
-	// 	}
-	// 	if (date === fecha.format(new Date("2023-12-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-	// 		return "<span>$110</span>";
-	// 	}
-	// 	if (date === fecha.format(new Date("2024-1-2"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-	// 		return "<span>$234</span>";
-	// 	}
-	// 	if (date === fecha.format(new Date("2024-1-5"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-	// 		return "<span>$150</span>";
-	// 	}
-	// 	if (date === fecha.format(new Date("2024-1-3"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-	// 		return "<span>$290</span>";
-	// 	}
-	// 	if (date === fecha.format(new Date("2024-1-4"), "YYYY-MM-DD") && attributes.class.includes("datepicker__month-day--visibleMonth")) {
-	// 		return "<span>$63</span>";
-	// 	}
-	// },
-	// disabledDates: [
-	// 	'2023-12-12',
-	// 	'2023-12-08',
-	// 	'2023-12-11',
-	// 	'2023-12-13',
-	// 	'2023-12-16',
-	// 	'2023-12-26'
-	// ],
-});
 
 
+var demo12 = new HotelDatepicker(document.querySelector(".datePickerPopup  .datePicker"), {
+	inline: true,
+});	
