@@ -521,8 +521,7 @@
     }
     .article_image {
         width: 100%;
-        margin: 0 auto;
-        padding-bottom: 48px;
+        margin: 0 auto 48px;
         img {
             margin-bottom: 0;
         }
@@ -696,6 +695,9 @@
 }
 @media (max-width: 576px) {
     .article_single {
+        .article_image {
+            padding: 0 16px;
+        }
         .comments_list {
             .comment_item {
                 .details {

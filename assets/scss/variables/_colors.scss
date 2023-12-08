@@ -288,6 +288,10 @@
             }
         }
     }
+    .moreFilerPopup .quantitySlider .field input,
+    .article_single .article_header .bottom {
+        border-color: var(--gray-700);
+    }
     .listingDetailPage .mainContent .main .btn:hover {
         background-color: var(--gray-700);
     }
@@ -534,14 +538,31 @@
         .inner {
             background-color: var(--gray-800);
         }
+        .top {
+            border-color: var(--gray-700);
+        }
         .socialMedia {
             a {
+                border-color: var(--gray-700);
                 &:hover {
                     background-color: var(--gray-600);
                 }
             }
         }
+        .form {
+            input {
+                border-color: var(--gray-700);
+            }
+            .icon {
+                svg {
+                    path {
+                        stroke: white;
+                    }
+                }
+            }
+        }
     }
+
     .site_header .action_list .notifications .dropdown .inner {
         background-color: var(--gray-800);
         border-color: transparent;
@@ -589,7 +610,8 @@
     .datePickerForm .sticky .dateRange .range {
         border-color: var(--gray-700);
     }
-    .datePickerForm .sticky .hiddenForm .form_element input, .datePickerForm .sticky .hiddenForm .form_element textarea {
+    .datePickerForm .sticky .hiddenForm .form_element input,
+    .datePickerForm .sticky .hiddenForm .form_element textarea {
         border-color: var(--gray-700);
     }
     .datePickerForm .bookingDetails .inner {

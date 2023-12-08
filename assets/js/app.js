@@ -352,7 +352,7 @@ $(document).click(function (event) {
 
 
 $(".bottomNavbar .navItem:not(.menuToggle)").click(function () {
-	$(this).toggleClass('active')
+	$(this).addClass('active')
 	$(this).siblings().removeClass('active')
 });
 
@@ -547,7 +547,9 @@ var demo14 = new HotelDatepicker(document.querySelector(".listingDetailPage .asi
 	// 	'2024-01-26',
 	// ]
 });
-
+var demo12 = new HotelDatepicker(document.querySelector(".datePickerPopup  .datePicker"), {
+	inline: true,
+});	
 
 
 
@@ -643,6 +645,3 @@ $(".datePickerPopup .closeBtn").click(function () {
 
 
 
-var demo12 = new HotelDatepicker(document.querySelector(".datePickerPopup  .datePicker"), {
-	inline: true,
-});	

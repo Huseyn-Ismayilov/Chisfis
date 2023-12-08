@@ -56,14 +56,33 @@
     .listingGallery {
         .wrapper {
             flex-wrap: wrap;
+            gap: 0;
+            justify-content: space-between;
         }
         .main_img,
         .nav_imgs {
-            width: 100%;
+            width: calc(50% - 5px);
+            img {
+                border-radius: 8px;
+            }
+        }
+        
+        .main_img {
+            .showAll {
+                display: none;
+            }
         }
     }
 }
-
+@media (max-width: 576px) {
+    .listingGallery {
+        .main_img {
+            img {
+                aspect-ratio: 358/407;
+            }
+        }
+    }
+}
 .listingDetailPage {
     .mainContent {
         display: flex;
@@ -216,7 +235,6 @@
             }
             .share_btn {
                 margin-right: 24px;
-               
             }
             .save_btn {
                 &.active {
@@ -582,7 +600,7 @@
         .btn {
             font-size: 14px;
             position: absolute;
-            right: 12px;
+            right: 5px;
             padding: 8px 21px;
             border-radius: 8px;
         }

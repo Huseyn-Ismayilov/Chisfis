@@ -406,6 +406,10 @@ h1 {
 .dark_theme .mobileSearchForm .trigger .icon {
   border-color: var(--gray-700);
 }
+.dark_theme .moreFilerPopup .quantitySlider .field input,
+.dark_theme .article_single .article_header .bottom {
+  border-color: var(--gray-700);
+}
 .dark_theme .listingDetailPage .mainContent .main .btn:hover {
   background-color: var(--gray-700);
 }
@@ -628,8 +632,20 @@ h1 {
 .dark_theme .share_popup .inner {
   background-color: var(--gray-800);
 }
+.dark_theme .share_popup .top {
+  border-color: var(--gray-700);
+}
+.dark_theme .share_popup .socialMedia a {
+  border-color: var(--gray-700);
+}
 .dark_theme .share_popup .socialMedia a:hover {
   background-color: var(--gray-600);
+}
+.dark_theme .share_popup .form input {
+  border-color: var(--gray-700);
+}
+.dark_theme .share_popup .form .icon svg path {
+  stroke: white;
 }
 .dark_theme .site_header .action_list .notifications .dropdown .inner {
   background-color: var(--gray-800);
@@ -676,7 +692,8 @@ h1 {
 .dark_theme .datePickerForm .sticky .dateRange .range {
   border-color: var(--gray-700);
 }
-.dark_theme .datePickerForm .sticky .hiddenForm .form_element input, .dark_theme .datePickerForm .sticky .hiddenForm .form_element textarea {
+.dark_theme .datePickerForm .sticky .hiddenForm .form_element input,
+.dark_theme .datePickerForm .sticky .hiddenForm .form_element textarea {
   border-color: var(--gray-700);
 }
 .dark_theme .datePickerForm .bookingDetails .inner {
@@ -3080,7 +3097,7 @@ datepicker__buttons {
   padding: 16px;
   font-weight: 600;
   background-color: transparent;
-  border: unset;
+  border: 1px solid var(--gray-300);
 }
 .mobileSearchForm .search .search_btn {
   position: absolute;
@@ -3998,7 +4015,7 @@ datepicker__buttons {
 }
 .moreFilerPopup .content h4 {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   width: 100%;
   margin-bottom: 12px;
 }
@@ -4586,10 +4603,24 @@ datepicker__buttons {
 @media (max-width: 991px) {
   .listingGallery .wrapper {
     flex-wrap: wrap;
+    gap: 0;
+    justify-content: space-between;
   }
   .listingGallery .main_img,
   .listingGallery .nav_imgs {
-    width: 100%;
+    width: calc(50% - 5px);
+  }
+  .listingGallery .main_img img,
+  .listingGallery .nav_imgs img {
+    border-radius: 8px;
+  }
+  .listingGallery .main_img .showAll {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .listingGallery .main_img img {
+    aspect-ratio: 358/407;
   }
 }
 .listingDetailPage .mainContent {
@@ -5071,7 +5102,7 @@ datepicker__buttons {
 .share_popup .form .btn {
   font-size: 14px;
   position: absolute;
-  right: 12px;
+  right: 5px;
   padding: 8px 21px;
   border-radius: 8px;
 }
@@ -6350,8 +6381,7 @@ datepicker__buttons {
 }
 .article_single .article_image {
   width: 100%;
-  margin: 0 auto;
-  padding-bottom: 48px;
+  margin: 0 auto 48px;
 }
 .article_single .article_image img {
   margin-bottom: 0;
@@ -6516,6 +6546,9 @@ datepicker__buttons {
   }
 }
 @media (max-width: 576px) {
+  .article_single .article_image {
+    padding: 0 16px;
+  }
   .article_single .comments_list .comment_item .details > p {
     font-size: 14px;
   }
