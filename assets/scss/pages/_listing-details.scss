@@ -66,7 +66,7 @@
                 border-radius: 8px;
             }
         }
-        
+
         .main_img {
             .showAll {
                 display: none;
@@ -76,9 +76,24 @@
 }
 @media (max-width: 576px) {
     .listingGallery {
+        padding: 14px 0 44px;
         .main_img {
+            width: calc(66.6666% - 2px);
             img {
                 aspect-ratio: 358/407;
+            }
+        }
+        .nav_imgs {
+            width: calc(33.3333% - 5px);
+            grid-template-columns: 1fr;
+            gap: 4px;
+            img {
+                aspect-ratio: 177/133;
+            }
+            a {
+                &:last-child {
+                    display: none;
+                }
             }
         }
     }

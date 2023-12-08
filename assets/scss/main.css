@@ -410,9 +410,6 @@ h1 {
 .dark_theme .article_single .article_header .bottom {
   border-color: var(--gray-700);
 }
-.dark_theme .listingDetailPage .mainContent .main .btn:hover {
-  background-color: var(--gray-700);
-}
 .dark_theme .amenities_popup .inner {
   background-color: var(--gray-800);
 }
@@ -691,6 +688,9 @@ h1 {
 }
 .dark_theme .datePickerForm .sticky .dateRange .range {
   border-color: var(--gray-700);
+}
+.dark_theme .listingDetailPage .sticky .price {
+  color: var(--gray-400);
 }
 .dark_theme .datePickerForm .sticky .hiddenForm .form_element input,
 .dark_theme .datePickerForm .sticky .hiddenForm .form_element textarea {
@@ -4619,8 +4619,25 @@ datepicker__buttons {
   }
 }
 @media (max-width: 576px) {
+  .listingGallery {
+    padding: 14px 0 44px;
+  }
+  .listingGallery .main_img {
+    width: calc(66.6666% - 2px);
+  }
   .listingGallery .main_img img {
     aspect-ratio: 358/407;
+  }
+  .listingGallery .nav_imgs {
+    width: calc(33.3333% - 5px);
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .listingGallery .nav_imgs img {
+    aspect-ratio: 177/133;
+  }
+  .listingGallery .nav_imgs a:last-child {
+    display: none;
   }
 }
 .listingDetailPage .mainContent {

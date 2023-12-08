@@ -291,10 +291,7 @@
     .moreFilerPopup .quantitySlider .field input,
     .article_single .article_header .bottom {
         border-color: var(--gray-700);
-    }
-    .listingDetailPage .mainContent .main .btn:hover {
-        background-color: var(--gray-700);
-    }
+    }   
     .amenities_popup .inner {
         background-color: var(--gray-800);
     }
@@ -609,6 +606,9 @@
     }
     .datePickerForm .sticky .dateRange .range {
         border-color: var(--gray-700);
+    }
+    .listingDetailPage .sticky .price {
+        color: var(--gray-400);
     }
     .datePickerForm .sticky .hiddenForm .form_element input,
     .datePickerForm .sticky .hiddenForm .form_element textarea {
