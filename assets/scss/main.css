@@ -12,6 +12,7 @@
 body {
   font-weight: 400;
   font-family: poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: white;
 }
 
 body.overflow_hidden {
@@ -645,14 +646,6 @@ h1 {
 }
 .dark_theme .mobileSearchForm .searchForm .tab-menu li.active {
   color: white;
-}
-
-.light_theme .mbsc-windows.mbsc-popup {
-  background-color: white !important;
-  min-width: 500px;
-}
-.light_theme body {
-  background-color: white;
 }
 
 .btn {

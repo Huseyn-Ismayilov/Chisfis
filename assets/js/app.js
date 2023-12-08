@@ -19,6 +19,21 @@ var demo1 = new HotelDatepicker(
 );
 
 
+$('html').toggleClass(localStorage.toggled);
+
+$('.c-theme-switch').on('click', function () {
+
+
+	if (localStorage.toggled != "dark_theme") {
+		$('html').toggleClass("dark_theme", true);
+		localStorage.toggled = "dark_theme";
+	} else {
+		$('html').toggleClass("dark_theme", false);
+		localStorage.toggled = "";
+	}
+
+});
+
 // end
 
 $('.site_header .search_bar').click(function () {
@@ -38,16 +53,30 @@ $('.page_overlay').click(function () {
 
 
 
-$(".c-theme-switch").on("click", () => {
-	$("html").toggleClass("dark_theme");
-	$("html").toggleClass("light_theme");
-});
+// $(".c-theme-switch").click(function () {
+// 	$('html').toggleClass(localStorage.toggled);
+
+// 	if (localStorage.toggled != 'dark_theme') {
+// 		$('html').toggleClass('dark', true);
+// 		localStorage.toggled = "dark";
+// 		$("html").toggleClass("dark_theme");
+
+// 	} else {
+// 		$('html').toggleClass('dark', false);
+// 		localStorage.toggled = "";
+// 	}
+// });
+
+
+
+// function darkLight() {
+
+// }
 
 
 $(".save_btn").click(function () {
 	$(this).toggleClass('active')
 });
-
 
 
 
