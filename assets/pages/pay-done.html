@@ -8,6 +8,12 @@
     <title>Chisfis</title>
 
     <link rel="stylesheet" href="../scss/main.css">
+    <script>
+        // Do this before the body gets parsed
+        if (localStorage.getItem('dark-theme') === '1') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
 </head>
 
 <body id="body">

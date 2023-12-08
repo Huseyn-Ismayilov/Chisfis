@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chisfis</title>
-    <link rel="stylesheet" href="../scss/main.css">
+   <link rel="stylesheet" href="../scss/main.css">
+    <script>
+        // Do this before the body gets parsed
+        if (localStorage.getItem('dark-theme') === '1') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/intl-tel-input@16.0.2/build/css/intlTelInput.css'>
 </head>
@@ -2528,14 +2534,33 @@
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
-                        <div class="listingSection">
+                        <div class="listingSection cancellationPolicy">
                             <h2>Things to know</h2>
                             <div class="line"></div>
                             <h3>Cancellation policy</h3>
                             <p>Refund 50% of the booking value when customers cancel the room within 48 hours after
                                 successful booking and 14 days before the check-in time. Then, cancel the room 14 days
                                 before the check-in time, get a 50% refund of the total amount paid (minus the service
-                                fee).</p>
+                                fee).
+                            </p>
+                            <div class="line"></div>
+                            <h3>Check-in time</h3>
+                            <ul class="list">
+                                <li>
+                                    <span>Check-in</span>
+                                    <span>08:00 am - 12:00 am</span>
+                                </li>
+                                <li>
+                                    <span>Check-out</span>
+                                    <span>02:00 pm - 04:00 pm</span>
+                                </li>
+                            </ul>
+                            <div class="line"></div>
+                            <h3>Special Note</h3>
+                            <ul class="features">
+                                <li>Ban and I will work together to keep the landscape and environment green and clean by not littering, not using stimulants and respecting people around.</li>
+                                <li>Do not sing karaoke past 11:30</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="aside">

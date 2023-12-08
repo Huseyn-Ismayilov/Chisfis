@@ -7,10 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chisfis</title>
     <link rel="stylesheet" href="./assets/scss/main.css">
+    <script>
+        // Do this before the body gets parsed
+        if (localStorage.getItem('dark-theme') === '1') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
 </head>
 
 <body id="body">
-
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="location" viewBox="0 0 20 20">
             <path
@@ -1591,7 +1596,7 @@
                 <div class="right">
                     <div class="action_list">
                         <a href="./assets/pages/add-listing-1.html" class="list_property">List your property</a>
-                        <button type="button" class="action_item c-theme-switch">
+                        <button type="button" class="action_item c-theme-switch" id="darkToggle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-7 h-7">
                                 <path stroke-linecap="round" stroke-linejoin="round"

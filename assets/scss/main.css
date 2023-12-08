@@ -156,566 +156,575 @@ h4 {
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
 }
 
-.dark_theme .mbsc-windows.mbsc-popup {
+.dark-theme .mbsc-windows.mbsc-popup {
   background-color: #1f2937 !important;
   min-width: 500px;
 }
-.dark_theme .btn {
+.dark-theme .btn {
   color: white;
 }
-.dark_theme body {
+.dark-theme body {
   background-color: #111827;
   color: white;
 }
-.dark_theme .site_header {
+.dark-theme .site_header {
   color: white;
   box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
 }
-.dark_theme .site_header .bg {
+.dark-theme .site_header .bg {
   background-color: #111827;
 }
-.dark_theme .site_header .action_item svg {
+.dark-theme .site_header .action_item svg {
   color: white;
 }
-.dark_theme .site_header .search_bar {
+.dark-theme .site_header .search_bar {
   border: 1px solid var(--gray-700);
 }
-.dark_theme .site_header .searchForm .tab-menu li.active {
+.dark-theme .site_header .searchForm .tab-menu li.active {
   color: white;
 }
-.dark_theme .site_header .searchForm .tab-menu li {
+.dark-theme .site_header .searchForm .tab-menu li {
   color: var(--gray-400);
 }
-.dark_theme .site_logo #text {
+.dark-theme .site_logo #text {
   fill: white !important;
 }
-.dark_theme .hero .tabs_wrapper .tabs li::before {
+.dark-theme .hero .tabs_wrapper .tabs li::before {
   background-color: white;
 }
-.dark_theme .hero .search_bar {
+.dark-theme .hero .search_bar {
   background-color: rgba(17, 24, 39, 0.5607843137);
   color: white;
 }
-.dark_theme .hero .search_bar .select .mbsc-ios.mbsc-label-stacked.mbsc-ltr {
+.dark-theme .hero .search_bar .select .mbsc-ios.mbsc-label-stacked.mbsc-ltr {
   color: white;
 }
-.dark_theme .hero .mbsc-ios.mbsc-select.mbsc-ltr,
-.dark_theme .hero .search_bar .date_item input {
+.dark-theme .hero .mbsc-ios.mbsc-select.mbsc-ltr,
+.dark-theme .hero .search_bar .date_item input {
   color: white;
 }
-.dark_theme .hero .mbsc-ios.mbsc-select.mbsc-ltr::-moz-placeholder, .dark_theme .hero .search_bar .date_item input::-moz-placeholder {
+.dark-theme .hero .mbsc-ios.mbsc-select.mbsc-ltr::-moz-placeholder, .dark-theme .hero .search_bar .date_item input::-moz-placeholder {
   color: white;
 }
-.dark_theme .hero .mbsc-ios.mbsc-select.mbsc-ltr::placeholder,
-.dark_theme .hero .search_bar .date_item input::placeholder {
+.dark-theme .hero .mbsc-ios.mbsc-select.mbsc-ltr::placeholder,
+.dark-theme .hero .search_bar .date_item input::placeholder {
   color: white;
 }
-.dark_theme .reservation_done .message .content {
+.dark-theme .reservation_done .message .content {
   border-color: var(--gray-700);
 }
-.dark_theme .reservation_done .message .contact_btn:hover {
+.dark-theme .reservation_done .message .contact_btn:hover {
   background-color: var(--gray-800);
 }
-.dark_theme .bottomNavbar {
+.dark-theme .bottomNavbar {
   background-color: var(--gray-800);
   border-color: var(--gray-700);
 }
-.dark_theme .bottomNavbar .navItem {
+.dark-theme .bottomNavbar .navItem {
   color: white;
 }
-.dark_theme .FeaturePlaces .wrapper {
+.dark-theme .FeaturePlaces .wrapper {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.dark_theme .FeaturePlaces .head > .btn {
+.dark-theme .FeaturePlaces .head > .btn {
   background-color: transparent;
   border: 1px solid white;
   color: white;
 }
-.dark_theme .reservation_done .hero_sec .content .down_btn::after {
+.dark-theme .reservation_done .hero_sec .content .down_btn::after {
   filter: brightness(0) saturate(100%) invert(7%) sepia(12%) saturate(2450%) hue-rotate(183deg) brightness(100%) contrast(96%);
 }
-.dark_theme .reservation_done .hero_sec .content .down_btn svg {
+.dark-theme .reservation_done .hero_sec .content .down_btn svg {
   color: white;
 }
-.dark_theme .FeaturePlaces.listings .tags .tag .dropdown {
+.dark-theme .FeaturePlaces.listings .tags .tag .dropdown {
   background-color: var(--gray-900);
   color: white;
 }
-.dark_theme .FeaturePlaces.listings .tags .tag .bottom {
+.dark-theme .FeaturePlaces.listings .tags .tag .bottom {
   background-color: var(--gray-900);
 }
-.dark_theme .FeaturePlaces.listings .tags .tag .bottom .btn {
+.dark-theme .FeaturePlaces.listings .tags .tag .bottom .btn {
   color: white;
   border-color: var(--gray-700);
 }
-.dark_theme .category_slider .pagination .arrow {
+.dark-theme .category_slider .pagination .arrow {
   border-color: var(--gray-700);
 }
-.dark_theme .reservation_done .features_list .list li {
+.dark-theme .reservation_done .features_list .list li {
   background-color: var(--gray-700);
   color: white;
 }
-.dark_theme .listingDetailPage .sticky .dateRange .range,
-.dark_theme .dateRange {
+.dark-theme .listingDetailPage .sticky .dateRange .range,
+.dark-theme .dateRange {
   border-color: var(--gray-700);
 }
-.dark_theme .listingDetailPage .sticky .hiddenForm .form_element input,
-.dark_theme .listingDetailPage .sticky .hiddenForm .form_element textarea {
+.dark-theme .listingDetailPage .sticky .hiddenForm .form_element input,
+.dark-theme .listingDetailPage .sticky .hiddenForm .form_element textarea {
   color: white;
   border-color: var(--gray-700);
 }
-.dark_theme .listingDetailPage .sticky .hiddenForm .form_element input::-moz-placeholder, .dark_theme .listingDetailPage .sticky .hiddenForm .form_element textarea::-moz-placeholder {
+.dark-theme .listingDetailPage .sticky .hiddenForm .form_element input::-moz-placeholder, .dark-theme .listingDetailPage .sticky .hiddenForm .form_element textarea::-moz-placeholder {
   color: white;
   opacity: 0.7;
 }
-.dark_theme .listingDetailPage .sticky .hiddenForm .form_element input::placeholder,
-.dark_theme .listingDetailPage .sticky .hiddenForm .form_element textarea::placeholder {
+.dark-theme .listingDetailPage .sticky .hiddenForm .form_element input::placeholder,
+.dark-theme .listingDetailPage .sticky .hiddenForm .form_element textarea::placeholder {
   color: white;
   opacity: 0.7;
 }
-.dark_theme .listingDetailPage .sticky .hiddenForm .form_element .inptWithIcon svg {
+.dark-theme .listingDetailPage .sticky .hiddenForm .form_element .inptWithIcon svg {
   color: white;
 }
-.dark_theme .FeaturePlaces.listings .tags .tag .popup .inner {
+.dark-theme .FeaturePlaces.listings .tags .tag .popup .inner {
   background-color: var(--gray-900);
   color: white;
 }
-.dark_theme .FeaturePlaces.listings .tags .range .text h4 {
+.dark-theme .FeaturePlaces.listings .tags .range .text h4 {
   color: white;
 }
-.dark_theme .FeaturePlaces.listings .tags .range .qua button {
+.dark-theme .FeaturePlaces.listings .tags .range .qua button {
   color: white;
 }
-.dark_theme .FeaturePlaces.listings .tags .range .qua input {
+.dark-theme .FeaturePlaces.listings .tags .range .qua input {
   color: white;
 }
-.dark_theme .FeaturePlaces.listings .tags .tag .dropdown {
+.dark-theme .FeaturePlaces.listings .tags .tag .dropdown {
   border-color: var(--gray-700);
 }
-.dark_theme .listingCart {
+.dark-theme .listingCart {
   background-color: rgba(17, 24, 39, 0.5607843137);
   border-color: var(--gray-800);
 }
-.dark_theme .listingCart .image .arrow {
+.dark-theme .listingCart .image .arrow {
   background-color: rgba(17, 24, 39, 0.5607843137);
 }
-.dark_theme .discover_slider .wrapper {
+.dark-theme .discover_slider .wrapper {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
-.dark_theme .pagination .arrow {
+.dark-theme .pagination .arrow {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.dark_theme .site_header .searchForm .wrapper {
+.dark-theme .site_header .searchForm .wrapper {
   background-color: #1f2937;
   border-color: transparent;
   border-color: var(--gray-700);
 }
-.dark_theme .site_header .date_item input::-moz-placeholder {
+.dark-theme .site_header .date_item input::-moz-placeholder {
   color: white;
 }
-.dark_theme .site_header .date_item input::placeholder {
+.dark-theme .site_header .date_item input::placeholder {
   color: white;
 }
-.dark_theme .quantity_item .quantity .dropdown {
+.dark-theme .quantity_item .quantity .dropdown {
   background-color: #1f2937;
   color: white;
   border-color: var(--gray-700) !important;
 }
-.dark_theme .quantity_item .quantity .dropdown h4 {
+.dark-theme .quantity_item .quantity .dropdown h4 {
   color: white;
 }
-.dark_theme .quantity_item .quantity .qua input {
+.dark-theme .quantity_item .quantity .qua input {
   color: white;
 }
-.dark_theme .quantity_item .quantity .qua button {
+.dark-theme .quantity_item .quantity .qua button {
   color: white;
 }
-.dark_theme .blog_hero .blog_items .item,
-.dark_theme .exploreNearby .list_items li .id {
+.dark-theme .blog_hero .blog_items .item,
+.dark-theme .exploreNearby .list_items li .id {
   background-color: #1f2937;
 }
-.dark_theme .site_footer {
+.dark-theme .site_footer {
   border-color: var(--gray-700);
 }
-.dark_theme .site_footer .menu ul a {
+.dark-theme .site_footer .menu ul a {
   color: white;
   opacity: 0.6;
 }
-.dark_theme .site_footer .menu ul a:hover {
+.dark-theme .site_footer .menu ul a:hover {
   opacity: 1;
   color: white;
 }
-.dark_theme .site_footer .socialMedia svg path {
+.dark-theme .site_footer .socialMedia svg path {
   fill: white;
 }
-.dark_theme .exploreNearby .list_items li h3 {
+.dark-theme .exploreNearby .list_items li h3 {
   color: white;
 }
-.dark_theme .exploreNearby .list_items li {
+.dark-theme .exploreNearby .list_items li {
   border-color: var(--gray-700);
 }
-.dark_theme .exploreNearby .list_items li:hover {
+.dark-theme .exploreNearby .list_items li:hover {
   background-color: var(--gray-800);
 }
-.dark_theme .search_item input {
+.dark-theme .search_item input {
   color: white;
 }
-.dark_theme .blogs_list .block {
+.dark-theme .blogs_list .block {
   background-color: #1f2937;
 }
-.dark_theme .hero .tabs_wrapper .tabs li.active {
+.dark-theme .hero .tabs_wrapper .tabs li.active {
   color: var(--gray-50);
 }
-.dark_theme .blogs_list .pagination ul span {
+.dark-theme .blogs_list .pagination ul span {
   color: white;
 }
-.dark_theme .search_item .dropdown {
+.dark-theme .search_item .dropdown {
   background-color: #1f2937;
 }
-.dark_theme .search_item .dropdown ul li span {
+.dark-theme .search_item .dropdown ul li span {
   color: var(--gray-300);
 }
-.dark_theme .search_item .dropdown ul li span:hover {
+.dark-theme .search_item .dropdown ul li span:hover {
   background-color: var(--gray-600);
 }
-.dark_theme .addListing .wrap {
+.dark-theme .addListing .wrap {
   border-color: var(--gray-700);
 }
-.dark_theme .addListing .stepCount span {
+.dark-theme .addListing .stepCount span {
   color: var(--gray-100);
 }
-.dark_theme .addListing .listingCart {
+.dark-theme .addListing .listingCart {
   border-color: var(--gray-700);
 }
-.dark_theme .addListing .btn.primary:hover {
+.dark-theme .addListing .btn.primary:hover {
   background-color: var(--gray-800);
 }
-.dark_theme .addListing .form_wrap .form_element label {
+.dark-theme .addListing .form_wrap .form_element label {
   color: white;
 }
-.dark_theme .addListing .form_wrap .form_element select {
+.dark-theme .addListing .form_wrap .form_element select {
   color: white;
   background-color: var(--gray-900);
 }
-.dark_theme .mobileSearchForm .search .search_btn {
+.dark-theme .mobileSearchForm .search .search_btn {
   color: white;
 }
-.dark_theme .mobileSearchForm {
+.dark-theme .mobileSearchForm {
   background-color: rgba(17, 24, 39, 0.68);
   border-bottom: 1px solid var(--gray-700);
 }
-.dark_theme .mobileSearchForm .trigger {
+.dark-theme .mobileSearchForm .trigger {
   background-color: transparent;
   color: white;
   border: 1px solid var(--gray-700);
 }
-.dark_theme .mobileSearchForm .trigger .icon {
+.dark-theme .mobileSearchForm .trigger .icon {
   border-color: var(--gray-700);
 }
-.dark_theme .moreFilerPopup .quantitySlider .field input,
-.dark_theme .article_single .article_header .bottom {
+.dark-theme .moreFilerPopup .quantitySlider .field input,
+.dark-theme .article_single .article_header .bottom {
   border-color: var(--gray-700);
 }
-.dark_theme .amenities_popup .inner {
-  background-color: var(--gray-800);
-}
-.dark_theme .listingDetailPage .reviews .search_bar input {
-  border-color: var(--gray-700);
-}
-.dark_theme .amenities_popup .features_items > div svg path {
-  fill: white;
-}
-.dark_theme .listingDetailPage .mainContent .main .btn:hover {
-  background-color: var(--gray-700);
-}
-.dark_theme .listingDetailPage .profileInfo li {
-  color: white;
-}
-.dark_theme .addListing .form_wrap .form_element .currentLocation {
-  color: white;
-}
-.dark_theme .addListing .form_wrap .form_element input,
-.dark_theme .addListing .form_wrap .form_element textarea {
-  background-color: transparent;
-  color: white;
-  border-color: var(--gray-700);
-}
-.dark_theme .addListing .form_wrap .form_element .quantity_wrap button {
-  color: white;
-}
-.dark_theme .checkbox span {
-  color: white;
-}
-.dark_theme .addListing .addTag input {
-  background-color: transparent;
-  color: white;
-}
-.dark_theme .datepicker {
-  background-color: var(--gray-800);
-  color: white;
-}
-.dark_theme .datepicker .datepicker__month-day {
-  color: white;
-}
-.dark_theme .datepicker .datepicker__month-day--invalid {
-  opacity: 0.3;
-}
-.dark_theme .datepicker .datepicker__info--help {
-  color: white;
-}
-.dark_theme .FeaturePlaces.listings .listingCart {
-  border-color: var(--gray-700);
-}
-.dark_theme .checkOut .form_wrap label {
-  color: white;
-}
-.dark_theme .checkOut .form_wrap input,
-.dark_theme .checkOut .form_wrap textarea {
-  background-color: transparent;
-  color: white;
-  border-color: var(--gray-700);
-}
-.dark_theme .checkOut .form_wrap input::-moz-placeholder, .dark_theme .checkOut .form_wrap textarea::-moz-placeholder {
-  color: white;
-}
-.dark_theme .checkOut .form_wrap input::placeholder,
-.dark_theme .checkOut .form_wrap textarea::placeholder {
-  color: white;
-}
-.dark_theme .checkOut .dateRange .range:first-child,
-.dark_theme .checkOut .dateRange,
-.dark_theme .checkOut .mainContent .block,
-.dark_theme .checkOut .sticky,
-.dark_theme .checkOut .sticky .info li.last,
-.dark_theme .listingDetailPage .listingSection,
-.dark_theme .listingDetailPage .mainContent .main .btn {
-  border-color: var(--gray-700);
-}
-.dark_theme .listingDetailPage .line {
-  background-color: var(--gray-700);
-}
-.dark_theme .navMenu .inner {
+.dark-theme .amenities_popup .inner {
   background-color: var(--gray-900);
 }
-.dark_theme .navMenu .menu a:hover {
-  background-color: var(--gray-800);
-}
-.dark_theme .navMenu .menu .nav_link::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true' class='ml-2 h-4 w-4 text-neutral-500' style=' color: white;%0A'%3E%3Cpath fill-rule='evenodd' d='M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
-}
-.dark_theme .c-theme-switch svg {
-  color: white;
-}
-.dark_theme .navMenu p {
-  color: white;
-}
-.dark_theme .navMenu .socialMedia a {
-  background-color: var(--gray-800);
-}
-.dark_theme .navMenu .socialMedia a svg path {
-  fill: white;
-}
-.dark_theme .navMenu .top {
+.dark-theme .listingDetailPage .reviews .search_bar input {
   border-color: var(--gray-700);
 }
-.dark_theme .listingDetailPage .roomRates .list li:nth-child(odd) {
+.dark-theme .amenities_popup .features_items > div svg path {
+  fill: white;
+}
+.dark-theme .listingDetailPage .mainContent .main .btn:hover {
   background-color: var(--gray-700);
 }
-.dark_theme .listingDetailPage .sticky .price span {
-  color: var(--gray-300);
-}
-.dark_theme .listingDetailPage .mainContent .main .btn {
+.dark-theme .listingDetailPage .profileInfo li {
   color: white;
 }
-.dark_theme .stickyCategorySlider {
+.dark-theme .addListing .form_wrap .form_element .currentLocation {
+  color: white;
+}
+.dark-theme .addListing .form_wrap .form_element input,
+.dark-theme .addListing .form_wrap .form_element textarea {
+  background-color: transparent;
+  color: white;
+  border-color: var(--gray-700);
+}
+.dark-theme .addListing .form_wrap .form_element .quantity_wrap button {
+  color: white;
+}
+.dark-theme .checkbox span {
+  color: white;
+}
+.dark-theme .addListing .addTag input {
+  background-color: transparent;
+  color: white;
+}
+.dark-theme .datepicker {
+  background-color: var(--gray-800);
+  color: white;
+}
+.dark-theme .datepicker .datepicker__month-day {
+  color: white;
+}
+.dark-theme .datepicker .datepicker__month-day--invalid {
+  opacity: 0.3;
+}
+.dark-theme .datepicker .datepicker__info--help {
+  color: white;
+}
+.dark-theme .FeaturePlaces.listings .listingCart {
+  border-color: var(--gray-700);
+}
+.dark-theme .checkOut .form_wrap label {
+  color: white;
+}
+.dark-theme .checkOut .form_wrap input,
+.dark-theme .checkOut .form_wrap textarea {
+  background-color: transparent;
+  color: white;
+  border-color: var(--gray-700);
+}
+.dark-theme .checkOut .form_wrap input::-moz-placeholder, .dark-theme .checkOut .form_wrap textarea::-moz-placeholder {
+  color: white;
+}
+.dark-theme .checkOut .form_wrap input::placeholder,
+.dark-theme .checkOut .form_wrap textarea::placeholder {
+  color: white;
+}
+.dark-theme .checkOut .dateRange .range:first-child,
+.dark-theme .checkOut .dateRange,
+.dark-theme .checkOut .mainContent .block,
+.dark-theme .checkOut .sticky,
+.dark-theme .checkOut .sticky .info li.last,
+.dark-theme .listingDetailPage .listingSection,
+.dark-theme .listingDetailPage .mainContent .main .btn {
+  border-color: var(--gray-700);
+}
+.dark-theme .listingDetailPage .line {
+  background-color: var(--gray-700);
+}
+.dark-theme .navMenu .inner {
+  background-color: var(--gray-900);
+}
+.dark-theme .navMenu .menu a:hover {
+  background-color: var(--gray-800);
+}
+.dark-theme .navMenu .menu .nav_link::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true' class='ml-2 h-4 w-4 text-neutral-500' style=' color: white;%0A'%3E%3Cpath fill-rule='evenodd' d='M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+}
+.dark-theme .c-theme-switch svg {
+  color: white;
+}
+.dark-theme .navMenu p {
+  color: white;
+}
+.dark-theme .navMenu .socialMedia a {
+  background-color: var(--gray-800);
+}
+.dark-theme .navMenu .socialMedia a svg path {
+  fill: white;
+}
+.dark-theme .navMenu .top {
+  border-color: var(--gray-700);
+}
+.dark-theme .listingDetailPage .list li:nth-child(odd) {
+  background-color: var(--gray-800);
+}
+.dark-theme .listingDetailPage .sticky .price span {
+  color: var(--gray-300);
+}
+.dark-theme .listingDetailPage .mainContent .main .btn {
+  color: white;
+}
+.dark-theme .listingDetailPage p {
+  color: var(--gray-400);
+}
+.dark-theme .stickyCategorySlider {
   background-color: var(--gray-900);
   border-bottom: 1px solid var(--gray-700);
 }
-.dark_theme .stickyCategorySlider .categortItem img {
+.dark-theme .stickyCategorySlider .categortItem img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
-.dark_theme .mobileSearchForm .block .range .text span {
+.dark-theme .mobileSearchForm .block .range .text span {
   color: var(--gray-200);
 }
-.dark_theme .mobileSearchForm .search input {
+.dark-theme .mobileSearchForm .search input {
   border: 1px solid var(--gray-200);
 }
-.dark_theme .mobileSearchForm .hiddenContent {
+.dark-theme .mobileSearchForm .hiddenContent {
   background-color: var(--gray-900);
 }
-.dark_theme .mobileSearchForm .hiddenContent .block {
+.dark-theme .mobileSearchForm .hiddenContent .block {
   background-color: var(--gray-800);
   color: white;
 }
-.dark_theme .mobileSearchForm .filterForm .tab-menu li.active {
+.dark-theme .mobileSearchForm .filterForm .tab-menu li.active {
   color: var(--gray-200);
 }
-.dark_theme .mobileSearchForm .block .head span {
+.dark-theme .mobileSearchForm .block .head span {
   color: white;
 }
-.dark_theme .mobileSearchForm .search .search_result ul li {
+.dark-theme .mobileSearchForm .search .search_result ul li {
   color: var(--gray-200);
 }
-.dark_theme .stickyCategorySlider .arrow {
+.dark-theme .stickyCategorySlider .arrow {
   background-color: var(--gray-500);
 }
-.dark_theme .stickyCategorySlider .categortItem::after {
+.dark-theme .stickyCategorySlider .categortItem::after {
   background-color: white;
 }
-.dark_theme .listingCart .save_btn {
+.dark-theme .listingCart .save_btn {
   background-color: var(--gray-700);
 }
-.dark_theme .listingCart .save_btn:hover {
+.dark-theme .listingCart .save_btn:hover {
   background-color: var(--gray-600);
 }
-.dark_theme .sectionVideos .mainVideo .video {
+.dark-theme .sectionVideos .mainVideo .video {
   background-color: var(--gray-900);
 }
-.dark_theme .sectionVideos .wrapper::after {
+.dark-theme .sectionVideos .wrapper::after {
   background-color: var(--gray-800);
 }
-.dark_theme .clientSay .wrapper {
+.dark-theme .clientSay .wrapper {
   background-color: rgb(14, 19, 31);
 }
-.dark_theme .FeaturePlaces.listings .tags .tag .btn,
-.dark_theme .FeaturePlaces.listings .tags .tag .popup .top,
-.dark_theme .moreFilerPopup .inner,
-.dark_theme .moreFilerPopup .bottom,
-.dark_theme .moreFilerPopup .top {
+.dark-theme .FeaturePlaces.listings .tags .tag .btn,
+.dark-theme .FeaturePlaces.listings .tags .tag .popup .top,
+.dark-theme .moreFilerPopup .inner,
+.dark-theme .moreFilerPopup .bottom,
+.dark-theme .moreFilerPopup .top {
   border-color: var(--gray-700);
 }
-.dark_theme .checkbox input {
+.dark-theme .checkbox input {
   border-color: var(--gray-700) !important;
 }
-.dark_theme .moreFilerPopup .inner {
+.dark-theme .moreFilerPopup .inner {
   background-color: var(--gray-900);
 }
-.dark_theme .moreFilerPopup .bottom {
+.dark-theme .moreFilerPopup .bottom {
   background-color: var(--gray-900);
   border-top: 1px solid var(--gray-700);
 }
-.dark_theme .moreFilerPopup .bottom .clear_btn {
+.dark-theme .moreFilerPopup .bottom .clear_btn {
   border-color: var(--gray-700);
 }
-.dark_theme .FeaturePlaces.listings .tags .tag .quantitySlider .field input {
+.dark-theme .FeaturePlaces.listings .tags .tag .quantitySlider .field input {
   color: white;
   border-color: var(--gray-700);
 }
-.dark_theme .site_header .action_list .list_property {
+.dark-theme .site_header .action_list .list_property {
   border-color: var(--gray-700);
 }
-.dark_theme .article_single .article_content > * {
+.dark-theme .article_single .article_content > * {
   color: var(--gray-300) !important;
 }
-.dark_theme .article_single .single_comment textarea {
+.dark-theme .article_single .single_comment textarea {
   border-color: var(--gray-700);
 }
-.dark_theme .article_single .single_comment .cancel_btn {
+.dark-theme .article_single .single_comment .cancel_btn {
   border-color: var(--gray-700);
 }
-.dark_theme .article_single .single_comment .cancel_btn:hover {
+.dark-theme .article_single .single_comment .cancel_btn:hover {
   background-color: var(--gray-700);
 }
-.dark_theme .article_single .writtenBy p {
+.dark-theme .article_single .writtenBy p {
   color: var(--gray-300);
 }
-.dark_theme .article_single .comments_list .comment_item .details {
+.dark-theme .article_single .comments_list .comment_item .details {
   border-color: var(--gray-700);
 }
-.dark_theme .article_single .comments_list .comment_item .details .title span {
+.dark-theme .article_single .comments_list .comment_item .details .title span {
   color: var(--gray-400);
 }
-.dark_theme .article_single .comments_list .comment_item .details > p {
+.dark-theme .article_single .comments_list .comment_item .details > p {
   color: var(--gray-300);
 }
-.dark_theme .article_single .comments_list .comment_item .details .reply_btn {
+.dark-theme .article_single .comments_list .comment_item .details .reply_btn {
   background-color: var(--gray-700);
   color: white;
 }
-.dark_theme .article_single .comments_list .comment_item .details .reply_btn:hover {
+.dark-theme .article_single .comments_list .comment_item .details .reply_btn:hover {
   background-color: var(--gray-800);
 }
-.dark_theme .share_popup .inner {
+.dark-theme .share_popup .inner {
   background-color: var(--gray-800);
 }
-.dark_theme .share_popup .top {
+.dark-theme .share_popup .top {
   border-color: var(--gray-700);
 }
-.dark_theme .share_popup .socialMedia a {
+.dark-theme .share_popup .socialMedia a {
   border-color: var(--gray-700);
 }
-.dark_theme .share_popup .socialMedia a:hover {
+.dark-theme .share_popup .socialMedia a:hover {
   background-color: var(--gray-600);
 }
-.dark_theme .share_popup .form input {
+.dark-theme .share_popup .form input {
   border-color: var(--gray-700);
 }
-.dark_theme .share_popup .form .icon svg path {
+.dark-theme .share_popup .form .icon svg path {
   stroke: white;
 }
-.dark_theme .site_header .action_list .notifications .dropdown .inner {
+.dark-theme .site_header .action_list .notifications .dropdown .inner {
   background-color: var(--gray-800);
   border-color: transparent;
   color: white;
 }
-.dark_theme .site_header .action_list .notifications .items li p {
+.dark-theme .site_header .action_list .notifications .items li p {
   color: var(--gray-300);
 }
-.dark_theme .site_header .action_list .notifications .items li:hover {
+.dark-theme .site_header .action_list .notifications .items li:hover {
   background-color: var(--gray-700);
 }
-.dark_theme .moreFilerPopup .content .wrapper {
+.dark-theme .moreFilerPopup .content .wrapper {
   border-color: var(--gray-700);
 }
-.dark_theme .moreFilerPopup .range .text h4 {
+.dark-theme .moreFilerPopup .range .text h4 {
   color: white;
 }
-.dark_theme .moreFilerPopup .range .qua button {
+.dark-theme .moreFilerPopup .range .qua button {
   color: white;
 }
-.dark_theme .moreFilerPopup .range .qua input {
+.dark-theme .moreFilerPopup .range .qua input {
   color: white;
 }
-.dark_theme input,
-.dark_theme textarea {
+.dark-theme input,
+.dark-theme textarea {
   color: white;
   background-color: transparent;
 }
-.dark_theme .mobileSearchForm .searchForm .tab-menu li.active {
+.dark-theme .mobileSearchForm .searchForm .tab-menu li.active {
   color: white;
 }
-.dark_theme .listingDetailNav {
+.dark-theme .listingDetailNav {
   background-color: var(--gray-800);
   border-color: var(--gray-700);
   color: white;
 }
-.dark_theme .listingDetailNav .price span {
+.dark-theme .listingDetailNav .price span {
   color: white;
 }
-.dark_theme .datePickerForm {
+.dark-theme .datePickerForm {
   background-color: var(--gray-900);
 }
-.dark_theme .datePickerForm .sticky .dateRange .range {
+.dark-theme .datePickerForm .sticky .dateRange .range {
   border-color: var(--gray-700);
 }
-.dark_theme .listingDetailPage .sticky .price {
+.dark-theme .listingDetailPage .sticky .price {
   color: var(--gray-400);
 }
-.dark_theme .datePickerForm .sticky .hiddenForm .form_element input,
-.dark_theme .datePickerForm .sticky .hiddenForm .form_element textarea {
+.dark-theme .datePickerForm .sticky .hiddenForm .form_element input,
+.dark-theme .datePickerForm .sticky .hiddenForm .form_element textarea {
   border-color: var(--gray-700);
 }
-.dark_theme .datePickerForm .bookingDetails .inner {
+.dark-theme .datePickerForm .bookingDetails .inner {
   background-color: var(--gray-800);
 }
-.dark_theme .datePickerPopup {
+.dark-theme .datePickerPopup {
   background-color: var(--gray-800);
 }
-.dark_theme .datePickerPopup .bottom {
+.dark-theme .datePickerPopup .bottom {
   background-color: var(--gray-900);
 }
-.dark_theme .datePickerPopup .bottom .clear_btn {
+.dark-theme .datePickerPopup .bottom .clear_btn {
   color: white;
+}
+.dark-theme .amenities_popup .top {
+  border-color: var(--gray-700);
+}
+.dark-theme .amenities_popup .features_items > div:not(:last-child) {
+  border-color: var(--gray-700);
 }
 
 .btn {
@@ -2706,7 +2715,7 @@ datepicker__buttons {
     height: 65px;
   }
   .stickyCategorySlider {
-    top: 85px;
+    top: 89px;
   }
   .stickyCategorySlider .slider {
     padding: 0 24px;
@@ -3823,7 +3832,7 @@ datepicker__buttons {
   background: #ddd;
   border-radius: 5px;
 }
-.FeaturePlaces.listings .tags .tag .quantitySlider .slider .progress {
+.FeaturePlaces.listings .tags .tag .quantitySlider .progress {
   height: 100%;
   left: 25%;
   right: 25%;
@@ -4636,14 +4645,16 @@ datepicker__buttons {
   }
   .listingGallery .main_img img {
     aspect-ratio: 358/407;
+    border-radius: 6px;
   }
   .listingGallery .nav_imgs {
-    width: calc(33.3333% - 5px);
+    width: calc(33.3333% - 2px);
     grid-template-columns: 1fr;
     gap: 4px;
   }
   .listingGallery .nav_imgs img {
-    aspect-ratio: 177/133;
+    aspect-ratio: 128/95;
+    border-radius: 6px;
   }
   .listingGallery .nav_imgs a:last-child {
     display: none;
@@ -4661,6 +4672,10 @@ datepicker__buttons {
 }
 .listingDetailPage .mainContent .main .btn:hover {
   background-color: var(--gray-100);
+}
+.listingDetailPage .mainContent .main h3 {
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 .listingDetailPage .mainContent .aside {
   width: 33.3333%;
@@ -4684,6 +4699,13 @@ datepicker__buttons {
   align-items: center;
   gap: 8px;
 }
+.listingDetailPage .features {
+  padding-left: 24px;
+}
+.listingDetailPage .features li {
+  list-style: disc;
+  opacity: 0.7;
+}
 .listingDetailPage .amenities .features_items {
   gap: 24px 0;
   margin-bottom: 34px;
@@ -4695,16 +4717,6 @@ datepicker__buttons {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-.listingDetailPage .roomRates .list li {
-  padding: 16px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.listingDetailPage .roomRates .list li:nth-child(odd) {
-  background-color: var(--gray-100);
 }
 .listingDetailPage .roomRates .datepicker {
   position: static;
@@ -4999,6 +5011,16 @@ datepicker__buttons {
 }
 .listingDetailPage .googleMap iframe {
   border-radius: 16px;
+}
+.listingDetailPage .list li {
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.listingDetailPage .list li:nth-child(odd) {
+  background-color: var(--gray-100);
 }
 
 .datepicker .datepicker__month-day span {
@@ -5586,7 +5608,7 @@ datepicker__buttons {
     padding-right: 0;
   }
   .listingDetailPage .mainContent .aside {
-    width: 100%;
+    display: none;
   }
   .listingDetailPage .preview .top .btn span {
     display: none;

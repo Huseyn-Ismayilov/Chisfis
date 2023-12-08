@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chisfis</title>
-    <link rel="stylesheet" href="../scss/main.css">
+   <link rel="stylesheet" href="../scss/main.css">
+    <script>
+        // Do this before the body gets parsed
+        if (localStorage.getItem('dark-theme') === '1') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/intl-tel-input@16.0.2/build/css/intlTelInput.css'>
 </head>

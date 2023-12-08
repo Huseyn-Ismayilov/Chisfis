@@ -26,7 +26,7 @@
     --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
 }
 
-.dark_theme {
+.dark-theme {
     .mbsc-windows.mbsc-popup {
         background-color: #1f2937 !important;
         min-width: 500px;
@@ -291,9 +291,9 @@
     .moreFilerPopup .quantitySlider .field input,
     .article_single .article_header .bottom {
         border-color: var(--gray-700);
-    }   
+    }
     .amenities_popup .inner {
-        background-color: var(--gray-800);
+        background-color: var(--gray-900);
     }
     .listingDetailPage .reviews .search_bar input {
         border-color: var(--gray-700);
@@ -303,7 +303,7 @@
             fill: white;
         }
     }
-    .listingDetailPage .mainContent  .main .btn {
+    .listingDetailPage .mainContent .main .btn {
         &:hover {
             background-color: var(--gray-700);
         }
@@ -400,14 +400,19 @@
     .navMenu .top {
         border-color: var(--gray-700);
     }
-    .listingDetailPage .roomRates .list li:nth-child(odd) {
-        background-color: var(--gray-700);
+    .listingDetailPage .list li {
+        &:nth-child(odd) {
+            background-color: var(--gray-800);
+        }
     }
     .listingDetailPage .sticky .price span {
         color: var(--gray-300);
     }
     .listingDetailPage .mainContent .main .btn {
         color: white;
+    }
+    .listingDetailPage p {
+        color: var(--gray-400);
     }
     .stickyCategorySlider {
         background-color: var(--gray-900);
@@ -630,5 +635,11 @@
                 color: white;
             }
         }
+    }
+    .amenities_popup .top {
+        border-color: var(--gray-700);
+    }
+    .amenities_popup .features_items > div:not(:last-child) {
+        border-color: var(--gray-700);
     }
 }

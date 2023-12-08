@@ -81,14 +81,16 @@
             width: calc(66.6666% - 2px);
             img {
                 aspect-ratio: 358/407;
+                border-radius: 6px;
             }
         }
         .nav_imgs {
-            width: calc(33.3333% - 5px);
+            width: calc(33.3333% - 2px);
             grid-template-columns: 1fr;
             gap: 4px;
             img {
-                aspect-ratio: 177/133;
+                aspect-ratio: 128/95;
+                border-radius: 6px;
             }
             a {
                 &:last-child {
@@ -96,6 +98,7 @@
                 }
             }
         }
+      
     }
 }
 .listingDetailPage {
@@ -109,6 +112,10 @@
                 &:hover {
                     background-color: var(--gray-100);
                 }
+            }
+            h3 {
+                margin-bottom: 12px;
+                font-weight: 600;
             }
         }
         .aside {
@@ -133,6 +140,14 @@
                 gap: 8px;
             }
         }
+  
+    }
+    .features {
+        padding-left: 24px;
+        li {
+            list-style: disc;
+            opacity: .7;
+        }
     }
     .amenities {
         .features_items {
@@ -149,18 +164,7 @@
         gap: 8px;
     }
     .roomRates {
-        .list {
-            li {
-                padding: 16px;
-                border-radius: 8px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                &:nth-child(odd) {
-                    background-color: var(--gray-100);
-                }
-            }
-        }
+
         .datepicker {
             position: static;
             box-shadow: unset;
@@ -484,6 +488,18 @@
     .googleMap {
         iframe {
             border-radius: 16px;
+        }
+    }
+    .list {
+        li {
+            padding: 16px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:nth-child(odd) {
+                background-color: var(--gray-100);
+            }
         }
     }
 }
@@ -1092,7 +1108,7 @@
                 padding-right: 0;
             }
             .aside {
-                width: 100%;
+               display: none;
             }
         }
         .preview {

@@ -8,9 +8,15 @@
     <title>Chisfis</title>
 
     <link rel="stylesheet" href="../scss/main.css">
+    <script>
+        // Do this before the body gets parsed
+        if (localStorage.getItem('dark-theme') === '1') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
 </head>
 
- <body id="body">
+<body id="body">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="location" viewBox="0 0 20 20">
             <path
@@ -862,7 +868,7 @@
         </div>
         <div class="bg"></div>
     </header>
-     <div class="navMenu">
+    <div class="navMenu">
         <div class="inner">
             <div class="top">
                 <a href="./index.html" class="site_logo">
@@ -1721,25 +1727,28 @@
                                 <div class="dropdown">
                                     <div class="quantitySlider">
                                         <h4>Price per day</h4>
-                                        <div class="slider first">
-                                            <div class="progress"></div>
-                                        </div>
-                                        <div class="range-input first">
-                                            <input type="range" class="range-min" min="0" max="10000" value="2500"
-                                                step="100">
-                                            <input type="range" class="range-max" min="0" max="10000" value="7500"
-                                                step="100">
-                                        </div>
-                                        <div class="price-input first">
-                                            <div class="field">
-                                                <span>Min price</span>
-                                                <input type="number" class="input-min" value="2500">
+                                        <div class="slider-container">
+                                            <div class="slider first">
+                                                <div class="progress"></div>
                                             </div>
-                                            <div class="field">
-                                                <span>Max price</span>
-                                                <input type="number" class="input-max" value="7500">
+                                            <div class="range-input first">
+                                                <input type="range" class="range-min" min="0" max="10000" value="2500"
+                                                    step="100">
+                                                <input type="range" class="range-max" min="0" max="10000" value="7500"
+                                                    step="100">
+                                            </div>
+                                            <div class="price-input first">
+                                                <div class="field">
+                                                    <span>Min price</span>
+                                                    <input type="number" class="input-min price-min" value="2500">
+                                                </div>
+                                                <div class="field">
+                                                    <span>Max price</span>
+                                                    <input type="number" class="input-max price-max" value="7500">
+                                                </div>
                                             </div>
                                         </div>
+                                      
 
                                     </div>
                                     <div class="bottom">
@@ -3736,9 +3745,6 @@
                 }
             });
         });
-        // 
-        // 
-        // 
         // 
 
         const range0Input0 = document.querySelectorAll(".range-input.first input")
