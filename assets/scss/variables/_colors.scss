@@ -414,9 +414,9 @@
     .listingDetailPage p {
         color: var(--gray-400);
     }
+
     .stickyCategorySlider {
-        background-color: rgb(17 24 39 / 68%);
-        border-bottom: 1px solid var(--gray-700);
+        background-color: var(--gray-900);
         .categortItem {
             img {
                 filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
@@ -641,5 +641,13 @@
     }
     .amenities_popup .features_items > div:not(:last-child) {
         border-color: var(--gray-700);
+    }
+}
+@media (max-width: 991px) {
+    .dark-theme {
+        .stickyCategorySlider {
+            background-color: rgb(17 24 39 / 68%);
+            border-bottom: 1px solid var(--gray-700);
+        }
     }
 }
