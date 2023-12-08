@@ -531,7 +531,7 @@ h4 {
   color: var(--gray-400);
 }
 .dark-theme .stickyCategorySlider {
-  background-color: var(--gray-900);
+  background-color: rgba(17, 24, 39, 0.68);
   border-bottom: 1px solid var(--gray-700);
 }
 .dark-theme .stickyCategorySlider .categortItem img {
@@ -2711,6 +2711,10 @@ datepicker__buttons {
   }
   .stickyCategorySlider {
     top: 86.5px;
+    background-color: rgba(255, 255, 255, 0.651);
+    border-bottom: 1px solid var(--gray-200);
+    -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(40px);
   }
   .stickyCategorySlider .slider {
     padding: 0 24px;
