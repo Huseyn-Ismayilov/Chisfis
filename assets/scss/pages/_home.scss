@@ -441,7 +441,11 @@
         overflow: hidden;
     }
 }
-
+@media (max-width: 991px) {
+    .section_slider {
+        margin: 50px 0;
+    }
+}
 .FeaturePlaces {
     overflow: hidden;
     margin: 60px 0;

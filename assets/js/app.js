@@ -1,8 +1,22 @@
-var $window = $(window);
-var $nav = $('.bottomNavbar');
 
-$window.scroll(function () {
-    $nav.toggleClass('hide', $window.scrollTop() > 0);
+
+var lastScrollTop = 0;
+var delta = 5;
+var headerHeight = $('.bottomNavbar').outerHeight();
+
+$(window).scroll(function () {
+	var st = $(this).scrollTop();
+
+	if (Math.abs(lastScrollTop - st) <= delta)
+		return;
+
+	if (st > lastScrollTop && st > headerHeight) {
+		$('.bottomNavbar').addClass("hide")
+	} else {
+		$('.bottomNavbar').removeClass("hide")
+	}
+
+	lastScrollTop = st;
 });
 
 // end

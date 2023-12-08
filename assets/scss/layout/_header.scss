@@ -40,6 +40,7 @@
         transition-duration: 0.15s;
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
         box-shadow:
             (0 0 #0000, 0 0 #0000),
             (0 0 #0000, 0 0 #0000),
@@ -140,6 +141,7 @@
                 align-items: center;
                 position: relative;
                 font-weight: 400;
+                cursor: pointer;
                 color: var(--gray-500);
                 &:not(:first-child) {
                     margin-left: 30px;
@@ -164,13 +166,6 @@
                     opacity: 0;
                     background-color: currentColor;
                 }
-            }
-            span {
-                display: block;
-                font-size: var(--text-sm);
-                font-weight: 400;
-                white-space: nowrap;
-                padding: 12px 0;
             }
         }
         .search_input {
@@ -541,13 +536,6 @@
     }
 }
 
-// @media (min-width: map.get($grid-breakpoints, "lg")) {
-//     .site_header {
-//         .toggle {
-//             display: none;
-//         }
-//     }
-// }
 @media (max-width: map.get($grid-breakpoints, "lg")) {
     .site_header {
         display: none;
@@ -1058,7 +1046,7 @@
     z-index: 90;
     background-color: white;
     border-top: 1px solid var(--gray-200);
-    transition: .15s;
+    transition: 0.15s;
     &.hide {
         transform: translateY(100%);
     }
