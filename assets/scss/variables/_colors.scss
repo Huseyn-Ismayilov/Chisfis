@@ -68,8 +68,13 @@
     }
     .hero {
         .search_bar {
-            background-color: #1118278f;
+            background-color: var(--gray-800);
             color: white;
+        }
+    }
+    .datepickerAlert_popup {
+        .inner {
+            background-color: var(--gray-700);
         }
     }
     .hero .search_bar .select .mbsc-ios.mbsc-label-stacked.mbsc-ltr {

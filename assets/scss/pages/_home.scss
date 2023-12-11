@@ -1102,18 +1102,25 @@
         .listItems {
             grid-template-columns: 1fr;
         }
+
+    }
+}
+@media (max-width: 991px)  {
+    .FeaturePlaces {
         &.listings {
             .tags {
                 .tag {
                     &.mobile {
                         display: block;
                     }
+                    &:not(.mobile) {
+                        display: none;
+                    }
                 }
             }
         }
     }
 }
-
 .howItWork {
     overflow: hidden;
     margin: 100px 0;
